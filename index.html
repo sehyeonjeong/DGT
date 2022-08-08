@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>등기통</title>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    
+<body class="index-page">
+    <header id="header"></header>
+    <script>
+        fetch("header.html")
+        .then(response => {
+        return response.text()
+        })
+        .then(data => {
+        document.querySelector("header").innerHTML = data;
+        });
+    </script>
+    <footer id="footer" class="main-dark-blue"></footer>
+    <script>
+        fetch("footer.html")
+        .then(response => {
+        return response.text()
+        })
+        .then(data => {
+        document.querySelector("footer").innerHTML = data;
+        });
+    </script>
 </body>
 </html>
