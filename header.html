@@ -1,12 +1,51 @@
-<div class="menu-wrap bg-blue">
-    <div class="menu">
-        <div class="title"><img src="./images/logo.svg" alt="등기통로고"></div>
-        <div class="nav">
-            <ul>
-                <li class="on"><a href="">주소검색</a></li>
-                <li><a href=""><a href="">등기열람 목록</a></li>
-            </ul>
-            <div class="my-data"><a href="">OOO님 | 남은열람권 15개</a></div>
+<header id="header">
+    <div class="menu-wrap bg-blue">
+        <div class="menu">
+            <div class="title"><img src="./images/logo.svg" alt="등기통로고"></div>
+            <div class="nav xl">
+                <ul>
+                    <li class="on"><a href="">주소검색</a></li>
+                    <li><a href=""><a href="">등기열람 목록</a></li>
+                </ul>
+    
+                <!-- 로그인 후 버튼 -->
+    
+                <div class="my-data login">
+                    <p>OOO님 | <span>남은열람권</span> 15개</p>
+                    <div class="my-data-menu">
+                        <ul>
+                            <li><a class="gray2" href="">내정보</a></li>
+                            <li><a class="gray2" href="">열람권 구매</a></li>
+                            <li><a class="gray2" href="">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 로그인 버튼 -->
+    
+                <!-- <div class="my-data nologin"><a href="">로그인</a></div> -->
+            </div>
+            <div class="nav-btn xs">
+                <img src="./images/m_nav.svg" alt="모바일 네비게이션 오픈">
+            </div>
+            <div class="m-nav-wrap">
+                <div class="nav-btn-in"><img src="./images/nav-close.svg" alt="모바일 네비게이션 닫기"></div>
+                <div class="m-nav">
+                    <ul>
+                        <li class="on"><a href="">주소검색</a></li>
+                        <li><a href="">등기열람 목록</a></li>
+                        <li><a href="">내정보</a></li>
+                    </ul>
+                </div>
+                <div class="m-my-data">
+                    <dl>
+                        <dt>OOO님</dt>
+                        <dl>남은 열람권 15개 <img src="./images/plus.svg" alt="열람권추가"></dl>
+                        <div class="logout-btn">로그아웃</div>
+                    </dl>
+                </div>
+            </div>
+            <div class="m-nav-dim"></div>
         </div>
     </div>
-</div>
+</header> 

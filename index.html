@@ -6,29 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>등기통</title>
 
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-</head>
+
+ </head>
 <body class="index-page">
-    <header id="header"></header>
+    <!-- Header -->
+    <div data-include-path="header.html"></div>
+    <!-- Header-end -->
+    <section>
+        <div class="section-content"></div>
+    </section>
+    <!-- Footer -->
+    <div data-include-path="footer.html"></div>
+    <!-- Footer-end -->
+ 
     <script>
-        fetch("header.html")
-        .then(response => {
-        return response.text()
-        })
-        .then(data => {
-        document.querySelector("header").innerHTML = data;
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
         });
     </script>
-    <footer id="footer" class="main-dark-blue"></footer>
-    <script>
-        fetch("footer.html")
-        .then(response => {
-        return response.text()
-        })
-        .then(data => {
-        document.querySelector("footer").innerHTML = data;
-        });
-    </script>
+
+    <!-- js.common -->
+    <script src="./js/common.js"></script>
 </body>
 </html>

@@ -1,7 +1,10 @@
+/* 폰트임포트 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
 
+/* 안티앨리어싱 설정 */
 *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-overflow-scrolling: touch;}
 
+/* a속성 */
 A:link{text-decoration:none;color:inherit}
 A:visited{text-decoration:none;color:inherit}
 A:active{text-decoration:none;color:inherit}
@@ -9,8 +12,10 @@ A:hover{text-decoration:none;color:inherit}
 A:hover span{text-decoration:none}
 A:focus,input:focus,button:focus{outline:none}
 
+/* clearfix */
 .cf:after{content: ""; display: block; clear: both;}
 
+/* 전체설정 */
 html{font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
 html, body{width: 100%; height: 100vh; margin: 0; padding: 0; word-break: break-all; text-align: justify; box-sizing: border-box;}
 body{overflow-x: hidden; font-weight: normal; font-size: 14px; line-height: 140%;}
@@ -18,14 +23,16 @@ b{font-weight: bold;}
 hr{margin:80px 0;border-top:1px;border-color:#ccc}
 .clear{clear: both;}
 
+/* 컬러설정 */
 .bg-blue{background-color: #5363f1;}
 .main-dark-blue{background-color: #34365e;}
+.gray2{color: #4f4f4f !important;}
 
-.hide-sm{display:block !important}
-@media (max-width: 979px){.hide-sm{display:none !important}}
-.show-sm{display:none !important}
-@media (max-width: 979px){.show-sm{display:block !important}}
+/* Breakpoint */
+@media (0px <= width <= 599px) {.xs{display: block;} .xl{display: none;}}
+@media (600px <= width <= 10000px) {.xs{display: none;} .xl{display: block;}}
 
+/* Button */
 .cta-button{margin-top:70px}
 .cta-button .button{width:100%;font-size:18px;font-weight:800;box-sizing:border-box;padding:0px;padding-bottom:2px;text-align:center;border-radius: 4px; color: #FEF8E9; padding: 9px;}
 /*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -34,29 +41,38 @@ hr{margin:80px 0;border-top:1px;border-color:#ccc}
 .cta-button .button img{margin-right:5px;height:24px;vertical-align:middle}
 .cta-button .button span{height:24px; vertical-align:middle; color:#ffffff;}
 
-.gnb-button{position:fixed;right:0;top:0;cursor:pointer;width:66px;height:65px;z-index: 3;}
-.gnb-button img{height:100%}
-
+/* Header */
 #header{overflow: auto; height: 56px;}
 
 .menu-wrap{width: 100vw; height: 56px; position: fixed; z-index: 2;}
-.menu{width: 1440px; height: 56px; margin: 0 auto;}
+.menu{max-width: 1440px; height: 56px; margin: 0 auto;}
 .menu .title{height: 32px; float: left; margin-top: 14px; margin-left: 24px;}
 .menu .title img{height: 100%;}
 .menu .nav{float: right; margin-right: 24px;}
-.menu .nav ul{display: inline-block; margin: 20px 0 0 0; position: relative;}
-.menu .nav ul li{list-style-type: none; float: left; margin-left: 32px; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 100%; opacity: 0.6;}
-.menu .nav ul li.on{opacity: 1;}
-.menu .nav .my-data{display: inline-block; width: 190px; margin-top: 12px; margin-left: 32px; border: 1px solid rgba(255,255,255,0.4); border-radius: 32px; text-align: center; vertical-align: top;}
-.menu .nav .my-data a{font-size: 14px; line-height: 100%; font-weight: 600; color: #ffffff; padding: 8px 16px; display: inline-block;}
+.menu .nav > ul{display: inline-block; margin: 20px 0 0 0; position: relative;}
+.menu .nav > ul > li{list-style-type: none; float: left; margin-left: 32px; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 100%; opacity: 0.6;}
+.menu .nav > ul > li.on{opacity: 1;}
+.menu .nav .my-data{width: 192px; display: inline-block; margin-top: 12px; margin-left: 32px; border: 1px solid rgba(255,255,255,0.4); border-radius: 32px; text-align: center; vertical-align: top; position: relative;}
+.menu .nav .my-data p{font-size: 14px; line-height: 100%; font-weight: 600; color: #ffffff; padding: 8px 16px; display: inline-block; cursor: pointer; margin: 0;}
+.menu .nav .my-data p span{opacity: 0.8;}
+.menu .nav .my-data .my-data-menu{display: none; position: absolute; right: 0px; top: 32px; padding-top: 4px;}
+.menu .nav .my-data-menu ul{width: 122px; background-color: #FFFFFF; border-radius: 8px; border: 1px solid #e5eafe; padding: 0; margin: 0;}
+.menu .nav .my-data-menu ul li{display: block; height: 32px; border-bottom: 1px solid #e5eafe; box-sizing: border-box;}
+.menu .nav .my-data-menu ul li:last-child{border-bottom: 0px;}
+.menu .nav .my-data-menu ul li a{display: block; font-size: 12px; line-height: 134%; font-style: normal; font-weight: 600; letter-spacing: -0.01em; padding: 8px;}
 
-.m-menu-wrap{display: none; position: fixed; width: 100vw;height: 100vh; background: #3865AA; z-index: 4; text-align: center;}
-.m-menu .title{margin-top: 70px;}
-.m-menu .m-nav ul{padding: 0;}
-.m-menu .m-nav ul li:first-child{margin-top: 59px;}
-.m-menu .m-nav ul li{margin-bottom: 23px;}
+.nav-btn{float: right; margin: 16px 24px; cursor: pointer;}
+.nav-btn-in{position: absolute; left: -40px; top: 16px; cursor: pointer;}
 
-section{position: absolute; overflow-y: auto; overflow-x: hidden; width: 100vw; height: 100vh; z-index: 1;}
+.m-nav-wrap{position: fixed; right: -280px; width: 240px; height: 100vh; background: #ffffff; z-index: 4; text-align: left;}
+.m-nav ul{padding: 0;}
+.m-nav ul li:first-child{margin-top: 59px;}
+.m-nav ul li{margin-bottom: 23px;}
+
+.m-nav-dim{display:none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4);}
+
+/* Content */
+section{overflow-y: auto; overflow-x: hidden; width: 100vw; height: 400vh; z-index: 1; background-color: #ffffff;}
 section .section-content .fixed .text-box .list li{font-size: 13px; font-weight: 500; line-height: 17px; margin-bottom:5px; letter-spacing: -0.04em; opacity: 0.8;}
 section .section-content .fixed .text-box .list ul{padding: 6px 0;}
 section .section-content .fixed .text-box .cta-button{margin-top: 35px;}
@@ -71,14 +87,19 @@ section .col{box-sizing:border-box;float:left;width:50%;padding:0 15px}
 @media (max-width: 979px){section .fixed .section-title img{margin: 0 auto;}}
 .section-content #colcenter { margin-bottom: 50px; }
 
-#footer{position: relative; z-index: 1; width: 100vw; height: 210px; color: #ffffff;}
-#footer .footer-content{width: 720px; margin: 0 auto; overflow: auto;}
-#footer .footer-content {box-sizing: border-box;}
-#footer .footer-content .left{float: left; vertical-align: top; text-align: left; margin-top: 48px; font-size: 12px; font-weight: 500; line-height: 19.2px; width: 640px;}
+
+/* Footer */
+#footer{position: relative; z-index: 1; width: 100vw; min-height: 210px; color: rgba(255, 255, 255, 0.7);}
+#footer .footer-content{max-width: 720px; margin: 0 auto; overflow: auto; padding: 0 24px;}
+#footer .footer-content .left{float: left; vertical-align: top; text-align: left; margin: 48px 10px 48px 0; font-size: 12px; font-weight: 500; line-height: 19.2px; width: calc(100% - 90px); }
 #footer .footer-content .left address{font-style: normal;}
 #footer .footer-content .left ul{padding: 0; margin: 0;}
 #footer .footer-content .left ul li{list-style: none; padding-left: 0;}
-#footer .footer-content .right{float: right; margin-top: 48px; font-size: 10px; line-height: 10px; width: 80px;}
+#footer .footer-content .right{float: right; margin: 48px 0; font-size: 10px; line-height: 10px; width: 80px;}
 
 #footer .footer-content .right .btn{width: 80px; height: 22px; box-sizing: border-box; text-align: center; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 8px;}
 #footer .footer-content .right .btn a{display: inline-block; padding: 6px 0;}
+
+/* gototop */
+.gototop{position: fixed; bottom: 245px; right: 16px; cursor: pointer; }
+.gototop img{width: 56px; height: 56px; border-radius: 28px; box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);}
