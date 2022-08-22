@@ -15,6 +15,15 @@ $('body').on('click', function(e){
     }
 });
 
+// 화면 사이즈 변환시 nav 초기화
+$(window).resize(function(){ 
+    if (window.innerWidth < 600) { // 다바이스 크기가 600이하일때  
+        $('.my-data-menu').removeAttr('style'); 
+    } else { // 다바이스 크기가 600이상일때  
+        $('.nav-btn, .m-nav-wrap, .m-nav-dim').removeAttr('style')
+    }
+}).resize(); 
+
 // 모바일 메뉴버튼 클릭
 $(document).on('click', '.nav-btn', function () {
     gsap.to('.m-nav-wrap', {duration: 0.3, right: 0});
