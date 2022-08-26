@@ -5,7 +5,6 @@ $('html').on('click', '.my-data.login', function(){
 
 // 내정보 타겟영역을 제외하고 클릭했을 시 팝업 숨김처리
 $('body').on('click', function(e){ 
-    e.preventDefault();
     var $tgPoint = $(e.target);
     var $popCallBtn = $tgPoint.hasClass('my-data')
     var $popArea = $tgPoint.hasClass('my-data-menu')
@@ -53,6 +52,50 @@ $(document).on('click', '.m-nav-dim', function () {
     gsap.to('.m-nav-wrap', {duration: 0.3, right: -280});
     $('.nav-btn').fadeIn();
     $('.m-nav-dim').fadeOut();
+});
+
+// 등기열람 요청 모달 오픈
+$(document).on('click', '.request-btn', function () {
+    $('.result-modal-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.result-modal').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+// 등기열람 요청 모달 닫기
+$(document).on('click', '.result-modal-close', function () {
+    $('.result-modal-dim').fadeOut();
+    $('.result-modal').fadeOut();
+});
+
+// 등기열람 요청 모달 쉐도우 영역 클릭
+$(document).on('click', '.result-modal-dim', function () {
+    $('.result-modal-dim').fadeOut();
+    $('.result-modal').fadeOut();
+});
+
+// 등기열람 경고창 오픈
+$(document).on('click', '.modal-request-btn', function () {
+    $('.result-modal-alert-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.result-modal-alert').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+// 등기열람 경고창 닫기
+$(document).on('click', '.result-modal-alert-close', function () {
+    $('.result-modal-alert-dim').fadeOut();
+    $('.result-modal-alert').fadeOut();
+});
+
+// 등기열람 경고창 쉐도우 영역 클릭
+$(document).on('click', '.result-modal-alert-dim', function () {
+    $('.result-modal-alert-dim').fadeOut();
+    $('.result-modal-alert').fadeOut();
 });
 
 //gototop
