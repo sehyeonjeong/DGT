@@ -16,22 +16,20 @@ $('body').on('click', function(e){
 
 // 화면 사이즈 변환시 nav 초기화
 $(window).resize(function(){ 
-    if (window.innerWidth < 600) { // 다바이스 크기가 600미만일때  
+    if (window.innerWidth < 600) { // 디바이스 크기가 600미만일때  
         $('.my-data-menu').removeAttr('style'); 
-    } else { // 다바이스 크기가 600이상일때  
+    } else { // 디바이스 크기가 600이상일때  
         $('.nav-btn, .m-nav-wrap, .m-nav-dim').removeAttr('style')
     }
 }).resize(); 
 
 $(window).resize(function(){ 
-    if (window.innerWidth < 960) {  // 다바이스 크기가 960미만일때 
+    if (window.innerWidth < 960) {  // 디바이스 크기가 960미만일때 
         $(".search input").attr("placeholder", "주소를 검색하세요.");
     } else {
         $(".search input").attr("placeholder", "주소를 검색해 원하는 등기를 쉽고 빠르게 열람하세요.");
-    }
-    
-    }).resize(); 
-    출처: https://hongpage.kr/20 [홍페이지 HONGPAGE:티스토리]
+    };
+}).resize(); 
 
 // 모바일 메뉴버튼 클릭
 $(document).on('click', '.nav-btn', function () {
@@ -98,6 +96,19 @@ $(document).on('click', '.result-modal-alert-dim', function () {
     $('.result-modal-alert').fadeOut();
 });
 
+// 체크박스가 체크되면 버튼 활성화 되게 만들기
+    
+$('.agree-form input[type="checkbox"]').click(function(){
+    var tmpp = $(this).prop('checked'); 
+    // this를 사용하여 클릭한 checkbox 가 체크되도록 설정
+    if(tmpp){
+        $(".agree-btn button").addClass('main-blue-bg-btn').removeClass('lightgray-bg-btn').attr("onclick","window.open('./enter-info.html','_self')").prop("disabled",false);
+    }
+    else{
+        $(".agree-btn button").removeClass('main-blue-bg-btn').addClass('lightgray-bg-btn').removeAttr("onclick").prop("disabled",true);
+    }
+});
+
 //gototop
 $(document).on('click', '.gototop', function(){
     $("html, body").animate({scrollTop:0}, '100');
@@ -107,3 +118,16 @@ $(window).scroll( function() {
     if ( $( this ).scrollTop() > 500 ) {$( '.gototop' ).fadeIn();} 
     else {$('.gototop').fadeOut();}
 });
+
+function adjustHeight() {
+    var textEle = $('textarea');
+    textEle[0].style.height = 'auto';
+    var textEleHeight = textEle.prop('scrollHeight');
+    textEle.css('height', textEleHeight);
+};
+
+window.onresize = function(event) {
+    adjustHeight(); 
+};
+
+adjustHeight(); 

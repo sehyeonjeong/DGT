@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>등기통</title>
+
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+ </head>
+<body class="index-page">
+    <!-- Header -->
+    <div data-include-path="header-logout.html"></div>
+    <!-- Header-end -->
+    <section>
+        <div class="section-content join">
+            <p>회원가입</p>
+            <div class="join-content">
+                <div class="main-terms-content">
+                    <div class="main-terms">
+                        <p>등기통 서비스 이용약관</p>
+                        <textarea name="" id="" disabled>
+등기통 서비스 이용약관
+
+제1조 (약관의 적용목적)
+본 약관은 ㈜네트워크디파인즈(이하 “회사”)가 운영하는 바로바로 서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다. 바로바로 서비스라 함은 “바로바로” 명칭을 사용하는 회사의 부동산 관련 서비스를 의미합니다. 바로바로 서비스를 이용하거나 회원으로 가입할 경우 여러분은 서비스 이용자로서 본 약관에 동의하게 되므로 주의 깊게 살펴보시기 바랍니다.
+
+제1조 (약관의 적용목적)
+본 약관은 ㈜네트워크디파인즈(이하 “회사”)가 운영하는 바로바로 서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다. 바로바로 서비스라 함은 “바로바로” 명칭을 사용하는 회사의 부동산 관련 서비스를 의미합니다. 바로바로 서비스를 이용하거나 회원으로 가입할 경우 여러분은 서비스 이용자로서 본 약관에 동의하게 되므로 주의 깊게 살펴보시기 바랍니다.
+                        </textarea>
+                    </div>
+                    <div class="main-terms">
+                        <p>개인정보처리방침</p>
+                        <textarea name="" id="" disabled>
+개인정보처리방침
+
+제1조 (목적)
+(주)네트워크디파인즈(이하 “회사”)는 이용자의 개인정보를 소중하게 생각하고, 보호하기 위하여 항상 최선을 다해 노력하고 있습니다. 회사는 정보통신망 이용촉진 및 정보보호 등에 관한 법률을 비롯한 모든 개인정보보호 관련 법률규정을 준수하고 있으며, 관련 법령에 의거한 개인정보처리방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 또한 개인정보처리방침을 제정하여 이를 준수하고 있으며, 이를 인터넷사이트에 공개하여 이용자가 언제나 용이하게 열람할 수 있도록 하
+                        </textarea>
+                    </div>
+                </div>
+                <div class="agree-form">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">본인은 만 14세 이상이며, 등기통 이용약관, 개인정보처리방침 내용을 확인하였고 이에 동의합니다.</label>
+                </div>
+                <div class="agree-btn">
+                    <button class="lightgray-bg-btn" disabled>다음으로 넘어가기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div data-include-path="footer.html"></div>
+    <!-- Footer-end -->
+ 
+    <script>
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+    </script>
+
+    <!-- js.common -->
+    <script src="./js/common.js"></script>
+</body>
+</html>

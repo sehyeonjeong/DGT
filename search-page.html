@@ -23,12 +23,12 @@
         <div class="section-content">
             <div class="main-search bg-blue">
                 <p>등기부등본, 등기통에서 쉽고 빠르게!</p>
-                <form action="">
+                <form action="search-page.html">
                     <div class="search">
                         <input type="text" placeholder="주소를 검색해 원하는 등기를 쉽고 빠르게 열람하세요." name="query" value="">
                         <button type="submit"><img src="./images/search.svg" alt=""></button>
                     </div>
-                </form>
+                </form>ß
             </div>
             <div class="main-content-P">
                 <div class="content-top">
@@ -359,8 +359,8 @@
                 <div class="result-modal-alert">
                     <p>로그인 후 사용 가능합니다.</p>
                     <div class="alert-btn-set">
-                        <button class="alert-login main-blue-bg">로그인</button>
-                        <button class="alert-join">회원가입</button>
+                        <button class="alert-login main-blue-bg" onclick="window.open('./login.html', '_self')">로그인</button>
+                        <button class="alert-join" onclick="window.open('./join.html', '_self')">회원가입</button>
                     </div>
                     <button class="result-modal-alert-close">
                         <img src="./images/close.svg" alt="로그인 안내 창 닫기">
