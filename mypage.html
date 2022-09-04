@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>등기통</title>
+
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+ </head>
+<body class="index-page">
+    <!-- Header -->
+    <div data-include-path="header.html"></div>
+    <!-- Header-end -->
+    <section>
+        <div class="section-content">
+            <div class="my-content">
+                <p>내정보</p>
+                <div class="proflie-card">
+                    <div class="profile-image">
+                        <img src="./images/profile.svg" alt="프로필이미지">
+                    </div>
+                    <div class="profile-txt">
+                        <div class="profile-name">OOO님</div>
+                        <p class="phone">010-0000-0000</p>
+                        <p class="email">subjun85@naver.com</p>
+                    </div>
+                    <div class="profile-content-area"></div>
+                    <div class="profile-btn">
+                        <button class="change">정보수정</button>
+                        <button class="resignation">탈퇴신청</button>
+                    </div>
+                </div>
+                <div class="ticket-card">
+                    <dl>
+                        <dt>사용가능한 열람권</dt>
+                        <dd>20개</dd>
+                    </dl>
+                    <div class="ticket-content-area"></div>
+                    <div class="ticket-btn"> 
+                        <button class="buy">열람권 구매 +</button>
+                    </div>
+                </div>
+                <div class="cash-card">
+                    <dl>
+                        <dt>전자민원캐시</dt>
+                        <dd>R7874659 - 2617</dd>
+                    </dl>
+                    <div class="cash-content-area"></div>
+                    <div class="cash-btn">
+                        <button class="modify">변경</button>
+                    </div>
+                </div>
+            </div>
+            <div class="history-content">
+                    
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div data-include-path="footer.html"></div>
+    <!-- Footer-end -->
+ 
+    <script>
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                        $('.nav ul li').removeClass('on');
+                        $('.m-nav ul li').removeClass('on');
+                        $('.m-nav ul li:nth-child(3)').addClass('on');
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+    </script>
+
+    <!-- js.common -->
+    <script src="./js/common.js"></script>
+</body>
+</html>
