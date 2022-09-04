@@ -109,6 +109,54 @@ $('.agree-form input[type="checkbox"]').click(function(){
     }
 });
 
+//회원가입폼
+$('.phone-cert').click(function(){
+    $('.join-content').addClass('cert-on');
+    $('.join-content div, .join-content label').removeClass('cert-none');
+    $('.join-content .join-phone-form p').hide();
+    $('.join-content .join-phone-form input').attr('readonly',true);
+    $(".phone-cert").text("인증완료");
+    $(".join-btn button").addClass('main-blue-bg-btn').removeClass('lightgray-bg-btn').prop("disabled",false);
+});
+
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("invalid", () => {
+    // 검증 후 폼 요소에 was-validated 클래스로 표시해 둔다
+    document.forms[0].classList.add("invalid-form")
+    })
+
+    input.addEventListener("invalid", e => {
+        // 브라우져 툴팁 숨김
+        e.preventDefault()
+    });
+})
+
+//폰번호 입력
+$('#phone').keydown(function(event) {
+    var key = event.charCode || event.keyCode || 0;
+    $text = $(this);
+    if (key !== 8 && key !== 9) {
+        if ($text.val().length === 3) {
+            $text.val($text.val() + '-');
+        }
+        if ($text.val().length === 8) {
+            $text.val($text.val() + '-');
+        }
+    }
+
+    return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+});
+
+// 회원가입 모달 오픈
+$(document).on('click', '.join-btn', function () {
+    $('.result-modal-alert-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.result-modal-alert').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
 //gototop
 $(document).on('click', '.gototop', function(){
     $("html, body").animate({scrollTop:0}, '100');

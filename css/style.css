@@ -17,6 +17,12 @@ input[type=checkbox] {display: none;}
 input[type=checkbox] + label {display: inline-block; cursor: pointer; padding-left: 28px; background: url(../images/checker-off.svg) no-repeat;}
 input[type=checkbox]:checked + label {background: url(../images/checker-on.svg) no-repeat;}
 
+input[type=text]:hover, input[type=password]:hover, input[type=email]:hover{background: #f4f7ff !important; border: 1px solid #e0e0e0 !important;}
+input[type=text]:focus, input[type=password]:focus, input[type=password]:focus{background: #FFFFFF !important; border: 1px solid #5363F1 !important;}
+form.was-validated input:invalid {
+    border-color: #eb5757;
+};
+
 /* clearfix */
 .cf:after{content: ""; display: block; clear: both;}
 
@@ -27,6 +33,7 @@ body{overflow-x: hidden; font-weight: normal; font-size: 14px; line-height: 140%
 b{font-weight: bold;}
 hr{margin:80px 0;border-top:1px;border-color:#ccc}
 .clear{clear: both;}
+p{margin: 0;}
 
 /* 컬러설정 */
 .bg-blue{background-color: #5363f1;}
@@ -132,7 +139,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 /* 검색후 모달 */
 .section-content .main-content-P .result-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 693px; left: calc(50% - 500px/2); top: calc(50% - 693px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 6; flex-grow: 0; z-index: 7;}
 .section-content .main-content-P .result-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
-.section-content .main-content-P .result-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 8; top: 0; left: 0;}
+.result-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 8; top: 0; left: 0;}
 .result-modal .result-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 452px; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .result-modal .result-modal-title h3{margin: 0; width: 428px; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
 .result-modal .result-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
@@ -193,7 +200,34 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .join .join-content .agree-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 4px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0; flex-wrap: wrap;}
 .join .join-content .agree-form label{font-weight: 500; font-size: 12px; line-height: 20px; color: #828282; flex: none; order: 1; flex-grow: 0;}
 .join .join-content .agree-btn,.join .join-content .join-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
-.join .join-content .agree-btn button,.join .join-content .join-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer;}
+.join .join-content .agree-btn button,.join .join-content .join-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 600;}
+
+.join input[type=text], .join input[type=password], .join input[type=email]{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; height: 38px; gap: 10px; background: #ffffff; border: 1px solid #e2e2e2; border-radius: 8px; flex: none; order: 0; flex-grow: 1;}
+
+.join .join-content.enter-info{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 24px; max-width: 400px; width: 100%; flex: none; order: 1; flex-grow: 0;}
+.join .join-content .join-form-wrap{display: flex; flex-direction: column; align-items: flex-start; gap: 16px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.join .join-content .join-phone-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.join .join-content .join-phone-form .join-phone-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; max-width: 400xp; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.join .join-content .join-phone-form .join-phone-form-content input{max-width: 312px; width: calc(100% - 96px); font-weight: 500; line-height: 155%;}
+.join .join-content .join-phone-form .join-phone-form-content input::placeholder{color: #acacac;}
+.join .join-content .join-phone-form .join-phone-form-content .phone-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 80px; height: 38px; border: 1px solid #2c6ff0; border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #ffffff; cursor: pointer;}
+.join .join-content .join-phone-form p{font-size: 12px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 1; flex-grow: 0;}
+ 
+.join .join-content .cert-none{display: none;}
+
+.join .cert-on .join-phone-form input{background: #f5f5f5; border: 1px solid #e2e2e2; color: #828282;}
+.join .cert-on input{width: 100%; max-width: 400px;}
+.join .cert-on label{font-size: 12px; line-height: 100%; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.join .cert-on .join-form-wrap > div{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.join .join-content.cert-on .join-phone-form .join-phone-form-content .phone-cert{background: #fbfbfb; border: 1px solid #acacac; color: #acacac;}
+
+.error {display: none; font-size: 11px; font-weight: 600; line-height: 100%; color: #eb5757;}
+.invalid-form input:invalid {border: 1px solid #EB5757;}
+.invalid-form input:invalid + .error {display: block;}
+
+.join .result-modal-alert{width: 300px; left: calc(50% - 300px/2);}
+.join .result-modal-alert .alert-btn-set{justify-content: center;}
+.join .result-modal-alert .alert-login{width: 122px;}
 
 /* 이용약관&개인정보보호 */
 .terms p{font-weight: 800; font-size: 24px; line-height: 24px; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0; margin: 0;}

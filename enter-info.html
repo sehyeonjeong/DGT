@@ -22,13 +22,52 @@
     <section>
         <div class="section-content join">
             <p>회원가입</p>
-            <div class="join-content">
-                <div class="join-btn">
-                    <button class="lightgray-bg-btn" disabled>등기통 가입하기</button>
+            <form class="join-content enter-info">
+                <div class="join-form-wrap">
+                    <div class="join-phone-form">
+                        <label class="cert-none" for="phone">휴대폰번호 인증 (#휴대폰번호는 로그인 ID로 사용됩니다.)</label>
+                        <div class="join-phone-form-content">
+                            <input type="text" name="phone" id="phone" placeholder="본인의 휴대폰 번호를 입력하세요." maxlength="13" required>
+                            <button type="button" class="phone-cert main-blue-bg">인증</button>
+                            <span class="error"></span>
+                        </div>
+                        <p>* 휴대폰번호는 로그인 ID로 사용됩니다.</p>
+                    </div>
+                    <div class="join-pw-form cert-none">
+                        <label for="pw">비밀번호 *</label>
+                        <input type="password" name="pw" id="pw" required>
+                        <span class="error">필수입력 항목입니다.</span>
+                    </div>
+                    <div class="join-pwconfirm-form cert-none">
+                        <label for="pwconfirm">비밀번호 확인 *</label>
+                        <input type="password" name="pwconfirm" id="pwconfirm" required>
+                        <span class="error">필수입력 항목입니다.</span>
+                    </div>
+                    <div class="join-name-form cert-none">
+                        <label for="name">사용자 이름 *</label>
+                        <input type="text" name="name" id="name" required>
+                        <span class="error">필수입력 항목입니다.</span>
+                    </div>
+                    <div class="join-email-form cert-none">
+                        <label for="email">이메일 주소 (#이전 열람기록을 불러올 수 있습니다.) * </label>
+                        <input type="email" name="email" id="email" required> 
+                         <span class="error">잘못된 정보입니다.</span>
+                    </div>
                 </div>
-                <div class="join-modal-alert"></div>
-                <div class="join-modal-alert-dim"></div>
-            </div>
+                <div class="join-btn">
+                    <button class="lightgray-bg-btn" type="button" disabled>등기통 가입하기</button>
+                </div>
+                <div class="result-modal-alert">
+                    <p>가입이 완료되었습니다.</p>
+                    <div class="alert-btn-set">
+                        <button class="alert-login main-blue-bg" onclick="window.open('./login.html', '_self')">확인</button>
+                    </div>
+                    <button class="result-modal-alert-close">
+                        <img src="./images/close.svg" alt="로그인 안내 창 닫기">
+                    </button>
+                </div>
+                <div class="result-modal-alert-dim"></div>
+            </form>
         </div>
     </section>
     <!-- Footer -->
