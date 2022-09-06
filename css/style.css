@@ -34,6 +34,8 @@ b{font-weight: bold;}
 hr{margin:80px 0;border-top:1px;border-color:#ccc}
 .clear{clear: both;}
 p{margin: 0;}
+ul, dl{margin: 0; padding: 0;}
+li, dd{margin: 0; padding: 0; list-style: none;}
 
 /* 컬러설정 */
 .bg-blue{background-color: #5363f1;}
@@ -242,6 +244,64 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .main-info .notice-block dt{font-weight: 500px; font-size: 14px; line-height: 20px; flex: none; order: 0; flex-grow: 0;}
 .section-content .main-info .notice-block dd{font-weight: 500px; font-size: 14px; line-height: 20px; color: #828282; flex: none; order: 1; align-self: stretch; flex-grow: 0; margin: 0;}
 
+/* 등기열람 */
+
+/* 마이페이지 */
+.my-content{display: flex; flex-direction: column; align-items: center; padding: 0; width: 100vw; min-height: 444px; max-height: 578px; background: #f8faff; flex: none; order: 1; align-self: stretch; flex-grow: 0; z-index: 1;}
+.my-content .content-top{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px 0px; gap: 16px; max-width: 720px; width: 100%; flex: none; order: 0; flex-grow: 0;}
+.my-content .content-top p{font-weight: 600; font-size: 24px; line-height: 100%; text-align: center; color: #212122; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data{display: flex; flex-direction: column; align-items: flex-start; padding: 16px 0px 40px; gap: 10px; max-width: 720px; width: 100%; flex: none; order: 1; flex-grow: 0;}
+.my-content .my-data .profile-card{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 24px; gap: 16px; width: 100%; background: #ffffff; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.my-content .my-data .profile-card .profile-image{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 16px; width: 218px; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .profile-card .profile-image .profile-txt{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; flex: none; order: 1; flex-grow: 0;}
+.my-content .my-data .profile-card .profile-image .profile-txt .profile-name{font-weight: 500; font-size: 18px; line-height: 100%; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .profile-card .profile-image .profile-txt ul{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 6px; flex: none; order: 1; flex-grow: 0;}
+.my-content .my-data .profile-card .profile-image .profile-txt ul li{font-weight: 500; font-size: 14px; line-height: 100%; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .profile-card .profile-content-area{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 9px 16px; gap: 10px; max-width: 302px; width: 100%; height: 68px; flex: none; order: 1; align-self: stretch; flex-grow: 1;}
+.my-content .my-data .profile-card .profile-btn{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; min-width: 120px; flex: none; order: 2; flex-grow: 0;}
+.my-content .my-data .profile-card button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; width: 120px; height: 30px; flex: none; order: 0; align-self: stretch; flex-grow: 0; background: #ffffff; border-radius: 8px; cursor: pointer;}
+.my-content .my-data .profile-card button.change{border: 1px solid rgba(83,99,241,0.3); color: #5363F1;}
+.my-content .my-data .profile-card button.resignation{border: 1px solid #e3e3e3; color: #828282;}
+
+.my-content .my-data .ticket-card{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 24px; gap: 16px; width: 100%; background: #ffffff; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.my-content .my-data .ticket-card dl{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 10px; width: 89px; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .ticket-card dl dt{font-weight: 700; font-size: 12px; line-height: 100%; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .ticket-card dl dd{font-weight: 500; font-size: 21px; line-height: 100%; flex: none; order: 1; flex-grow: 0;}
+.my-content .my-data .ticket-card .ticket-content-area{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 16px; gap: 10px; max-width: 431px; width: 100%; height: 24px; flex: none; order: 1; flex-grow: 1;}
+.my-content .my-data .ticket-card .ticket-btn{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; min-width: 120px; flex: none; order: 2; flex-grow: 0;}
+.my-content .my-data .ticket-card button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; width: 120px; height: 30px; flex: none; order: 0; align-self: stretch; flex-grow: 0; background: #ffffff; border-radius: 8px; cursor: pointer; border: 1px solid #cbd0fb; color: #5363F1;}
+
+.my-content .my-data .cash-card{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 24px; gap: 16px; width: 100%; background: #ffffff; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.my-content .my-data .cash-card dl{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 10px; width: 167px; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .cash-card dl dt{font-weight: 700; font-size: 12px; line-height: 100%; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.my-content .my-data .cash-card dl dd{font-weight: 500; font-size: 21px; line-height: 100%; flex: none; order: 1; flex-grow: 0;}
+.my-content .my-data .cash-card .cash-content-area{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 16px; gap: 10px; max-width: 353px; width: 100%; height: 24px; flex: none; order: 1; flex-grow: 1;}
+.my-content .my-data .cash-card .cash-btn{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; min-width: 120px; flex: none; order: 2; flex-grow: 0;}
+.my-content .my-data .cash-card button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; width: 120px; height: 30px; flex: none; order: 0; align-self: stretch; flex-grow: 0; background: #ffffff; border-radius: 8px; cursor: pointer; border: 1px solid #cbd0fb; color: #5363F1;}
+
+.recent-content{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px; gap: 8px; max-width: 720px; width: 100%; flex: none; order: 2; flex-grow: 0; z-index: 2;}
+.recent-content .wrap-tap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.recent-content .wrap-tap .tap{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 4px; width: 263px; flex: none; order: 0; flex-grow: 0;}
+.recent-content .wrap-tap .tap button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 15px; gap: 10px; border-radius: 0; border: 0; font-weight: 600; line-height: 100%; cursor: pointer;}
+.recent-content .wrap-tap .tap button.on{background: #5363F1; border: 1px solid #5363F1; color: #ffffff;}
+.recent-content .wrap-tap .tap button.off{background: #ffffff; border: 1px solid #ffffff; color: #5363F1}
+.recent-content .wrap-tap .tap .btn-tap-00{width: 151px; height: 30px; flex: none; order: 0; flex-grow: 0;}
+.recent-content .wrap-tap .tap .btn-tap-01{width: 108px; height: 30px; flex: none; order: 1; flex-grow: 0;}
+
+.recent-content .wrap-tap .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+
+.recent-content .wrap-tap .recent-caution-wrap{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 8px 0px; gap: 2px; width: 100%; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.recent-content .wrap-tap .recent-caution-wrap .recent-caution{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 4px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.recent-content .wrap-tap .recent-caution-wrap .recent-caution .caution-img{display: flex; flex-direction: row; align-items: center; padding: 0; gap: 4px; flex: none; order: 0; flex-grow: 0;}
+.recent-content .wrap-tap .recent-caution-wrap .recent-caution p{font-weight: 500; font-size: 12px; line-height: 150%; display: flex; align-items: center; color: #9fa9cd; flex: none; order: 1; flex-grow: 1;}
+
+.recent-content .table{box-sizing: border-box; padding: 0; width: 100%; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0; border-spacing: 0; border-collapse: collapse; border-style: hidden; box-shadow: 0 0 0 1px #ededed; overflow: hidden;}
+
+.recent-content .table thead{background: #fbfaff;}
+.recent-content .table tr{width: 100%; height: 36px; border-bottom: 1px solid #ededed;}
+.recent-content .table tr th{font-weight: 700; font-size: 12px; padding: 8px;}
+.recent-content .table tr td{font-weight: 600;; font-size: 14px; color: #828282; padding: 8px;}
+
 @media (0px <= width <= 960px) {
 	.section-content .main-search p{font-size: 21px;}
 	.section-content .main-search .search{max-width: 720px; width: 100%;}
@@ -254,6 +314,8 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.section-content .main-content-P .result-wrap .result-card{max-width: 720px; width: calc(100vw - 48px);}
 	.section-content .main-content-P .result-wrap .result-card .type-address-wrap{max-width: 672px; width: calc(100vw - 96px);}
 	.section-content .main-content-P .result-wrap .result-card .type-address-wrap .type-address{max-width: 672px; width: calc(100vw - 96px);}
+	.my-content .my-data{width: calc(100vw - 48px);}
+	.recent-content .table{width: calc(100vw - 48px); margin: 0 auto;}
 }
 
 @media (0px <= width <= 599px) {
@@ -282,11 +344,6 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.result-modal .modal-request-btn{align-items: center; padding: 16px; gap: 10px; width: 100vw; height: 48px; flex: none; order: 3; border-radius: 0;}
 	.join .join-content .main-terms-content .main-terms textarea{max-height: 242px;} 
 }
-
-/* 등기열람 */
-
-/* 마이페이지 */
-.my-content{display: flex; flex-direction: column; align-items: center; padding: 0; width: 100vw; background: #f8faff; flex: none; order: 1; align-self: stretch; flex-grow: 0; z-index: 1;}
 
 /* Footer */
 #footer{position: relative; z-index: 1; width: 100vw; min-height: 210px; color: rgba(255, 255, 255, 0.7);}

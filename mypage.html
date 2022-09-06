@@ -22,45 +22,547 @@
     <section>
         <div class="section-content">
             <div class="my-content">
-                <p>내정보</p>
-                <div class="proflie-card">
-                    <div class="profile-image">
-                        <img src="./images/profile.svg" alt="프로필이미지">
-                    </div>
-                    <div class="profile-txt">
-                        <div class="profile-name">OOO님</div>
-                        <p class="phone">010-0000-0000</p>
-                        <p class="email">subjun85@naver.com</p>
-                    </div>
-                    <div class="profile-content-area"></div>
-                    <div class="profile-btn">
-                        <button class="change">정보수정</button>
-                        <button class="resignation">탈퇴신청</button>
-                    </div>
+                <div class="content-top">
+                    <p>내정보</p>
                 </div>
-                <div class="ticket-card">
-                    <dl>
-                        <dt>사용가능한 열람권</dt>
-                        <dd>20개</dd>
-                    </dl>
-                    <div class="ticket-content-area"></div>
-                    <div class="ticket-btn"> 
-                        <button class="buy">열람권 구매 +</button>
+                <div class="my-data">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="./images/profile.svg" alt="프로필이미지">
+                            <div class="profile-txt">
+                                <div class="profile-name main-blue">OOO님</div>
+                                <ul>
+                                    <li class="phone">010-0000-0000</li>
+                                    <li class="email">subjun85@naver.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="profile-content-area"></div>
+                        <div class="profile-btn">
+                            <button class="change">정보수정</button> 
+                            <button class="resignation">탈퇴신청</button>
+                        </div>
                     </div>
-                </div>
-                <div class="cash-card">
-                    <dl>
-                        <dt>전자민원캐시</dt>
-                        <dd>R7874659 - 2617</dd>
-                    </dl>
-                    <div class="cash-content-area"></div>
-                    <div class="cash-btn">
-                        <button class="modify">변경</button>
+                    <div class="ticket-card">
+                        <dl>
+                            <dt>사용가능한 열람권</dt>
+                            <dd class="main-blue">20개</dd>
+                        </dl>
+                        <div class="ticket-content-area"></div>
+                        <div class="ticket-btn"> 
+                            <button class="buy">열람권 구매 +</button>
+                        </div>
+                    </div>
+                    <div class="cash-card">
+                        <dl>
+                            <dt>전자민원캐시</dt>
+                            <dd class="main-blue">R7874659 - 2617</dd>
+                        </dl>
+                        <div class="cash-content-area"></div>
+                        <div class="cash-btn">
+                            <button class="modify">변경</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="history-content">
-                    
+            <div class="recent-content">
+                <div class="wrap-tap">
+                    <div class="tap">
+                        <button class="btn-tap-00 on">등기 열람권 이용 내역</button>
+                        <button class="btn-tap-01 off">최근 구매내역</button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="recent-caution-wrap">
+                        <div class="recent-caution">
+                            <div class="caution-img">
+                                <img src="./images/caution.svg" alt="주의사항">
+                            </div>
+                            <p>최신 30건까지 보여집니다. 이전 정보가 필요하시면 1:1 문의를 남겨주세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="main-blue">일시</th>
+                            <th class="main-blue">내용</th>
+                            <th class="main-blue">잔여 열람권</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-06-01 13:41</td>
+                            <td>등기열람권
+                            <span>
+                                -30회
+                                환불/패널티
+                            </span>
+                            <span class="ng-binding ng-hide">
+                                
+                                
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            29회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-06-01 13:24</td>
+                            <td>등기열람권
+                            <span>
+                                30회
+                                결제 충전
+                            </span>
+                            <span class="ng-binding ng-hide">
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            59회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-06-01 12:39</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            29회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-05-19 23:47</td>
+                            <td>등기열람권
+                            <span>
+                                30회
+                                결제 충전
+                            </span>
+                            <span class="ng-binding ng-hide">
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            30회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-01-14 09:57</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            0회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-01-09 23:01</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            1회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2022-01-03 13:44</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            2회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-28 16:08</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            3회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-28 16:05</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            4회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-25 17:03</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            5회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-25 17:02</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                1회
+                                등기 차감
+                            </span>
+                            <span>
+                                환불 (열람 실패 등)
+                                
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            6회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-25 16:57</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            5회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-25 12:34</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            6회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-23 15:20</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            7회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-17 10:46</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                1회
+                                등기 차감
+                            </span>
+                            <span>
+                                환불 (열람 실패 등)
+                                
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            8회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-17 10:46</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            7회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-17 10:39</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                1회
+                                등기 차감
+                            </span>
+                            <span>
+                                환불 (열람 실패 등)
+                                
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            8회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-17 10:39</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            7회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-10 13:04</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            8회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-08 10:46</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            9회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-02 12:57</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            10회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-02 10:43</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            11회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-12-01 16:26</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            12회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-30 21:17</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            13회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-30 21:14</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            14회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-30 14:59</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            15회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-16 14:49</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            16회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-15 19:58</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            17회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-15 16:27</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            18회</td>
+                        </tr>
+                        <tr ng-repeat="recentLog in recentLogList" class="ng-scope">
+                            <td>2021-11-15 12:45</td>
+                            <td>등기열람권
+                            <span class="ng-binding ng-hide">
+                                -1회
+                                등기 차감
+                            </span>
+                            <span>
+                                
+                                이용
+                            </span>
+                            </td>
+                            <td>
+                            등기열람권
+                            19회</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
