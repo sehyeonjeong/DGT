@@ -54,10 +54,10 @@ li, dd{margin: 0; padding: 0; list-style: none;}
 #header{overflow: auto; height: 56px;}
 
 .menu-wrap{width: 100vw; height: 56px; position: fixed; z-index: 4;}
-.menu{max-width: 1440px; height: 56px; margin: 0 auto;}
-.menu .title{height: 32px; float: left; margin-top: 14px; margin-left: 24px;}
+.menu{max-width: 720px; height: 56px; margin: 0 auto; padding: 0px 24px;}
+.menu .title{height: 32px; float: left; margin-top: 14px;}
 .menu .title img{height: 100%;}
-.menu .nav{float: right; margin-right: 24px;}
+.menu .nav{float: right;}
 .menu .nav > ul{display: inline-block; margin: 20px 0 0 0; position: relative;}
 .menu .nav > ul > li{list-style-type: none; float: left; margin-left: 32px; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 100%; opacity: 0.6;}
 .menu .nav > ul > li.on{opacity: 1;}
@@ -71,7 +71,7 @@ li, dd{margin: 0; padding: 0; list-style: none;}
 .menu .nav .my-data-menu ul li:last-child{border-bottom: 0px;}
 .menu .nav .my-data-menu ul li a{display: block; font-size: 12px; line-height: 134%; font-style: normal; font-weight: 600; letter-spacing: -0.01em; padding: 8px;}
 
-.nav-btn{float: right; margin: 16px 24px; cursor: pointer;}
+.nav-btn{float: right; margin: 16px 0px; cursor: pointer;}
 .nav-btn-in{position: absolute; left: -40px; top: 16px; cursor: pointer;}
 
 .m-nav-wrap{position: fixed; right: -280px; width: 240px; height: 100vh; background: #ffffff; z-index: 4; text-align: left;}
@@ -246,6 +246,32 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 
 /* 등기열람 */
 
+.section-content .registered-content{display: flex; flex-direction: column; align-items: center; padding: 40px 0px 0px; max-width: 720px; width: 100%; flex: none; order: 1; flex-grow: 1; z-index: 1;}
+.section-content .registered-content .content-top{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px 0px; gap: 16px; width: 100%; flex: none; order: 1; flex-grow: 0; z-index: 1;}
+.section-content .registered-content .content-top .registered-title-wrap{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 16px 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0; flex-wrap: wrap;}
+.section-content .registered-content .content-top .registered-title-wrap .registered-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 4px; max-width: 532px; width: calc(100% - 188px);}
+.registered-title .result-count{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 4px; flex: none; order: 0; flex-grow: 0; font-weight: 600; font-size: 24px; line-height: 100%; text-align: center; color: #212122;}
+.section-content .registered-content .content-top .registered-title-wrap .registered-search{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 0px 16px; gap: 16px; width: 180px; height: 30px; border: 1px solid #5363F1; border-radius: 16px; flex: none; order: 1; flex-grow: 0;}
+.registered-search::placeholder{color: #bdc3c7;}
+.section-content .registered-content .content-top .registered-title-wrap .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.section-content .registered-content .content-top .registered-caution{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 8px 0px; gap: 2px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.section-content .registered-content .content-top .registered-caution li{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 4px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0; font-weight: 500; font-size: 12px; line-height: 150%; color: #9fa9cd;}
+.section-content .registered-content .content-top .registered-caution li .caution-img{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 4px; width: 12px; height: 18px; flex: none; order: 0; flex-grow: 0;}
+.section-content .registered-content .registered-wrap-keyword{display: flex; flex-direction: row; align-items: flex-start; padding: 32px 0px 16px; gap: 8px; width: 100%; flex: none; order: 2; flex-grow: 0; z-index: 2;}
+.section-content .registered-content .registered-wrap-keyword .keyword{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 10px; gap: 2px; height: 24px; flex: none; order: 0; flex-grow: 0; border-radius: 8px; background: #ffffff; font-weight: 500; font-size: 12px; line-height: 100%; cursor: pointer;}
+.section-content .registered-content .registered-wrap-keyword .keyword.on{background: #5363F1; border: 0; color: #ffffff;}
+.section-content .registered-content .registered-wrap-keyword .keyword.off{background: #f4f7ff; border: 1px solid #cbd0fb; color: #5363F1;}
+.section-content .registered-content .registered-wrap-keyword .edit-keyword{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 10px; gap: 2px; height: 24px; border: 1px dashed #cbd0fb; border-radius: 8px; background-color: #ffffff; flex: none; order: 7; flex-grow: 0; font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #5363f1; flex: none; order: 0; flex-grow: 0; cursor: pointer;}
+.section-content .registered-content .registered-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px 0px 32px; gap: 16px; isolation: isolate; width: 100%; flex: none; order: 3; flex-grow: 0; z-index: 3;}
+.section-content .registered-content .registered-wrap .registered-card{box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; padding: 24px; gap: 10px; width: 100%; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 0; align-self: stretch; flex-grow: 0; z-index: 9;}
+.section-content .registered-content .registered-wrap .registered-card .date-sms{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 16px; max-width: 672px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.section-content .registered-content .registered-wrap .registered-card .date-sms p{width: calc(100% - 140px); font-weight: 500; font-size: 12px; line-height: 20px; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
+.section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 124px; flex: none; order: 1; flex-grow: 0;}
+.section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 9px; height: 20px; border: 1px solid #cbd0fb; border-radius: 4px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 12px; line-height: 12px; text-align: center; background: #ffffff; cursor: pointer;}
+.section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn .sms{width: 75px;}
+.section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn .card-delete{width: 41px;}
+.section-content .registered-content .registered-wrap .registered-card .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+
 /* 마이페이지 */
 .my-content{display: flex; flex-direction: column; align-items: center; padding: 0; width: 100vw; min-height: 444px; max-height: 578px; background: #f8faff; flex: none; order: 1; align-self: stretch; flex-grow: 0; z-index: 1;}
 .my-content .content-top{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px 0px; gap: 16px; max-width: 720px; width: 100%; flex: none; order: 0; flex-grow: 0;}
@@ -299,8 +325,8 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 
 .recent-content .table thead{background: #fbfaff;}
 .recent-content .table tr{width: 100%; height: 36px; border-bottom: 1px solid #ededed;}
-.recent-content .table tr th{font-weight: 700; font-size: 12px; padding: 8px;}
-.recent-content .table tr td{font-weight: 600;; font-size: 14px; color: #828282; padding: 8px;}
+.recent-content .table tr th{font-weight: 700; font-size: 12px; padding: 8px 16px;}
+.recent-content .table tr td{font-weight: 600;; font-size: 14px; color: #828282; padding: 8px 16px;}
 
 @media (0px <= width <= 960px) {
 	.section-content .main-search p{font-size: 21px;}
