@@ -245,8 +245,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .main-info .notice-block dd{font-weight: 500px; font-size: 14px; line-height: 20px; color: #828282; flex: none; order: 1; align-self: stretch; flex-grow: 0; margin: 0;}
 
 /* 등기열람 */
-
-.section-content .registered-content{display: flex; flex-direction: column; align-items: center; padding: 40px 0px 0px; max-width: 720px; width: 100%; flex: none; order: 1; flex-grow: 1; z-index: 1;}
+.section-content .registered-content{display: flex; flex-direction: column; align-items: center; padding: 0px; max-width: 720px; width: 100%; flex: none; order: 1; flex-grow: 1; z-index: 1;}
 .section-content .registered-content .content-top{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px 0px; gap: 16px; width: 100%; flex: none; order: 1; flex-grow: 0; z-index: 1;}
 .section-content .registered-content .content-top .registered-title-wrap{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 16px 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0; flex-wrap: wrap;}
 .section-content .registered-content .content-top .registered-title-wrap .registered-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 4px; max-width: 532px; width: calc(100% - 188px);}
@@ -263,6 +262,8 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .registered-content .registered-wrap-keyword .keyword.off{background: #f4f7ff; border: 1px solid #cbd0fb; color: #5363F1;}
 .section-content .registered-content .registered-wrap-keyword .edit-keyword{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 10px; gap: 2px; height: 24px; border: 1px dashed #cbd0fb; border-radius: 8px; background-color: #ffffff; flex: none; order: 7; flex-grow: 0; font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #5363f1; flex: none; order: 0; flex-grow: 0; cursor: pointer;}
 .section-content .registered-content .registered-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px 0px 32px; gap: 16px; isolation: isolate; width: 100%; flex: none; order: 3; flex-grow: 0; z-index: 3;}
+.section-content .registered-content .registered-wrap.no-result{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0px; gap: 16px; width: 100%; min-height: 400px; flex: none; order: 3; flex-grow: 0;}
+.section-content .registered-content .registered-wrap.no-result .empty-result{display: flex; flex-direction: column; justify-content: center; padding: 0px; flex: none; order: 0; flex-grow: 0;}
 .section-content .registered-content .registered-wrap .registered-card{box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; padding: 24px; gap: 10px; width: 100%; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 0; align-self: stretch; flex-grow: 0; z-index: 9;}
 .section-content .registered-content .registered-wrap .registered-card .date-sms{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 16px; max-width: 672px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .section-content .registered-content .registered-wrap .registered-card .date-sms p{width: calc(100% - 140px); font-weight: 500; font-size: 12px; line-height: 20px; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
@@ -270,7 +271,23 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 9px; height: 20px; border: 1px solid #cbd0fb; border-radius: 4px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 12px; line-height: 12px; text-align: center; background: #ffffff; cursor: pointer;}
 .section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn .sms{width: 75px;}
 .section-content .registered-content .registered-wrap .registered-card .date-sms .sms-btn .card-delete{width: 41px;}
-.section-content .registered-content .registered-wrap .registered-card .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.section-content .registered-content .registered-wrap .registered-card .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.section-content .registered-content .registered-wrap .registered-card .line1{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 3; align-self: stretch; flex-grow: 0;}
+.section-content .registered-content .registered-wrap .registered-card .registered-cont{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 16px; isolation: isolate; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.registered-card .registered-cont .type-address-wrap{box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0; z-index: 3;}
+.registered-card .registered-cont .type-address-wrap .type-address{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 10px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.registered-card .registered-cont .type-address-wrap .type-address .type{font-weight: 700; font-size: 12px; line-height: 100%; text-align: center; flex: none; order: 0; flex-grow: 0;}
+.registered-card .registered-cont .type-address-wrap .type-address .address{font-weight: 600; font-size: 16px; line-height: 130%; color: #828282; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.registered-card .registered-cont .type-address-wrap .add-code{font-weight: 400; font-size: 12px; line-height: 100%; text-align: center; color: 828282; flex: none; order: 1; flex-grow: 0;}
+.registered-card .registered-cont .keyword-btn{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 6px; isolation: isolate; width: 100%; flex: none; order: 2; align-self: stretch; flex-grow: 0; z-index: 2;}
+.registered-card .registered-cont .keyword-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 10px; gap: 2px; height: 24px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; z-index: 0; font-weight: 500; font-size: 12px; line-height: 12px; text-align: center; cursor: pointer;}
+.registered-card .registered-cont .keyword-btn .keyword{background: #f4f7ff; border: 1px solid #cbd0fb;}
+.registered-card .registered-cont .keyword-btn .edit-keyword{background: #ffffff; border: 1px dashed #cbd0fb;}
+.registered-card .registered-cont .registered-btn{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 4; align-self: stretch; flex-grow: 0; z-index: 0;}
+.registered-card .registered-cont .registered-btn button{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; height: 32px; border-radius: 8px; flex: none; order: 0; flex-grow: 1; background: #ffffff; font-size: 12px; line-height: 12px; text-align: center; cursor: pointer;}
+.registered-card .registered-cont .registered-btn .on{border: 1px solid #cbd0fb}
+.registered-card .registered-cont .registered-btn .off{border: 1px solid rgba(171,171,171,.4); color: #ababab;}
+.registered-content .result-modal{display: none;}
 
 /* 마이페이지 */
 .my-content{display: flex; flex-direction: column; align-items: center; padding: 0; width: 100vw; min-height: 444px; max-height: 578px; background: #f8faff; flex: none; order: 1; align-self: stretch; flex-grow: 0; z-index: 1;}
