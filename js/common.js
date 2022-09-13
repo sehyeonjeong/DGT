@@ -157,6 +157,16 @@ $(document).on('click', '.join-btn', function () {
     .fadeIn();
 });
 
+// 키워드 추가 및 수정 모달 오픈
+$(document).on('click', '.registered-wrap-keyword .edit-keyword', function () {
+    $('.result-modal-alert-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.result-modal-alert').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
 //gototop
 $(document).on('click', '.gototop', function(){
     $("html, body").animate({scrollTop:0}, '100');
