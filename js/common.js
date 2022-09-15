@@ -159,20 +159,70 @@ $(document).on('click', '.join-btn', function () {
 
 // 키워드 추가 및 수정 모달 오픈
 $(document).on('click', '.registered-wrap-keyword .edit-keyword', function () {
-    $('.result-modal-alert-dim').css("display", "flex")
+    $('.registered-modal-dim').css("display", "flex")
     .hide()
     .fadeIn();
-    $('.result-modal-alert').css("display", "flex")
+    $('.registered-modal').css("display", "flex")
     .hide()
     .fadeIn();
 });
+
+// 키워드 추가 및 수정 모달 닫기
+$(document).on('click', '.modal-agree-btn', function () {
+    $('.registered-modal-dim').fadeOut();
+    $('.registered-modal').fadeOut();
+});
+
+// 키워드 추가 및 수정 모달 쉐도우 영역 클릭
+$(document).on('click', '.registered-modal-dim', function () {
+    $('.registered-modal-dim').fadeOut();
+    $('.registered-modal').fadeOut();
+});
+
+//키워드 수정 버튼 클릭
+$(document).on('click', '.keyword-edit-list', function () {
+    $('.list-depth').hide();
+    $(this).find('.list-depth').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+//키워드 추가 버튼 클릭
+$(document).on('click', '.keyword-btn .edit-keyword', function () {
+    $('.keyword-add').hide();
+    $(this).parent().find('.keyword-add').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+//키워드 추가 버튼 클릭 > 확인
+$(document).on('click', '.keyword-add > button', function () {
+    $('.keyword-add').fadeOut();
+});
+
+//키워드토글
+$(document).on('click', '.keyword-add-btn button', function () {
+    $(this).toggleClass('on main-blue');
+    $(this).toggleClass('off');
+});
+
+//마이페이지 테이블 탭
+$(document).on('click', '.wrap-tab .tab button', function () {
+    var activeTab = $(this).attr('data-tab');
+    $('.wrap-tab .tab button').removeClass('on');
+    $('.table').removeClass('on');
+    $(this).addClass('on');
+    $('#' + activeTab).addClass('on');
+
+});
+
 
 //gototop
 $(document).on('click', '.gototop', function(){
     $("html, body").animate({scrollTop:0}, '100');
     return false;
 });
-$(window).scroll( function() {
+$(window).scroll( function() { 
     if ( $( this ).scrollTop() > 500 ) {$( '.gototop' ).fadeIn();} 
     else {$('.gototop').fadeOut();}
 });
