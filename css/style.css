@@ -17,6 +17,10 @@ input[type=checkbox] {display: none;}
 input[type=checkbox] + label {display: inline-block; cursor: pointer; padding-left: 28px; background: url(../images/checker-off.svg) no-repeat;}
 input[type=checkbox]:checked + label {background: url(../images/checker-on.svg) no-repeat;}
 
+input[type=radio] {display: none;}
+input[type=radio] + label {display: inline-block; cursor: pointer; padding-left: 28px; background: url(../images/checker-off.svg) no-repeat;}
+input[type=radio]:checked + label {background: url(../images/checker-on.svg) no-repeat;}
+
 input[type=text]:hover, input[type=password]:hover, input[type=email]:hover{background: #f4f7ff !important; border: 1px solid #e0e0e0 !important;}
 input[type=text]:focus, input[type=password]:focus, input[type=password]:focus{background: #FFFFFF !important; border: 1px solid #5363F1 !important;}
 form.was-validated input:invalid {
@@ -329,7 +333,6 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .my-content .my-data .profile-card button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; width: 120px; height: 30px; flex: none; order: 0; align-self: stretch; flex-grow: 0; background: #ffffff; border-radius: 8px; cursor: pointer;}
 .my-content .my-data .profile-card button.change{border: 1px solid rgba(83,99,241,0.3); color: #5363F1;}
 .my-content .my-data .profile-card button.resignation{border: 1px solid #e3e3e3; color: #828282;}
-
 .my-content .my-data .ticket-card{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 24px; gap: 16px; width: 100%; background: #ffffff; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
 .my-content .my-data .ticket-card dl{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 10px; width: 89px; flex: none; order: 0; flex-grow: 0;}
 .my-content .my-data .ticket-card dl dt{font-weight: 700; font-size: 12px; line-height: 100%; color: #828282; flex: none; order: 0; flex-grow: 0;}
@@ -337,7 +340,6 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .my-content .my-data .ticket-card .ticket-content-area{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 16px; gap: 10px; max-width: 431px; height: 24px; flex: none; order: 1; flex-grow: 1;}
 .my-content .my-data .ticket-card .ticket-btn{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; min-width: 120px; flex: none; order: 2; flex-grow: 0;}
 .my-content .my-data .ticket-card button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; width: 120px; height: 30px; flex: none; order: 0; align-self: stretch; flex-grow: 0; background: #ffffff; border-radius: 8px; cursor: pointer; border: 1px solid #cbd0fb; color: #5363F1;}
-
 .my-content .my-data .cash-card{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 24px; gap: 16px; width: 100%; background: #ffffff; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
 .my-content .my-data .cash-card dl{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 10px; width: 167px; flex: none; order: 0; flex-grow: 0;}
 .my-content .my-data .cash-card dl dt{font-weight: 700; font-size: 12px; line-height: 100%; color: #828282; flex: none; order: 0; flex-grow: 0;}
@@ -345,7 +347,6 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .my-content .my-data .cash-card .cash-content-area{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 16px; gap: 10px; max-width: 353px; height: 24px; flex: none; order: 1; flex-grow: 1;}
 .my-content .my-data .cash-card .cash-btn{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; min-width: 120px; flex: none; order: 2; flex-grow: 0;}
 .my-content .my-data .cash-card button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 16px; gap: 10px; width: 120px; height: 30px; flex: none; order: 0; align-self: stretch; flex-grow: 0; background: #ffffff; border-radius: 8px; cursor: pointer; border: 1px solid #cbd0fb; color: #5363F1;}
-
 .recent-content{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px; gap: 8px; max-width: 720px; width: 100%; flex: none; order: 2; flex-grow: 0; z-index: 2;}
 .recent-content .wrap-tab{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .recent-content .wrap-tab .tab{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 4px; width: 263px; flex: none; order: 0; flex-grow: 0;}
@@ -353,14 +354,11 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .recent-content .wrap-tab .tab button.on{background: #5363F1; border: 1px solid #5363F1; color: #ffffff;}
 .recent-content .wrap-tab .tab .btn-tab-00{width: 151px; height: 30px; flex: none; order: 0; flex-grow: 0;}
 .recent-content .wrap-tab .tab .btn-tab-01{width: 108px; height: 30px; flex: none; order: 1; flex-grow: 0;}
-
 .recent-content .wrap-tab .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
-
 .recent-content .wrap-tab .recent-caution-wrap{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 8px 0px; gap: 2px; width: 100%; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
 .recent-content .wrap-tab .recent-caution-wrap .recent-caution{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 4px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .recent-content .wrap-tab .recent-caution-wrap .recent-caution .caution-img{display: flex; flex-direction: row; align-items: center; padding: 0; gap: 4px; flex: none; order: 0; flex-grow: 0;}
 .recent-content .wrap-tab .recent-caution-wrap .recent-caution p{font-weight: 500; font-size: 12px; line-height: 150%; display: flex; align-items: center; color: #9fa9cd; flex: none; order: 1; flex-grow: 1;}
-
 .recent-content .table{display: none; box-sizing: border-box; padding: 0; width: 100%; border: 1px solid #ededed; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0; border-spacing: 0; border-collapse: collapse; border-style: hidden; box-shadow: 0 0 0 1px #ededed; overflow: hidden;}
 .recent-content .table.on{display: table;}
 .recent-content .table thead{background: #fbfaff;}
@@ -368,6 +366,49 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .recent-content .table tr th{font-weight: 700; font-size: 12px; padding: 8px 16px;}
 .recent-content .table tr td{font-weight: 600;; font-size: 14px; color: #828282; padding: 8px 16px;}
 .recent-content .table .ng-hide{display: none;}
+
+/* 마이페이지 모달 */
+.ticket-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 752px; left: calc(50% - 500px/2); top: calc(50% - 752px/2); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
+.ticket-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
+.ticket-modal .ticket-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 452px; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.ticket-modal .ticket-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
+.ticket-modal .ticket-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
+.ticket-modal .ticket-modal-content-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 32px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.ticket-modal .ticket-modal-content-form .ticket-modal-content{display: flex; flex-direction: column; align-items: flex-end; padding: 0px; gap: 24px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap{display: flex; flex-direction: column; align-items: flex-end; padding: 0; gap: 16px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .ticket-select-list{display: flex; flex-direction: column; align-items: flex-end; padding: 0px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px 2px; gap: 10px; width: 100%; height: 40px; border-width: 1px 0px 0px; border-style: solid; border-color: #dadfe9; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li:last-child{border-width: 1px 0;}
+.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li label{font-weight: 600; font-size: 14px; text-align: center; color: #828282;}
+.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li .frame{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 10px; gap: 10px; height: 20px; flex: none; order: 2; flex-grow: 1;}
+.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li p{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 3; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .minwon-cash{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px; gap: 8px; width: 221px; height: 36px; background: #f4f7ff; border: 1px solid #cbd0fb; border-radius: 8px; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .minwon-cash label{font-weight: 500; font-size: 14px; color: #8b95a1; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-content .calculation{display: flex; flex-direction: row; align-items: flex-end; padding: 0px; gap: 8px; max-width: 399px; height: 44px; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 8px; max-width: 282px; height: 40px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; color: #828282;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap{display: flex; flex-direction: column; align-items: flex-end; padding: 0px; gap: 4px; width: 115px; height: 40px; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .minwon-label{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 4px 8px; gap: 10px; width: 97px; height: 18px; background: #ffedca; border-radius: 40px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 10px; line-height: 100%; text-align: center; color: #ec9d00; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost{display: flex; flex-direction: row; align-items: flex-end; padding: 0px; gap: 4px; width: 115px; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-txt{font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #c2c2c2; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-num{display: flex; flex-direction: column; align-items: flex-start; padding: 0; width: 59px; height: 18px; flex: none; order: 1; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; text-decoration-line: line-through; color: #c2c2c2;}
+.ticket-modal-content .calculation .service-cost-wrap .service-cost{display: flex; flex-direction: row; align-items: flex-end; padding: 0px; gap: 4px; width: 119px; height: 18px; flex: none; order: 2; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .service-cost .service-txt{font-size: 12px; line-height: 100%; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .total-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 10px; width: 109px; height: 44px; flex: none; order: 1; flex-grow: 0; font-weight: 700; font-size: 19px; line-height: 100%; text-align: center;}
+.ticket-modal-content .calculation .total-cost-wrap .total-txt{font-weight: 500; font-size: 12px; line-height: 100%; text-align: right; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .total-cost-wrap .total-num{font-weight: 600; font-size: 24px; line-height: 100%; text-align: center; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-btn{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.ticket-modal-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; width: 140px; height: 42px; background: #ffffff; border: 1px solid #cbd0fb; border-radius: 8px; flex: none; order: 0; flex-grow: 1; cursor: pointer; font-weight: 700; font-size: 14px; line-height: 100%; text-align: center;}
+.ticket-modal .line{width: 100%; height: 0; border: 1px solid #ededed; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.ticket-modal .notice{font-weight: 500; font-size: 14px; line-height: 130%; color: #acacac; flex: none; order: 3; align-self: stretch; flex-grow: 0; width: 452px;}
+.ticket-modal .notice li{list-style-type: disc; margin-left: 20px; margin-top: 8px;}
+
+.ticket-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 32px; gap: 24px; isolation: isolate; position: fixed; width: 366px; height: 171px; left: calc(50% - 366px/2); top: calc(50% - 171px/2 + 0.5px); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.ticket-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
+.ticket-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0;}
+.ticket-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; justify-content: center; padding: 0px; gap: 16px; width: 302px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1;}
+.ticket-modal-alert .alert-btn-set .alert-failed{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 122px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
+.ticket-modal-alert .ticket-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
+
 
 @media (0px <= width <= 960px) {
 	.section-content .main-search p{font-size: 21px;}
@@ -382,6 +423,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.section-content .main-content-P .result-wrap .result-card .type-address-wrap{max-width: 672px; width: calc(100vw - 96px);}
 	.section-content .main-content-P .result-wrap .result-card .type-address-wrap .type-address{max-width: 672px; width: calc(100vw - 96px);}
 	.my-content .my-data{width: calc(100vw - 48px);}
+	.recent-content .wrap-tab{width: calc(100vw - 48px); margin: 0 auto;}
 	.recent-content .table{width: calc(100vw - 48px); margin: 0 auto;}
 
 	.my-content .content-top{max-width: 720px; width: calc(100vw - 48px);}
@@ -433,6 +475,18 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.my-content .my-data .cash-card .cash-content-area{display: none;}
 	.my-content .my-data .cash-card .cash-btn{width: 100%;}
 	.my-content .my-data .cash-card button{width: 100%;}
+
+	/* 등기열람권 충전하기 모달 */
+	.section-content .ticket-modal{border-radius: 0; width: 100vw; height: 100vh; top: 0; left: 0; padding: 0; gap: 0; justify-content: flex-start;}
+	.section-content .ticket-modal .ticket-modal-title{box-sizing: border-box; padding: 16px 24px; width: 100vw; height: 56px; border-bottom: 1px solid #f2f2f2;}
+	.section-content .ticket-modal .ticket-modal-content-form{box-sizing: border-box; padding: 32px 24px;}
+	.section-content .ticket-modal .ticket-modal-btn{flex-direction: column;}
+	.section-content .ticket-modal .ticket-modal-btn button{width: 100%;}
+	.ticket-modal .notice{padding: 32px 24px; width: 100%; box-sizing: border-box;}
+	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li{height: 54px; flex-direction: column; align-items: flex-start; gap: 8px;}
+	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li label{background-position-y: 11px; padding-bottom: 20px; margin-bottom: -20px;}
+	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li .frame{display: none;}
+	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li p{margin-left: 29px;}
 }
 
 @media (0px <= width <= 398px) {

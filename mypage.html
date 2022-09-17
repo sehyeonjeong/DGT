@@ -81,7 +81,7 @@
                                     <p>500 X (등기소700원 + 서비스400원)</p>
                                 </li>
                                 <li>
-                                    <input type="radio" name="ticket-count" id="100ea" value="100"> 
+                                    <input type="radio" name="ticket-count" id="100ea" value="100" checked> 
                                     <label for="100ea">100회 등기열람권</label>
                                     <div class="frame"></div>
                                     <p>100 X (등기소700원 + 서비스400원)</p>
@@ -102,28 +102,70 @@
                                     <input type="radio" name="ticket-count" id="10ea" value="10"> 
                                     <label for="10ea">10회 등기열람권</label>
                                     <div class="frame"></div>
-                                    <p>10 X (등기소700원 + 서비스400원)</p>
+                                    <p>10 X (등기소700원 + 서비스700원)</p>
                                 </li>
                                 <li>
                                     <input type="radio" name="ticket-count" id="1ea" value="1"> 
                                     <label for="1ea">1회 등기열람권</label>
                                     <div class="frame"></div>
-                                    <p>1 X (등기소700원 + 서비스400원)</p>
+                                    <p>1 X (등기소700원 + 서비스800원)</p>
                                 </li>
                             </ul>
                             <div class="minwon-cash">
-                                <input type="checkbox" name="minwon-cash" id="MC" value="minwon">
+                                <input type="checkbox" name="minwon-cash" id="MC" value="minwon" checked>
                                 <label for="MC">전자민원캐시로 등기수수료 결제</label>
                             </div>
                         </div>
-                        <div class="total-cost">
-
+                        <div class="calculation">
+                            <div class="service-cost-wrap">
+                                <div class="commission-wrap">
+                                    <div class="minwon-label on">전자민원캐시로 결제</div>
+                                    <div class="commission-cost">
+                                        <div class="commission-txt">등기수수료</div>
+                                        <div class="commission-num">70,000</div>
+                                    </div>
+                                </div>
+                                +
+                                <div class="service-cost">
+                                   <div class="service-txt">서비스금액</div>
+                                   <div class="service-num">40,000</div>
+                                </div>
+                                =
+                            </div>
+                            <div class="total-cost-wrap">
+                                <p class="main-blue">총</p>
+                                <div class="total-cost">
+                                    <div class="total-txt">결제금액</div>
+                                    <div class="total-num main-blue">40,000</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="ticket-modal-btn">
+                        <button class="main-blue">신용카드 결제</button>
+                        <button class="main-blue">가상계좌 입금</button>
+                        <button class="main-blue">실시간 계좌이체</button>
+                    </div>
                 </form>
-                <div class="ticket-m-frame"></div>
+                <div class="line"></div>
+                <ul class="notice">
+                    <p>등기열람권 환불 정책 알림</p>
+                    <li>등기열람권 사용분 환불 불가(바로바로에서 등기부등본을 열람할 수 있었다면 등기열람권을 사용한 것으로 간주)</li>
+                    <li>등기열람권 미사용분은 결제일포함 7일까지 100%, 1개월까지 80%, 3개월까지 50%, 그 이후는 환불 불가능 (예: 등기열람권 40회를 40,000원에 결제, 20회 사용, 결제 3주 후 환불금 = 20회 * 1,000원 * 80% = 16,000원)</li>
+                    <li>등기열람권 결제 후 6개월이 지나면 사용 불가(등기열람권 유효기간 6개월)</li>
+                </ul>
             </div>
             <div class="ticket-modal-dim"></div>
+            <div class="ticket-modal-alert">
+                <p>결제에 실패했습니다.</p>
+                <div class="alert-btn-set">
+                    <button class="alert-failed main-blue-bg">확인</button>
+                </div>
+                <button class="ticket-modal-alert-close">
+                    <img src="./images/close.svg" alt="결제실패 창 닫기">
+                </button>
+            </div>
+            <div class="ticket-modal-alert-dim"></div>
             <div class="recent-content">
                 <div class="wrap-tab">
                     <div class="tab">

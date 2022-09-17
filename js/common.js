@@ -216,6 +216,51 @@ $(document).on('click', '.wrap-tab .tab button', function () {
 
 });
 
+// 등기열람 충전 모달 오픈
+$(document).on('click', '.ticket-btn .buy', function () {
+    $('.ticket-modal-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.ticket-modal').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+// 등기열람 충전 모달 닫기
+$(document).on('click', '.ticket-modal-close', function () {
+    $('.ticket-modal-dim').fadeOut();
+    $('.ticket-modal').fadeOut();
+});
+
+// 등기열람 충전 모달 쉐도우 영역 클릭
+$(document).on('click', '.ticket-modal-dim', function () {
+    $('.ticket-modal-dim').fadeOut();
+    $('.ticket-modal').fadeOut();
+});
+
+// 결제실패 경고창 오픈
+$(document).on('click', '.ticket-modal-btn button', function () {
+    $('.ticket-modal-alert-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.ticket-modal-alert').css("display", "flex")
+    .hide()
+    .fadeIn();
+
+    return false;
+});
+
+// 결제실패 경고창 닫기
+$(document).on('click', '.ticket-modal-alert-close, .alert-failed', function () {
+    $('.ticket-modal-alert-dim').fadeOut();
+    $('.ticket-modal-alert').fadeOut();
+});
+
+// 결제실패 경고창 쉐도우 영역 클릭
+$(document).on('click', '.ticket-modal-alert-dim', function () {
+    $('.ticket-modal-alert-dim').fadeOut();
+    $('.ticket-modal-alert').fadeOut();
+});
 
 //gototop
 $(document).on('click', '.gototop', function(){
