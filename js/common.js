@@ -31,6 +31,10 @@ $(window).resize(function(){
     };
 }).resize(); 
 
+$('.search input').on('input', function(){
+    if('')
+})
+
 // 모바일 메뉴버튼 클릭
 $(document).on('click', '.nav-btn', function () {
     gsap.to('.m-nav-wrap', {duration: 0.3, right: 0});
@@ -97,7 +101,6 @@ $(document).on('click', '.result-modal-alert-dim', function () {
 });
 
 // 체크박스가 체크되면 버튼 활성화 되게 만들기
-    
 $('.agree-form input[type="checkbox"]').click(function(){
     var tmpp = $(this).prop('checked'); 
     // this를 사용하여 클릭한 checkbox 가 체크되도록 설정
@@ -131,6 +134,26 @@ document.querySelectorAll("input").forEach(input => {
     });
 })
 
+// 회원가입 검증
+$(document).on('click', '.join-btn button', function () {
+    if(fjrm.pw.value == ""){
+        $('.join-content').addClass('invalid-form');
+    }else if(fjrm.pwconfirm.value == ""){
+        $('.join-content').addClass('invalid-form');
+    }else if(fjrm.name.value == ""){
+        $('.join-content').addClass('invalid-form');
+    }else if(fjrm.email.value == ""){
+        $('.join-content').addClass('invalid-form');
+    } else{
+        $('.result-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.result-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+    }
+});
+
 //폰번호 입력
 $('#phone').keydown(function(event) {
     var key = event.charCode || event.keyCode || 0;
@@ -148,14 +171,14 @@ $('#phone').keydown(function(event) {
 });
 
 // 회원가입 모달 오픈
-$(document).on('click', '.join-btn', function () {
-    $('.result-modal-alert-dim').css("display", "flex")
-    .hide()
-    .fadeIn();
-    $('.result-modal-alert').css("display", "flex")
-    .hide()
-    .fadeIn();
-});
+// $(document).on('click', '.join-btn', function () {
+//     $('.result-modal-alert-dim').css("display", "flex")
+//     .hide()
+//     .fadeIn();
+//     $('.result-modal-alert').css("display", "flex")
+//     .hide()
+//     .fadeIn();
+// });
 
 // 키워드 추가 및 수정 모달 오픈
 $(document).on('click', '.registered-wrap-keyword .edit-keyword', function () {
@@ -260,6 +283,88 @@ $(document).on('click', '.ticket-modal-alert-close, .alert-failed', function () 
 $(document).on('click', '.ticket-modal-alert-dim', function () {
     $('.ticket-modal-alert-dim').fadeOut();
     $('.ticket-modal-alert').fadeOut();
+});
+
+// 정보수정 모달 오픈
+$(document).on('click', '.profile-btn .change', function () {
+    $('.change-modal-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.change-modal').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+// 정보수정 모달 닫기
+$(document).on('click', '.change-modal-close, .change-btn button', function () {
+    $('.change-modal-dim').fadeOut();
+    $('.change-modal').fadeOut();
+});
+
+// 정보수정 모달 쉐도우 영역 클릭
+$(document).on('click', '.change-modal-dim', function () {
+    $('.change-modal-dim').fadeOut();
+    $('.change-modal').fadeOut();
+});
+
+// 전자민원캐시 모달 오픈
+$(document).on('click', '.cash-btn button ', function () {
+    $('.minwoncash-modal-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.minwoncash-modal').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+// 전자민원캐시 모달 닫기
+$(document).on('click', '.minwoncash-modal-close, .minwoncash-btn button', function () {
+    $('.minwoncash-modal-dim').fadeOut();
+    $('.minwoncash-modal').fadeOut();
+});
+
+// 전자민원캐시 모달 쉐도우 영역 클릭
+$(document).on('click', '.minwoncash-modal-dim', function () {
+    $('.minwoncash-modal-dim').fadeOut();
+    $('.minwoncash-modal').fadeOut();
+});
+
+// 전자민원캐시 인증
+$(document).on('click', '.pw-cert', function () {
+    $(this).addClass('on').text('인증완료');
+    $('.cash-card dl dd').text('R7874659 - 2617');
+    $('.modify').text('변경');
+});
+
+// 비밀번호 찾기 모달 오픈
+$(document).on('click', '.pw-lose', function () {
+    $('.findpw-modal-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.findpw-modal').css("display", "flex")
+    .hide()
+    .fadeIn();
+});
+
+// 비밀번호 찾기 모달 닫기
+$(document).on('click', '.findpw-modal-close', function () {
+    $('.findpw-modal-dim').fadeOut();
+    $('.findpw-modal').fadeOut();
+});
+
+// 비밀번호 찾기 모달 확인
+$(document).on('click', '.findpw-btn button', function () {
+    if(fprm.email.value == ""){
+    }else{
+        $('.findpw-modal-dim').fadeOut();
+        $('.findpw-modal').fadeOut();
+    }
+});
+
+// 비밀번호 찾기 모달 쉐도우 영역 클릭
+$(document).on('click', '.findpw-modal-dim', function () {
+    $('.findpw-modal-dim').fadeOut();
+    $('.findpw-modal').fadeOut();
 });
 
 //gototop

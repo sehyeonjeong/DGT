@@ -27,12 +27,33 @@
                     <input type="text" placeholder="이곳에 인증하신 휴대폰 번호를 입력해주세요." name="" id="">
                     <input type="password" placeholder="이곳에 비밀번호를 입력해주세요." name="" id="">
                 </div>
-                <p class="pw-lose">비밀번호를 잊어 버리셨습니까? <span class="main-blue"><a href="">비밀번호 찾기</a></span></p>
+                <p class="pw-lose">비밀번호를 잊어 버리셨습니까? <span class="main-blue"><a>비밀번호 찾기</a></span></p>
                 <div class="main-login-btn-wrap">
                     <button class="main-login-btn main-blue-bg" onclick="window.open('./index.html', '_self');">로그인</button>
                     <p>등기통 계정이 없으신가요? <span class="main-blue"><a href="./join.html">회원가입</a></span></p>
                 </div>
             </div>
+            <div class="findpw-modal">
+                <div class="findpw-modal-title">
+                    <h3>비밀번호 찾기</h3>
+                    <button class="findpw-modal-close"><img src="./images/close.svg" alt="등기열람 닫기"></button>
+                </div>
+                <form class="findpw-modal-content-form" name="fprm">
+                    <p>회원가입 시 등록된 이메일로 임시비밀번호를 보내드립니다.</p>
+                    <div class="findpw-form-wrap">
+                        <div class="findpw-email-form">
+                            <label for="email">이메일 주소* </label>
+                            <input type="email" name="email" id="email" required> 
+                            <span class="error">등록된 이메일 주소가 아닙니다.</span>
+                        </div>
+                    </div>
+                    <div class="findpw-m-frame"></div>
+                    <div class="findpw-btn">
+                        <button class="main-blue-bg-btn" type="submit">확인</button>
+                    </div>
+                </form>
+            </div>
+            <div class="findpw-modal-dim"></div>
         </div>
     </section>
     <!-- Footer -->

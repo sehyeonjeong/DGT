@@ -56,17 +56,17 @@
                     <div class="cash-card">
                         <dl>
                             <dt>전자민원캐시</dt>
-                            <dd class="main-blue">R7874659 - 2617</dd>
+                            <dd class="main-blue">-</dd>
                         </dl>
                         <div class="cash-content-area"></div>
                         <div class="cash-btn">
-                            <button class="modify">변경</button>
+                            <button class="modify">등록</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="ticket-modal">
-                <div class="ticket-modal-title">
+               x <div class="ticket-modal-title">
                     <h3>등기열람권 충전하기</h3>
                     <button class="ticket-modal-close"><img src="./images/close.svg" alt="등기열람 닫기"></button>
                 </div>
@@ -157,7 +157,7 @@
             </div>
             <div class="ticket-modal-dim"></div>
             <div class="ticket-modal-alert">
-                <p>결제에 실패했습니다.</p>
+                <p>결제에 실패 했습니다.</p>
                 <div class="alert-btn-set">
                     <button class="alert-failed main-blue-bg">확인</button>
                 </div>
@@ -166,6 +166,84 @@
                 </button>
             </div>
             <div class="ticket-modal-alert-dim"></div>
+            <div class="change-modal">
+                <div class="change-modal-title">
+                    <h3>정보수정</h3>
+                    <button class="change-modal-close"><img src="./images/close.svg" alt="등기열람 닫기"></button>
+                </div>
+                <form action="" class="change-modal-content-form">
+                    <div class="change-form-wrap">
+                        <div class="change-phone-form">
+                            <label for="phone">휴대폰번호 인증 (#휴대폰번호는 로그인 ID로 사용됩니다.)</label>
+                            <div class="change-phone-form-content">
+                                <input type="text" name="phone" id="phone" placeholder="010-0000-0000" maxlength="13" required disabled>
+                                <button type="button" class="phone-cert">인증완료</button>
+                                <span class="error"></span>
+                            </div>
+                        </div>
+                        <div class="change-pw-form">
+                            <label for="pw">비밀번호 *</label>
+                            <input type="password" name="pw" id="pw" placeholder="*******" required>
+                            <span class="error">필수입력 항목입니다.</span>
+                        </div>
+                        <div class="change-pwconfirm-form">
+                            <label for="pwconfirm">비밀번호 확인 *</label>
+                            <input type="password" name="pwconfirm" id="pwconfirm" placeholder="*******" required>
+                            <span class="error">필수입력 항목입니다.</span>
+                        </div>
+                        <div class="change-name-form">
+                            <label for="name">사용자 이름 *</label>
+                            <input type="text" name="name" id="name" required placeholder="홍길동">
+                            <span class="error">필수입력 항목입니다.</span>
+                        </div>
+                        <div class="change-email-form">
+                            <label for="email">이메일 주소 (#이전 열람기록을 불러올 수 있습니다.) * </label>
+                            <input type="email" name="email" id="email" required placeholder="jeongnnnn@gmail.com"> 
+                             <span class="error">잘못된 정보입니다.</span>
+                        </div>
+                    </div>
+                    <div class="change-m-frame"></div>
+                    <div class="change-btn">
+                        <button class="main-blue-bg-btn" type="button">저장</button>
+                    </div>
+                </form>
+            </div>
+            <div class="change-modal-dim"></div>
+            <div class="minwoncash-modal">
+                <div class="minwoncash-modal-title">
+                    <h3>전자민원캐시 사용</h3>
+                    <button class="minwoncash-modal-close"><img src="./images/close.svg" alt="등기열람 닫기"></button>
+                </div>
+                <form action="" class="minwoncash-modal-content-form">
+                    <div class="minwoncash-form-wrap">
+                        <div class="minwoncash-number-form">
+                            <label for="mw-number">전자민원캐시 번호</label>
+                            <div><input type="text" name="mw-number1" id="mw-number" required>-<input type="text" name="mw-number2" id="mw-number" required></div>
+                            <span class="error">필수입력 항목입니다.</span>
+                        </div>
+                        <div class="minwoncash-pw-form">
+                            <label for="mw-pw">비밀번호</label>
+                            <div class="minwoncash-pw-form-content">
+                                <input type="password" name="mw-pw" id="mw-pw" maxlength="13" required>
+                                <button type="button" class="pw-cert">인증하기</button>
+                                <span class="error"></span>
+                            </div>
+                        </div>
+                        <ul class="notice">
+                            <li>구매하신 등기열람권을 사용하실 때마다, <span>입력하신 전자민원캐시에서 등기열람권 수수료 700원이 차감되기 때문에, 정확한 정보의 입력이 필요합니다</spa>.</li>
+                            <li>전자민원캐시를 미리 구입, 충전하셔야 바로바로 서비스를 사용할 수 있습니다. <a href="https://minwon.cashgate.co.kr/main.do" class="link" target="_blank">[전자민원캐시 바로가기]</a></li>
+                            <li>입력하신 결제정보(전자민원캐시번호 등)는 법원 인터넷등기소 시스템에 저장되어 열람ㆍ발급, 결제취소 및 열람ㆍ발급내역 조회 시 비밀번호로 이용됩니다.</li>
+                            <li>전자민원캐시 등기열람권을 구매하시더라도 기본 등기열람권이 남아 있다면, 기본 등기열람권을 먼저 사용합니다.</li>
+                            <li>해당 정보는 재판 및 수사를 위한 자료로도 활용될 수 있고, 법원 인터넷 등기소에 영구적으로 보관되며 수집 및 이용에 동의하시지 않을 경우 열람ㆍ발급 서비스를 이용하실 수 없습니다. <a href="http://www.iros.go.kr/" class="link"  target="_blank">[인터넷등기소 바로가기]</a></l>
+                        </ul>
+                    </div>
+                    <div class="minwoncash-m-frame"></div>
+                    <div class="minwoncash-btn">
+                        <button class="main-blue-bg-btn" type="button">위 내용에 동의합니다.</button>
+                    </div>
+                </form>
+            </div>
+            <div class="minwoncash-modal-dim"></div>
             <div class="recent-content">
                 <div class="wrap-tab">
                     <div class="tab">

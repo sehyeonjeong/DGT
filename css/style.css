@@ -147,7 +147,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .main-content-P .result-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
 .result-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 8; top: 0; left: 0;}
 .result-modal .result-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 452px; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
-.result-modal .result-modal-title h3{margin: 0; width: 428px; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
+.result-modal .result-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
 .result-modal .result-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
 .modal-content{display: flex; flex-direction: column; gap: 32px;}
 .modal-type-address-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 16px; width: 452px; height: 112px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
@@ -196,6 +196,25 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .login .login-content .main-login-btn-wrap .main-login-btn{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; width: 100%; height: 44px; border-radius: 8px; flex: none; order: 0; align-self: stretch; flex-grow: 0; border: 0; color: #ffffff; font-weight: 700; font-size: 16px; cursor: pointer;}
 .login .login-content .main-login-btn-wrap p{font-weight: 500; color: #828282; flex: none; order: 1; align-self: stretch; flex-grow: 0; margin: 0; text-align: center;}
 
+/* 패스워드 찾기 */
+.findpw-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; min-height: 266px; left: calc(50% - 500px/2); top: calc(50% - 266px/2); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
+.findpw-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
+.findpw-modal .findpw-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.findpw-modal .findpw-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
+.findpw-modal .findpw-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
+.findpw-modal input[type=text], .findpw-modal input[type=password], .findpw-modal input[type=email]{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; height: 38px; gap: 10px; background: #ffffff; border: 1px solid #e2e2e2; border-radius: 8px; flex: none; order: 0; flex-grow: 1;}
+.findpw-modal .findpw-modal-content-form{display: flex; flex-direction: column; align-items: flex-start; gap: 24px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.findpw-modal .findpw-modal-content-form p{font-weight: 600; font-size: 13px; line-height: 148%; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
+.findpw-modal .findpw-modal-content-form .findpw-form-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 16px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.findpw-modal .findpw-modal-content-form .findpw-form-wrap label{font-size: 13px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
+.findpw-modal .findpw-modal-content-form .findpw-form-wrap input{width: 100%;}
+.findpw-modal .findpw-phone-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.findpw-modal .findpw-phone-form .findpw-phone-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.findpw-modal .findpw-form-wrap > div{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.findpw-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.findpw-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; height: 44px; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 700; font-size: 16px;}
+.findpw-m-frame{display: none;}
+
 /* 회원가입 */
 .join > p{font-weight: 800; font-size: 24px; line-height: 24px; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0; margin: 0;}
 .join .join-content{display: flex; flex-direction: column; align-items: center; padding: 0px; gap: 16px; max-width: 560px; width: 100%; flex: none; order: 1; flex-grow: 0;}
@@ -213,24 +232,20 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .join .join-content.enter-info{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 24px; max-width: 400px; width: 100%; flex: none; order: 1; flex-grow: 0;}
 .join .join-content .join-form-wrap{display: flex; flex-direction: column; align-items: flex-start; gap: 16px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .join .join-content .join-phone-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
-.join .join-content .join-phone-form .join-phone-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; max-width: 400xp; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.join .join-content .join-phone-form .join-phone-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .join .join-content .join-phone-form .join-phone-form-content input{max-width: 312px; width: calc(100% - 96px); font-weight: 500; line-height: 155%;}
 .join .join-content .join-phone-form .join-phone-form-content input::placeholder{color: #acacac;}
 .join .join-content .join-phone-form .join-phone-form-content .phone-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 80px; height: 38px; border: 1px solid #2c6ff0; border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #ffffff; cursor: pointer;}
 .join .join-content .join-phone-form p{font-size: 12px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 1; flex-grow: 0;}
- 
 .join .join-content .cert-none{display: none;}
-
 .join .cert-on .join-phone-form input{background: #f5f5f5; border: 1px solid #e2e2e2; color: #828282;}
 .join .cert-on input{width: 100%; max-width: 400px;}
 .join .cert-on label{font-size: 12px; line-height: 100%; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0;}
 .join .cert-on .join-form-wrap > div{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
 .join .join-content.cert-on .join-phone-form .join-phone-form-content .phone-cert{background: #fbfbfb; border: 1px solid #acacac; color: #acacac;}
-
 .error {display: none; font-size: 11px; font-weight: 600; line-height: 100%; color: #eb5757;}
 .invalid-form input:invalid {border: 1px solid #EB5757;}
 .invalid-form input:invalid + .error {display: block;}
-
 .join .result-modal-alert{width: 300px; left: calc(50% - 300px/2);}
 .join .result-modal-alert .alert-btn-set{justify-content: center;}
 .join .result-modal-alert .alert-login{width: 122px;}
@@ -392,7 +407,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-txt{font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #c2c2c2; flex: none; order: 0; flex-grow: 0;}
 .ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-num{display: flex; flex-direction: column; align-items: flex-start; padding: 0; width: 59px; height: 18px; flex: none; order: 1; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; text-decoration-line: line-through; color: #c2c2c2;}
 .ticket-modal-content .calculation .service-cost-wrap .service-cost{display: flex; flex-direction: row; align-items: flex-end; padding: 0px; gap: 4px; width: 119px; height: 18px; flex: none; order: 2; flex-grow: 0;}
-.ticket-modal-content .calculation .service-cost-wrap .service-cost .service-txt{font-size: 12px; line-height: 100%; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .service-cost .service-txt{font-size: 13px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
 .ticket-modal-content .calculation .total-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 10px; width: 109px; height: 44px; flex: none; order: 1; flex-grow: 0; font-weight: 700; font-size: 19px; line-height: 100%; text-align: center;}
 .ticket-modal-content .calculation .total-cost-wrap .total-txt{font-weight: 500; font-size: 12px; line-height: 100%; text-align: right; color: #828282; flex: none; order: 0; flex-grow: 0;}
 .ticket-modal-content .calculation .total-cost-wrap .total-num{font-weight: 600; font-size: 24px; line-height: 100%; text-align: center; flex: none; order: 1; flex-grow: 0;}
@@ -402,6 +417,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .ticket-modal .notice{font-weight: 500; font-size: 14px; line-height: 130%; color: #acacac; flex: none; order: 3; align-self: stretch; flex-grow: 0; width: 452px;}
 .ticket-modal .notice li{list-style-type: disc; margin-left: 20px; margin-top: 8px;}
 
+/* 결제 실패 안내 */
 .ticket-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 32px; gap: 24px; isolation: isolate; position: fixed; width: 366px; height: 171px; left: calc(50% - 366px/2); top: calc(50% - 171px/2 + 0.5px); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
 .ticket-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
 .ticket-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0;}
@@ -409,6 +425,54 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .ticket-modal-alert .alert-btn-set .alert-failed{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 122px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
 .ticket-modal-alert .ticket-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
 
+/* 정보수정 */
+.change-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 531px; left: calc(50% - 500px/2); top: calc(50% - 531px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
+.change-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
+.change-modal .change-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 452px; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.change-modal .change-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
+.change-modal .change-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
+.change-modal input[type=text], .change-modal input[type=password], .change-modal input[type=email]{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; height: 38px; gap: 10px; background: #ffffff; border: 1px solid #e2e2e2; border-radius: 8px; flex: none; order: 0; flex-grow: 1;}
+.change-modal .change-modal-content-form{display: flex; flex-direction: column; align-items: center; gap: 24px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.change-modal .change-modal-content-form .change-form-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 16px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.change-modal .change-modal-content-form .change-form-wrap label{font-size: 13px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
+.change-modal .change-modal-content-form .change-form-wrap input{width: 100%;}
+.change-modal .change-phone-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.change-modal .change-phone-form .change-phone-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.change-modal .change-phone-form .change-phone-form-content input{width: calc(100% - 96px); font-weight: 500; line-height: 155%; background: #fbfbfb;}
+.change-modal .change-phone-form .change-phone-form-content input::placeholder{color: #acacac;}
+.change-modal .change-phone-form .change-phone-form-content .phone-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 90px; height: 38px; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #828282;}
+.change-modal .change-phone-form p{font-size: 12px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 1; flex-grow: 0;}
+.change-modal .cert-none{display: none;}
+.change-modal .change-form-wrap > div{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.change-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.change-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; height: 44px; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 700; font-size: 16px;}
+.change-m-frame{display: none;}
+
+/* 전자민원캐시 사용 */
+.minwoncash-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 571px; left: calc(50% - 500px/2); top: calc(50% - 571px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
+.minwoncash-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
+.minwoncash-modal .minwoncash-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 452px; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.minwoncash-modal .minwoncash-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
+.minwoncash-modal .minwoncash-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
+.minwoncash-modal input[type=text], .minwoncash-modal input[type=password], .minwoncash-modal input[type=email]{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; height: 38px; gap: 10px; background: #ffffff; border: 1px solid #e2e2e2; border-radius: 8px; flex: none; order: 0; flex-grow: 1;}
+.minwoncash-modal .minwoncash-modal-content-form{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 24px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.minwoncash-modal .minwoncash-modal-content-form .minwoncash-form-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 16px; width: 100%; flex: none; order: 0; flex-grow: 0;}
+.minwoncash-modal .minwoncash-modal-content-form .minwoncash-form-wrap label{font-size: 13px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
+.minwoncash-modal .minwoncash-modal-content-form .minwoncash-form-wrap input{width: 100%;}
+.minwoncash-modal .minwoncash-form-wrap > div{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.minwoncash-number-form div{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 8px; width: 100%; height: 38px; flex: none; order: 1; align-self: stretch; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; color: #828282;}
+.minwoncash-number-form div input{width: calc(50% - 12px) !important;}
+.minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content input{width: calc(100% - 96px); font-weight: 500; line-height: 155%;}
+.minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content .pw-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 90px; height: 38px; border: 1px solid rgba(83,99,241,0.3); border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #5363F1; background: #ffffff;}
+.minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.minwoncash-modal .notice{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.minwoncash-modal .notice li{list-style: disc; margin-left: 20px; font-weight: 500; font-size: 13px; line-height: 145%; color: #828282; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.minwoncash-modal .notice li span{color: #EB5757;}
+.minwoncash-modal .notice li .link{color: #2f80ed;}
+.minwoncash-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.minwoncash-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; height: 44px; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 600; font-weight: 700; font-size: 16px;}
+.minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content .pw-cert.on{border: 0; background: #f2f2f2; color: #bdbdbd;}
+.minwoncash-m-frame{display: none;}
 
 @media (0px <= width <= 960px) {
 	.section-content .main-search p{font-size: 21px;}
@@ -487,6 +551,26 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li label{background-position-y: 11px; padding-bottom: 20px; margin-bottom: -20px;}
 	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li .frame{display: none;}
 	.ticket-modal-content .ticket-select-list-wrap .ticket-select-list li p{margin-left: 29px;}
+
+	/* 정보수정 모달 */
+	.section-content .change-modal{border-radius: 0; width: 100vw; height: 100vh; top: 0; left: 0; padding: 0; gap: 0; justify-content: flex-start;}
+	.section-content .change-modal .change-modal-title{box-sizing: border-box; padding: 16px 24px; width: 100vw; height: 56px; border-bottom: 1px solid #f2f2f2;}
+	.change-modal .change-modal-content-form{flex-grow: 1;}
+	.change-modal .change-modal-content-form .change-form-wrap{padding: 32px 24px; box-sizing: border-box;}
+	.change-m-frame{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 16px; width: 100vw; height: 116px; flex: none; order: 2; align-self: stretch; flex-grow: 1;}
+	.change-btn button{border-radius: 0;}
+
+	/* 전자민원캐시 모달 */
+	.section-content .minwoncash-modal{border-radius: 0; width: 100vw; height: 100vh; top: 0; left: 0; padding: 0; gap: 0; justify-content: flex-start;}
+	.section-content .minwoncash-modal .minwoncash-modal-title{box-sizing: border-box; padding: 16px 24px; width: 100vw; height: 56px; border-bottom: 1px solid #f2f2f2;}
+	.minwoncash-modal .minwoncash-modal-content-form{flex-grow: 1;}
+	.minwoncash-modal .minwoncash-modal-content-form .minwoncash-form-wrap{padding: 32px 24px; box-sizing: border-box;}
+	.minwoncash-m-frame{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 16px; width: 100vw; height: 116px; flex: none; order: 2; align-self: stretch; flex-grow: 1;}
+	.minwoncash-btn button{border-radius: 0;}
+
+	/* 비밀번호 찾기 모달 */
+	.section-content .findpw-modal{width: calc(100vw - 48px); left: calc(50% - 100vw/2 + 24px);}
+
 }
 
 @media (0px <= width <= 398px) {
