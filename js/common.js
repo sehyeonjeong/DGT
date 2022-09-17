@@ -32,8 +32,12 @@ $(window).resize(function(){
 }).resize(); 
 
 $('.search input').on('input', function(){
-    if('')
-})
+    if($('.search input').val()==''){
+
+    }else{
+        
+    }
+});
 
 // 모바일 메뉴버튼 클릭
 $(document).on('click', '.nav-btn', function () {
