@@ -340,6 +340,11 @@ $(document).on('click', '.pw-cert', function () {
     $('.modify').text('변경');
 });
 
+// 민원캐시 on/off
+$(document).on('click', '.minwon-cash label', function () {
+    $('.minwon-cash').toggleClass('on');
+});
+
 // 비밀번호 찾기 모달 오픈
 $(document).on('click', '.pw-lose', function () {
     $('.findpw-modal-dim').css("display", "flex")

@@ -51,11 +51,11 @@ li, dd{margin: 0; padding: 0; list-style: none;}
 .lightgray-bg-btn{background-color: #f5f5f5; color: #afafaf;}
 
 /* Breakpoint */
-@media (0px <= width <= 599px) {.xs{display: block;} .xl{display: none;}}
-@media (600px <= width <= 10000px) {.xs{display: none;} .xl{display: block;}}
+@media screen and (max-width:599px) {.xs{display: block;} .xl{display: none;}}
+@media screen and(min-width:600px) and (max-width: 10000px) {.xs{display: none;} .xl{display: block;}}
 
 /* Header */
-#header{overflow: auto; height: 56px;}
+#header{overflow: visible; height: 56px;}
 
 .menu-wrap{width: 100vw; height: 56px; position: fixed; z-index: 4;}
 .menu{max-width: 720px; height: 56px; margin: 0 auto; padding: 0px 24px;}
@@ -96,7 +96,7 @@ li, dd{margin: 0; padding: 0; list-style: none;}
 .m-my-data .nologin dt{display: none;}
 .m-my-data .nologin dd{font-size: 14px; margin: 0; line-height: 150%;}
 
-.m-nav-dim{display:none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); top: 0; left: 0;}
+.m-nav-dim{display:none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); top: 0; left: 0; z-index: 3;}
 
 /* Content */
 section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; background-color: #ffffff;}
@@ -109,7 +109,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .main-search p{font-weight: 500; font-size: 30px; line-height: 100%; color: #ffffff; flex: none; order: 0; flex-grow: 0; margin: 0;}
 .section-content .main-search .search{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; width: 720px; height: 40px; flex: none; order: 1; flex-grow: 0; position: relative;}
 .section-content .main-search .search input{box-sizing:  border-box; display: flex; flex-direction: row; align-items: center; padding: 16px 20px 16px 24px; gap: 4px; width: 720px; height: 40px; background: #ffffff; border: 1px solid #3937C8; border-radius: 60px; flex: none; order: 0; flex-grow: 1;}
-.section-content .main-search .search button{width: 24px; height: 24px; border: 0; background: transparent; position: absolute; top: 8px; right: 20px; cursor: pointer;}
+.section-content .main-search .search button{width: 24px; height: 24px; border: 0; background: transparent; position: absolute; top: 8px; right: 20px; cursor: pointer; padding: 0;}
 
 /* 메인컨텐츠 */
 
@@ -383,7 +383,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .recent-content .table .ng-hide{display: none;}
 
 /* 마이페이지 모달 */
-.ticket-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 752px; left: calc(50% - 500px/2); top: calc(50% - 752px/2); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
+.ticket-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 752px; left: calc(50% - 500px/2); top: calc(50% - 752px/2); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 10000; transform: translate3d(0, 0, 200px);}
 .ticket-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
 .ticket-modal .ticket-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 452px; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .ticket-modal .ticket-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
@@ -397,7 +397,8 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .ticket-modal-content .ticket-select-list-wrap .ticket-select-list li label{font-weight: 600; font-size: 14px; text-align: center; color: #828282;}
 .ticket-modal-content .ticket-select-list-wrap .ticket-select-list li .frame{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 10px; gap: 10px; height: 20px; flex: none; order: 2; flex-grow: 1;}
 .ticket-modal-content .ticket-select-list-wrap .ticket-select-list li p{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 3; flex-grow: 0;}
-.ticket-modal-content .ticket-select-list-wrap .minwon-cash{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px; gap: 8px; width: 221px; height: 36px; background: #f4f7ff; border: 1px solid #cbd0fb; border-radius: 8px; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .minwon-cash{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px; gap: 8px; width: 221px; height: 36px;  border-radius: 8px; border: 1px solid #dadfe9; background: #ffffff; flex: none; order: 1; flex-grow: 0;}
+.ticket-modal-content .ticket-select-list-wrap .minwon-cash.on{background: #f4f7ff; border: 1px solid #cbd0fb;}
 .ticket-modal-content .ticket-select-list-wrap .minwon-cash label{font-weight: 500; font-size: 14px; color: #8b95a1; flex: none; order: 1; flex-grow: 0;}
 .ticket-modal-content .calculation{display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-end; padding: 0px; gap: 8px; flex: none; order: 1; flex-grow: 0; flex-wrap: wrap;}
 .ticket-modal-content .calculation .service-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 8px; height: 40px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; color: #828282;}
@@ -474,7 +475,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content .pw-cert.on{border: 0; background: #f2f2f2; color: #bdbdbd;}
 .minwoncash-m-frame{display: none;}
 
-@media (0px <= width <= 960px) {
+@media screen and (max-width:960px) {
 	.section-content .main-search p{font-size: 21px;}
 	.section-content .main-search .search{max-width: 720px; width: 100%;}
 	.section-content .main-search .search input{max-width: 720px; width: calc(100vw - 48px);}
@@ -493,7 +494,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.my-content .content-top{max-width: 720px; width: calc(100vw - 48px);}
 }
 
-@media (0px <= width <= 599px) {
+@media screen and (max-width:599px) {
 	.section-content .main-content-P .content-top .result-count{font-size: 18px;}
 	.section-content .main-content-P .result-wrap{padding: 32px 16px; width: calc(100vw - 32px);}
 	.section-content .main-content-P .result-wrap .result-card{padding: 16px; width: calc(100vw - 32px);}
@@ -541,7 +542,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.my-content .my-data .cash-card button{width: 100%;}
 
 	/* 등기열람권 충전하기 모달 */
-	.section-content .ticket-modal{border-radius: 0; width: 100vw; height: 100vh; top: 0; left: 0; padding: 0; gap: 0; justify-content: flex-start;}
+	.section-content .ticket-modal{border-radius: 0; width: 100vw; height: 100vh; top: 0; left: 0; padding: 0; gap: 0; justify-content: flex-start; overflow: scroll;}
 	.section-content .ticket-modal .ticket-modal-title{box-sizing: border-box; padding: 16px 24px; width: 100vw; height: 56px; border-bottom: 1px solid #f2f2f2;}
 	.section-content .ticket-modal .ticket-modal-content-form{box-sizing: border-box; padding: 32px 24px;}
 	.section-content .ticket-modal .ticket-modal-btn{flex-direction: column;}
@@ -573,11 +574,11 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 
 }
 
-@media (0px <= width <= 398px) {
+@media screen and (max-width:398px) {
 	.registered-modal{width: calc(100vw - 48px); left: calc(50% - 100vw/2 + 24px);}
 }
 
-@media (0px <= width <= 768px) {
+@media screen and (max-width:768px) {
 	.section-content .registered-content{max-width: 720px; width: calc(100vw - 48px);}
 }
 
