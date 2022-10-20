@@ -27,17 +27,9 @@ $(window).resize(function(){
     if (window.innerWidth < 960) {  // 디바이스 크기가 960미만일때 
         $(".search input").attr("placeholder", "주소를 검색하세요.");
     } else {
-        $(".search input").attr("placeholder", "주소를 검색해 원하는 등기를 쉽고 빠르게 열람하세요.");
+        $(".search input").attr("placeholder", "도로명 주소 또는 지번 주소를 입력해주세요.(공동주택의 경우  동 · 호수까지 입력)");
     };
 }).resize(); 
-
-$('.search input').on('input', function(){
-    if($('.search input').val()==''){
-
-    }else{
-        
-    }
-});
 
 // 모바일 메뉴버튼 클릭
 $(document).on('click', '.nav-btn', function () {
@@ -265,6 +257,12 @@ $(document).on('click', '.ticket-modal-dim', function () {
     $('.ticket-modal').fadeOut();
 });
 
+// 등기열람 도큐먼트 on/off
+$(document).on('click', '.modal-docu-opt-cont label', function () {
+    $(this).parent().toggleClass('on');
+});
+
+
 // 결제실패 경고창 오픈
 $(document).on('click', '.ticket-modal-btn button', function () {
     $('.ticket-modal-alert-dim').css("display", "flex")
@@ -374,6 +372,30 @@ $(document).on('click', '.findpw-btn button', function () {
 $(document).on('click', '.findpw-modal-dim', function () {
     $('.findpw-modal-dim').fadeOut();
     $('.findpw-modal').fadeOut();
+});
+
+// 비밀번호 찾기 안내창 오픈
+$(document).on('click', '.findpw-btn button', function () {
+    $('.findpw-modal-alert-dim').css("display", "flex")
+    .hide()
+    .fadeIn();
+    $('.findpw-modal-alert').css("display", "flex")
+    .hide()
+    .fadeIn();
+
+    return false;
+});
+
+// 비밀번호 찾기 안내창 닫기
+$(document).on('click', '.findpw-modal-alert-close, .alert-failed', function () {
+    $('.findpw-modal-alert-dim').fadeOut();
+    $('.findpw-modal-alert').fadeOut();
+});
+
+// 비밀번호 찾기 안내창 쉐도우 영역 클릭
+$(document).on('click', '.findpw-modal-alert-dim', function () {
+    $('.findpw-modal-alert-dim').fadeOut();
+    $('.findpw-modal-alert').fadeOut();
 });
 
 //gototop

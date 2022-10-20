@@ -27,7 +27,13 @@
                         <div class="registered-title">
                             <p class="result-count">총 <span class="main-blue">24개</span> 의 등기</p>
                         </div>
-                        <input type="text" placeholder="등기검색" class="registered-search">
+                        <form action="registered-list.html">
+                            <div class="reg-search-wrap">
+                                <input type="search" placeholder="등기 검색" name="query" value="" class="registered-search">
+                                <button type="submit"><img src="./images/search.svg" alt="검색"></button>
+                            </div>
+                        </form>
+
                         <div class="line"></div>
                     </div>
                     <ul class="registered-caution">

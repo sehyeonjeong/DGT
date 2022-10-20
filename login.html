@@ -49,11 +49,21 @@
                     </div>
                     <div class="findpw-m-frame"></div>
                     <div class="findpw-btn">
-                        <button class="main-blue-bg-btn" type="submit">확인</button>
+                        <button class="main-blue-bg-btn">확인</button>
                     </div>
                 </form>
             </div>
             <div class="findpw-modal-dim"></div>
+            <div class="findpw-modal-alert">
+                <p>등록된 이메일 주소로<br>임시비밀번호가 발송되었습니다.</p>
+                <div class="alert-btn-set">
+                    <button class="alert-failed main-blue-bg" onclick="window.open('./login.html', '_self');">확인</button>
+                </div>
+                <button class="findpw-modal-alert-close">
+                    <img src="./images/close.svg" alt="결제실패 창 닫기">
+                </button>
+            </div>
+            <div class="findpw-modal-alert-dim"></div>
         </div>
     </section>
     <!-- Footer -->

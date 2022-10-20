@@ -27,7 +27,12 @@
                         <div class="registered-title">
                             <p class="result-count">총 <span class="main-blue">0개</span> 의 등기</p>
                         </div>
-                        <input type="text" placeholder="등기검색" class="registered-search">
+                        <form action="registered-list.html">
+                            <div class="reg-search-wrap">
+                                <input type="search" placeholder="등기 검색" name="query" value="" class="registered-search">
+                                <button type="submit"><img src="./images/search.svg" alt="검색"></button>
+                            </div>
+                        </form>
                         <div class="line"></div>
                     </div>
                     <ul class="registered-caution">
@@ -44,97 +49,70 @@
                         <img src="./images/reg-empty.svg" alt="열람된 등기가 없습니다.">
                     </div>
                 </div>
-                <div class="result-modal">
-                    <div class="result-modal-title">
-                        <h3>등기열람</h3>
-                        <button class="result-modal-close"><img src="./images/close.svg" alt="등기열람 닫기"></button>
-                    </div>
+                <div class="registered-modal">
+                    <h3>키워드 추가 및 수정</h3>
                     <div class="modal-content">
-                        <div class="modal-type-address-wrap">
-                            <dl class="modal-type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <div class="address-info">
-                                <p class="modal-add-code">2701-2018-001308</p>
-                                <p class="owner-name">소유자명: 김준범</p>  
-                            </div>
-                        </div>
-                        <div class="result-modal-opt">
-                            <div class="modal-opt-title">
-                                <p>선택옵션</p>
-                                <div class="modal-line"></div>
-                            </div>
-                            <div class="modal-opt-cont">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" id="jointlist" name="joint" value="joint"/>
-                                        <label for="jointlist">공동담보/전세목록</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="tradinglist" name="trading">
-                                        <label for="tradinglist">매매목록</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="valid" name="valid">
-                                        <label for="valid">현재유효사항</label>
-                                    </li>
-                                </ul>
-                                <div class="regnum-wrap">
-                                    <div class="regnum">
-                                        <input type="checkbox" name="regnumber" id="regnumber">
-                                        <label for="regnumber">주민등록번호 표시</label>
-                                    </div>
-                                    <div class="nums">
-                                        <input type="text" name="num1" id="num1" disabled>-<input type="text" name="num2" id="num2" disabled>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="result-modal-docu-opt">
-                            <div class="modal-docu-opt-title">
-                                <p>열람 할 문서</p>
-                                <div class="modal-line"></div>
-                            </div>
-                            <ul class="modal-docu-opt-cont">
-                                <li>
-                                    <input style="display: none;" type="checkbox" name="docu00" id="docu00" checked disabled>
-                                    <label style="background: none;" for="docu00">등기부등본</label>
+                        <div class="modal-keyword-wrap">
+                            <ul class="modal-keyword">
+                                <li class="keyword-edit-list">
+                                    <p>서울</p>
+                                    <img src="./images/treedot.svg" alt="수정 또는 삭제">
+                                    <ul class="list-depth">
+                                        <li><a href="">수정</a></li>
+                                        <li><a href="">삭제</a></li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="docu01" id="docu01">
-                                    <label for="docu01">건축물대장</label>
+                                <li class="keyword-edit-list">
+                                    <p>마포구청역</p>
+                                    <img src="./images/treedot.svg" alt="수정 또는 삭제">
+                                    <ul class="list-depth">
+                                        <li><a href="">수정</a></li>
+                                        <li><a href="">삭제</a></li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="docu02" id="docu02">
-                                    <label for="docu02">토지대장</label>
+                                <li class="keyword-edit-list">
+                                    <p>퍼스티지</p>
+                                    <img src="./images/treedot.svg" alt="수정 또는 삭제">
+                                    <ul class="list-depth">
+                                        <li><a href="">수정</a></li>
+                                        <li><a href="">삭제</a></li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="docu03" id="docu03">
-                                    <label for="docu03">지적도</label>
+                                <li class="keyword-edit-list">
+                                    <p>대전</p>
+                                    <img src="./images/treedot.svg" alt="수정 또는 삭제">
+                                    <ul class="list-depth">
+                                        <li><a href="">수정</a></li>
+                                        <li><a href="">삭제</a></li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="docu04" id="docu04">
-                                    <label for="docu04">토지이용계획</label>
+                                <li class="keyword-edit-list">
+                                    <p>우남</p>
+                                    <img src="./images/treedot.svg" alt="수정 또는 삭제">
+                                    <ul class="list-depth">
+                                        <li><a href="">수정</a></li>
+                                        <li><a href="">삭제</a></li>
+                                    </ul>
                                 </li>
+                                <li class="keyword-edit-list">
+                                    <p>자인채</p>
+                                    <img src="./images/treedot.svg" alt="수정 또는 삭제">
+                                    <ul class="list-depth">
+                                        <li><a href="">수정</a></li>
+                                        <li><a href="">삭제</a></li>
+                                    </ul>
+                                </li>
+                                <form class="add-keyword">
+                                    <input type="text" name="keyword" id="keyword-add" placeholder="키워드(최대 8자)">
+                                    <button class="main-blue" type="submit">추가</button>
+                                </form>  
                             </ul>
+                            <div class="line"></div>
+                            <button class="modal-agree-btn main-blue-bg" type="submit">확인</button>
                         </div>
                     </div>
-                    <div class="result-m-frame"></div>
-                    <button class="modal-request-btn main-blue-bg">열람요청</button>
                 </div>
-                <div class="result-modal-dim"></div>
-                <div class="result-modal-alert">
-                    <p>로그인 후 사용 가능합니다.</p>
-                    <div class="alert-btn-set">
-                        <button class="alert-login main-blue-bg" onclick="window.open('./login.html', '_self')">로그인</button>
-                        <button class="alert-join" onclick="window.open('./join.html', '_self')">회원가입</button>
-                    </div>
-                    <button class="result-modal-alert-close">
-                        <img src="./images/close.svg" alt="로그인 안내 창 닫기">
-                    </button>
-                </div>
-                <div class="result-modal-alert-dim"></div>
+                <div class="registered-modal-dim"></div>
             </div>
         </div>
     </section>
