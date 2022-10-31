@@ -449,6 +449,48 @@
                     </div>
                 </div>
                 <div class="registered-modal-dim"></div>
+                <div class="reg-sms-modal">
+                    <div class="reg-sms-modal-title">
+                        <h3>등기부등본 문자 보내기</h3>
+                        <button class="reg-sms-modal-close"><img src="./images/close.svg" alt="등기 문자 보내기 닫기"></button>
+                    </div>
+                    <form action="" class="reg-sms-modal-content-form">
+                        <div class="reg-sms-modal-content">
+                            <div class="send-num-form">
+                                <label for="send-num">보내는 사람</label>
+                                <div class="send-num-cont"><input type="text" name="send-num" id="send-num0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="3" placeholder="010" required>-<input type="text" name="send-num" id="send-num1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="4" placeholder="0000" required>-<input type="text" name="send-num" id="send-num3" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="4" placeholder="0000" required></div>
+                            </div>
+                            <div class="recive-num-form">
+                                <label for="recive-num">받는 사람</label>
+                                <div class="recive-num-cont"><input type="text" name="recive-num" id="recive-num0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="3" placeholder="010" required>-<input type="text" name="recive-num" id="recive-num1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="4" placeholder="0000" required>-<input type="text" name="recive-num" id="recive-num3" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="4" placeholder="0000" required></div>
+                            </div>
+                            <div class="sms-cont-form">
+                                <label for="sms-cont">문자내용</label>
+                                <div>
+                                    <p>등기부등본, 등기통에서 쉽고 빠르게!<br><br>
+                                        [등기 문자 서비스]<br>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]<br>
+                                        https://www.dgt.info/l#/v/l8zw0d
+                                    </p>
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="추가할 문구가 있다면 이곳에 적어주세요." ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reg-sms-modal-btn">
+                            <button class="main-blue-bg-btn">문자보내기</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="reg-sms-modal-dim"></div>
+                <div class="reg-sms-modal-alert">
+                    <p>010-0000-0000<br>등기 링크가 발송되었습니다.</p>
+                    <div class="alert-btn-set">
+                        <button class="alert-failed main-blue-bg" onClick="window.location.reload()">확인</button>
+                    </div>
+                    <button class="reg-sms-modal-alert-close">
+                        <img src="./images/close.svg" alt="창 닫기">
+                    </button>
+                </div>
+                <div class="reg-sms-modal-alert-dim"></div>
             </div>
         </div>
     </section>

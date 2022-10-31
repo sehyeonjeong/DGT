@@ -109,7 +109,8 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .main-search p{font-weight: 500; font-size: 30px; line-height: 100%; color: #ffffff; flex: none; order: 0; flex-grow: 0; margin: 0;}
 .section-content .main-search .search{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; width: 720px; height: 40px; flex: none; order: 1; flex-grow: 0; position: relative;}
 .section-content .main-search .search input{box-sizing:  border-box; display: flex; flex-direction: row; align-items: center; padding: 16px 20px 16px 24px; gap: 4px; width: 720px; height: 40px; background: #ffffff; border: 1px solid #3937C8; border-radius: 60px; flex: none; order: 0; flex-grow: 1;}
-.section-content .main-search .search button{width: 24px; height: 24px; border: 0; background: transparent; position: absolute; top: 8px; right: 20px; cursor: pointer; padding: 0;}
+.section-content .main-search .search button.searchsubmit{width: 24px; height: 24px; border: 0; background: transparent; position: absolute; top: 8px; right: 20px; cursor: pointer; padding: 0;}
+.btnClear {display: none; position: absolute; top: 0; right: 50px; width: 30px; height: inherit; background: url(../images/icon24_close.svg) center center no-repeat; border: none; outline: none; cursor: pointer;}
 
 /* 메인컨텐츠 */
 
@@ -345,6 +346,38 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .registered-modal .modal-content .modal-keyword-wrap .modal-agree-btn{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; width: 100%; height: 44px; flex: none; order: 2; align-self: stretch; flex-grow: 0; font-weight: 700; font-size: 16px; line-height: 100%; text-align: center; color: #ffffff; flex: none; order: 0; flex-grow: 0; border-radius: 8px; border: 0; cursor: pointer;}
 .registered-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 8;}
 
+/* 등기부등본 문자보내기 */
+.reg-sms-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 320px; height: 695px; left: calc(50% - 320px/2); top: calc(50% - 695px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5; transform: translate3d(0, 0, 200px);}
+.reg-sms-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
+.reg-sms-modal .reg-sms-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 100%; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .reg-sms-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
+.reg-sms-modal .reg-sms-modal-title button{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; gap: 10px; width: 24px; height: 24px; flex: none; order: 1; flex-grow: 0; border: 0; background: transparent; cursor: pointer;}
+.reg-sms-modal .reg-sms-modal-content-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 32px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .reg-sms-modal-content-form .reg-sms-modal-content{display: flex; flex-direction: column; align-items: flex-end; padding: 0px; gap: 24px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .reg-sms-modal-content-form .reg-sms-modal-content label{font-size: 13px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
+.reg-sms-modal .send-num-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .send-num-form .send-num-cont{display: flex; flex-direction: row; align-items: center; padding: 0; gap: 4px; width: 100%; height: 38px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .send-num-form .send-num-cont input{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; width: 90px; height: 38px; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 0; flex-grow: 0;}
+.reg-sms-modal .send-num-form .send-num-cont input#send-num0{width: 60px;}
+.reg-sms-modal .recive-num-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .recive-num-form .recive-num-cont{display: flex; flex-direction: row; align-items: center; padding: 0; gap: 4px; width: 100%; height: 38px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .recive-num-form .recive-num-cont input{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; width: 90px; height: 38px; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 0; flex-grow: 0;}
+.reg-sms-modal .recive-num-form .recive-num-cont input#recive-num0{width: 60px;}
+.reg-sms-modal .sms-cont-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 16px; width: 100%; height: 349px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .sms-cont-form div{box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; padding: 16px; gap: 16px; width: 100%; height: 328px; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0; color: #828282; font-weight: 500; font-size: 14px; line-height: 145%;}
+.reg-sms-modal .sms-cont-form div textarea{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 8px; gap: 10px; width: 100%; height: 140px; border: 1px solid #e0e0e0; border-radius: 8px; resize: none; line-height: 155%;}
+.reg-sms-modal .sms-cont-form div textarea::placeholder{color: #bdbdbd;}
+.reg-sms-modal-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 44px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; width: 100%; height: 44px; border-radius: 8px; flex: none; order: 0; align-self: stretch; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; cursor: pointer;}
+
+/* 문자보내기 안내 */
+.reg-sms-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 32px; gap: 24px; isolation: isolate; position: fixed; width: 366px; height: 200px; left: calc(50% - 366px/2); top: calc(50% - 200px/2); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.reg-sms-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
+.reg-sms-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
+.reg-sms-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0px; gap: 16px; width: 302px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1;}
+.reg-sms-modal-alert .alert-btn-set .alert-failed{display: flex; flex-direction: row; align-items: flex-start; justify-content: center; padding: 6px 47px; gap: 10px; width: 100%; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
+.reg-sms-modal-alert .reg-sms-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
+
 /* 마이페이지 */
 .my-content{display: flex; flex-direction: column; align-items: center; padding: 0; width: 100vw; min-height: 444px; max-height: 578px; background: #f8faff; flex: none; order: 1; align-self: stretch; flex-grow: 0; z-index: 1;}
 .my-content .content-top{display: flex; flex-direction: column; align-items: flex-start; padding: 40px 0px 0px; gap: 16px; max-width: 720px; width: 100%; flex: none; order: 0; flex-grow: 0;}
@@ -461,6 +494,17 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .change-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
 .change-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; height: 44px; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 700; font-size: 16px;}
 .change-m-frame{display: none;}
+
+/* 회원탈퇴 */
+.secession-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 24px; gap: 24px; isolation: isolate; position: fixed; width: 312px; height: 200px; left: calc(50% - 312px/2); top: calc(50% - 200px/2); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.secession-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
+.secession-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 264px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1; align-self: stretch;}
+.secession-modal-alert .alert-btn-set .alert-secession{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #eb5757; color: #ffffff; cursor: pointer;}
+.secession-modal-alert .alert-btn-set .alert-no{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 41px; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 1; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #fbfbfb; color: #828282; cursor: pointer;}
+.secession-m-frame{display: none;}
+.secession-modal-alert .secession-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
+
+.secession-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
 
 /* 전자민원캐시 사용 */
 .minwoncash-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 571px; left: calc(50% - 500px/2); top: calc(50% - 571px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
@@ -594,6 +638,10 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 @media screen and (max-width:768px) {
 	.section-content .registered-content{max-width: 720px; width: calc(100vw - 48px);}
 }
+
+/* pdf프리뷰 */
+.pdf-reader{display: flex; flex-direction: column; justify-content: top; align-items: flex-start; padding: 8px 0; gap: 2px; flex: none; order: 1; align-self: stretch; flex-grow: 0; width: 100%; min-height: 400px; margin-bottom: 40px; margin-top: 20px;}
+#outerContainer{min-height: 400px; background: #212122;}
 
 /* Footer */
 #footer{position: relative; z-index: 1; width: 100vw; min-height: 210px; color: rgba(255, 255, 255, 0.7);}
