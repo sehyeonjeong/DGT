@@ -69,6 +69,23 @@
     <!-- Footer-end -->
  
     <script>
+        //search clear btn
+        document.getElementsByClassName('search-input')[0].oninput = function() {
+            document.getElementsByClassName('btnClear')[0].style.display = "block";
+        };
+
+        var btnClear = document.querySelector('.btnClear');
+        btnClear.addEventListener('click', function(){
+            btnClear.parentNode.querySelector('input').value = "";
+            document.getElementsByClassName('btnClear')[0].style.display = "none";
+        })
+
+        function adjustHeight() {
+            var textEle = $('textarea');
+            textEle[0].style.height = 'auto';
+            var textEleHeight = textEle.prop('scrollHeight');
+            textEle.css('height', textEleHeight);
+        };
         window.addEventListener('load', function() {
             var allElements = document.getElementsByTagName('*');
             Array.prototype.forEach.call(allElements, function(el) {

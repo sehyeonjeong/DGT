@@ -377,10 +377,10 @@ $(document).on('click', '.secession-modal-alert-dim', function () {
 
 // 전자민원캐시 모달 오픈
 $(document).on('click', '.cash-btn button ', function () {
-    $('.minwoncash-modal-alert-dim').css("display", "flex")
+    $('.minwoncash-modal-dim').css("display", "flex")
     .hide()
     .fadeIn();
-    $('.minwoncash-modal-alert').css("display", "flex")
+    $('.minwoncash-modal').css("display", "flex")
     .hide()
     .fadeIn();
 });
@@ -483,27 +483,3 @@ function hashHandler() {
 }
 
 hashHandler();
-
-//search clear btn
-document.getElementsByClassName('search-input')[0].oninput = function() {
-    document.getElementsByClassName('btnClear')[0].style.display = "block";
-};
-
-var btnClear = document.querySelector('.btnClear');
-btnClear.addEventListener('click', function(){
-    btnClear.parentNode.querySelector('input').value = "";
-    document.getElementsByClassName('btnClear')[0].style.display = "none";
-})
-
-function adjustHeight() {
-    var textEle = $('textarea');
-    textEle[0].style.height = 'auto';
-    var textEleHeight = textEle.prop('scrollHeight');
-    textEle.css('height', textEleHeight);
-};
-
-window.onresize = function(event) {
-    adjustHeight(); 
-};
-
-adjustHeight(); 

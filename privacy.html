@@ -153,6 +153,10 @@ Amazon Web Services Inc.	서비스를 위한 서버, 데이터베이스등 시�
     <!-- Footer-end -->
  
     <script>
+        window.onresize = function(event) {
+            adjustHeight(); 
+        };
+        adjustHeight(); 
         window.addEventListener('load', function() {
             var allElements = document.getElementsByTagName('*');
             Array.prototype.forEach.call(allElements, function(el) {
