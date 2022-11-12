@@ -70,37 +70,37 @@
                     <h3>등기열람권 충전하기</h3>
                     <button class="ticket-modal-close"><img src="./images/close.svg" alt="등기열람 닫기"></button>
                 </div>
-                <form action="" class="ticket-modal-content-form">
+                <form action="" class="ticket-modal-content-form" name="ct">
                     <div class="ticket-modal-content">
                         <div class="ticket-select-list-wrap">
                             <ul class="ticket-select-list">
                                 <li>
-                                    <input type="radio" name="ticket-count" id="500ea" value="500"> 
-                                    <label for="500ea">500회 등기열람권</label>
+                                    <input type="radio" name="ticketcount" id="ea500" value="500"> 
+                                    <label for="ea500">500회 등기열람권</label>
                                     <div class="frame"></div>
                                     <p>500 X (등기소700원 + 서비스300원)</p>
                                 </li>
                                 <li>
-                                    <input type="radio" name="ticket-count" id="100ea" value="100" checked> 
-                                    <label for="100ea">100회 등기열람권</label>
+                                    <input type="radio" name="ticketcount" id="ea100" value="100" checked> 
+                                    <label for="ea100">100회 등기열람권</label>
                                     <div class="frame"></div>
                                     <p>100 X (등기소700원 + 서비스300원)</p>
                                 </li>
                                 <li>
-                                    <input type="radio" name="ticket-count" id="30ea" value="30"> 
-                                    <label for="30ea">30회 등기열람권</label>
+                                    <input type="radio" name="ticketcount" id="ea30" value="30"> 
+                                    <label for="ea30">30회 등기열람권</label>
                                     <div class="frame"></div>
                                     <p>30 X (등기소700원 + 서비스400원)</p>
                                 </li> 
                                 <li>
-                                    <input type="radio" name="ticket-count" id="10ea" value="10"> 
-                                    <label for="10ea">10회 등기열람권</label>
+                                    <input type="radio" name="ticketcount" id="ea10" value="10"> 
+                                    <label for="ea10">10회 등기열람권</label>
                                     <div class="frame"></div>
                                     <p>10 X (등기소700원 + 서비스600원)</p>
                                 </li>
                                 <li>
-                                    <input type="radio" name="ticket-count" id="1ea" value="1"> 
-                                    <label for="1ea">1회 등기열람권</label>
+                                    <input type="radio" name="ticketcount" id="ea1" value="1"> 
+                                    <label for="ea1">1회 등기열람권</label>
                                     <div class="frame"></div>
                                     <p>1 X (등기소700원 + 서비스800원)</p>
                                 </li>
@@ -113,7 +113,7 @@
                         <div class="calculation">
                             <div class="service-cost-wrap">
                                 <div class="commission-wrap">
-                                    <div class="minwon-label on">전자민원캐시로 결제</div>
+                                    <div class="minwon-label">전자민원캐시로 결제</div>
                                     <div class="commission-cost">
                                         <div class="commission-txt">등기수수료</div>
                                         <div class="commission-num">70,000</div>
@@ -122,7 +122,7 @@
                                 +
                                 <div class="service-cost">
                                    <div class="service-txt">서비스금액</div>
-                                   <div class="service-num">40,000</div>
+                                   <div class="service-num">30,000</div>
                                 </div>
                                 =
                             </div>
@@ -130,7 +130,7 @@
                                 <p class="main-blue">총</p>
                                 <div class="total-cost">
                                     <div class="total-txt">결제금액</div>
-                                    <div class="total-num main-blue">40,000</div>
+                                    <div class="total-num main-blue">100,000</div>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +213,7 @@
                     <div class="minwoncash-form-wrap">
                         <div class="minwoncash-number-form">
                             <label for="mw-number">전자민원캐시 번호</label>
-                            <div><input type="text" name="mw-number1" id="mw-number" required>-<input type="text" name="mw-number2" id="mw-number" required></div>
+                            <div><input type="text" name="mw-number1" id="mw-number1" required minlength="7" maxlength="7" style="text-transform: uppercase;">-<input type="text" name="mw-number2" id="mw-number2" required minlength="4" maxlength="4" style="text-transform: uppercase;"></div>
                             <span class="error">필수입력 항목입니다.</span>
                         </div>
                         <div class="minwoncash-pw-form">
@@ -226,7 +226,7 @@
                         </div>
                         <ul class="notice">
                             <li>구매하신 등기열람권을 사용하실 때마다, <span>입력하신 전자민원캐시에서 등기열람권 수수료 700원이 차감되기 때문에, 정확한 정보의 입력이 필요합니다</spa>.</li>
-                            <li>전자민원캐시를 미리 구입, 충전하셔야 바로바로 서비스를 사용할 수 있습니다. <a href="https://minwon.cashgate.co.kr/main.do" class="link" target="_blank">[전자민원캐시 바로가기]</a></li>
+                            <li>전자민원캐시를 미리 구입, 충전하셔야 바로바로 서비스를 사용할 수 있습니다. <br><a href="https://minwon.cashgate.co.kr/main.do" class="link" target="_blank">[전자민원캐시 바로가기]</a></li>
                             <li>입력하신 결제정보(전자민원캐시번호 등)는 법원 인터넷등기소 시스템에 저장되어 열람ㆍ발급, 결제취소 및 열람ㆍ발급내역 조회 시 비밀번호로 이용됩니다.</li>
                             <li>전자민원캐시 등기열람권을 구매하시더라도 기본 등기열람권이 남아 있다면, 기본 등기열람권을 먼저 사용합니다.</li>
                             <li>해당 정보는 재판 및 수사를 위한 자료로도 활용될 수 있고, 법원 인터넷 등기소에 영구적으로 보관되며 수집 및 이용에 동의하시지 않을 경우 열람ㆍ발급 서비스를 이용하실 수 없습니다. <a href="http://www.iros.go.kr/" class="link"  target="_blank">[인터넷등기소 바로가기]</a></l>
@@ -240,16 +240,28 @@
             </div>
             <div class="minwoncash-modal-dim"></div>
             <div class="secession-modal-alert">
-                <p>탈퇴하시겠습니까?<br>탈퇴 후 사용자 정보는 삭제됩니다.</p>
+                <p>탈퇴하시겠습니까?</p>
                 <div class="alert-btn-set">
-                    <button class="alert-secession" onclick="window.open('./index-logout.html', '_self')">탈퇴</button>
-                    <button class="alert-no" onClick="window.location.reload()"">아니요</button>
+                    <button class="alert-secession">예</button>
+                    <button class="alert-no" onClick="window.location.reload()">아니요</button>
                 </div>
                 <button class="secession-modal-alert-close">
                     <img src="./images/close.svg" alt="로그인 안내 창 닫기">
                 </button>
             </div>
             <div class="secession-modal-alert-dim"></div>
+            <div class="secession-modal-alert-re">
+                <p>탈퇴 후 사용자 정보는 삭제됩니다.</p>
+                <div class="alert-btn-set">
+                    <button class="alert-secession-re" onclick="window.open('./index-logout.html', '_self')">탈퇴</button>
+                    <button class="alert-no-re" onClick="window.location.reload()">아니요</button>
+                </div>
+                <button class="secession-modal-alert-re-close">
+                    <img src="./images/close.svg" alt="로그인 안내 창 닫기">
+                </button>
+            </div>
+            <div class="secession-modal-alert-dim"></div>
+            
             <div class="recent-content">
                 <div class="wrap-tab">
                     <div class="tab">

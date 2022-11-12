@@ -27,20 +27,25 @@
                     <div class="join-phone-form">
                         <label class="cert-none" for="phone">휴대폰번호 인증 (#휴대폰번호는 로그인 ID로 사용됩니다.)</label>
                         <div class="join-phone-form-content">
-                            <input type="text" name="phone" id="phone" placeholder="본인의 휴대폰 번호를 입력하세요." maxlength="13" required>
+                            <input type="text" name="phone" id="phone" placeholder="본인의 휴대폰 번호를 입력하세요." minlength="13" required>
+                            <button type="button" class="phone-cert-after main-blue-bg">인증번호</button>
+                            <span class="error">휴대폰번호를 입력하세요.</span>
+                        </div>
+                        <div class="join-phone-num-form-content">
+                            <input type="text" name="phonenum" id="phonenum" placeholder="인증번호를 입력해주세요." minlength="6" required>
                             <button type="button" class="phone-cert main-blue-bg">인증</button>
-                            <span class="error"></span>
+                            <span class="error">인증번호가 틀렸습니다.</span>
                         </div>
                         <p>* 휴대폰번호는 로그인 ID로 사용됩니다.</p>
                     </div>
                     <div class="join-pw-form cert-none">
-                        <label for="pw">비밀번호 *</label>
-                        <input type="password" name="pw" id="pw" required>
+                        <label for="pw">비밀번호 * (8자리 이상 숫자 문자 상관 없이)</label>
+                        <input type="password" name="pw" id="pw" required minlength="8">
                         <span class="error">필수입력 항목입니다.</span>
                     </div>
                     <div class="join-pwconfirm-form cert-none">
                         <label for="pwconfirm">비밀번호 확인 *</label>
-                        <input type="password" name="pwconfirm" id="pwconfirm" required>
+                        <input type="password" name="pwconfirm" id="pwconfirm" required minlength="8">
                         <span class="error">필수입력 항목입니다.</span>
                     </div>
                     <div class="join-name-form cert-none">
@@ -51,7 +56,50 @@
                     <div class="join-email-form cert-none">
                         <label for="email">이메일 주소 (#이전 열람기록을 불러올 수 있습니다.) * </label>
                         <input type="email" name="email" id="email" required> 
-                         <span class="error">잘못된 정보입니다.</span>
+                        <span class="error">잘못된 정보입니다.</span>
+                    </div>
+                    <div class="join-tob-form cert-none">
+                        <label for="tob">종사업종 *</label>
+                        <div>
+                            <input type="radio" name="tob" id="tob1" class="tob" required>
+                            <label for="tob1">공인중개사</label>
+                            <input type="radio" name="tob" id="tob2" class="tob">
+                            <label for="tob2">법무사</label>
+                            <input type="radio" name="tob" id="tob3" class="tob">
+                            <label for="tob3">경매</label>
+                            <input type="radio" name="tob" id="tob4" class="tob">
+                            <label for="tob4">기타</label>
+                            <input type="text" name="tob4txt" id="tob4txt">
+                            <span class="error">업종을 선택해주세요</span>
+                        </div>
+                    </div>
+                    <div class="join-residence-form cert-none">
+                        <label for="residence">거주지역 *</label>
+                        <select name="residence" id="residence" required>
+                            <option value="">선택해주세요</option>
+                            <option value="서울">서울</option>
+                            <option value="부산">부산</option>
+                            <option value="대구">대구</option>
+                            <option value="인천">인천</option>
+                            <option value="광주">광주</option>
+                            <option value="대전">대전</option>
+                            <option value="울산">울산</option>
+                            <option value="세종">세종</option>
+                            <option value="경기">경기</option>
+                            <option value="강원">강원</option>
+                            <option value="충북">충북</option>
+                            <option value="충남">충남</option>
+                            <option value="전북">전북</option>
+                            <option value="전남">전남</option>
+                            <option value="경북">경북</option>
+                            <option value="경남">경남</option>
+                            <option value="제주">제주</option>
+                        </select>
+                        <span class="error">거주지역을 선택해주세요</span>
+                    </div>
+                    <div class="join-recommender-form cert-none">
+                        <label for="recommender">추천인</label>
+                        <input type="text" name="recommender" id="recommender">
                     </div>
                 </div>
                 <div class="join-btn">
@@ -60,21 +108,113 @@
                 <div class="result-modal-alert">
                     <p>가입이 완료되었습니다.</p>
                     <div class="alert-btn-set">
-                        <button class="alert-login main-blue-bg" onclick="window.open('../login.html', '_self')">확인</button>
+                        <button class="alert-login main-blue-bg" onclick="window.open('./login.html', '_self'); return false;">확인</button>
                     </div>
                     <button class="result-modal-alert-close">
-                        <img src="./images/close.svg" alt="로그인 안내 창 닫기">
+                        <img src="./images/close.svg" alt="로그인 안내 창 닫기" onclick="window.open('./login.html', '_self'); return false;">
                     </button>
                 </div>
                 <div class="result-modal-alert-dim"></div>
             </form>
         </div>
+        
     </section>
     <!-- Footer -->
     <div data-include-path="footer.html"></div>
     <!-- Footer-end -->
  
     <script>
+        // 회원가입폼
+        $('.phone-cert-after').click(function(){
+            $('.join-phone-num-form-content').css("display", "flex")
+            .hide()
+            .fadeIn();
+
+            if(fjrm.phone.value.length < 13){
+                $('.join-phone-form-content').addClass('invalid-form');
+                $('.join-phone-num-form-content').css("display", "flex").hide();
+            }
+        });
+
+        $('.phone-cert').click(function(){
+            $('.join-content').addClass('cert-on');
+            $('.join-content div, .join-content label').removeClass('cert-none');
+            $('.join-content .join-phone-form p').hide();
+            $('.join-content .join-phone-form input').attr('readonly',true);
+            $('.join-content .join-phone-form input').attr('disable',true);
+            $('.join-content .join-phone-form input').addClass('off')
+            $(".phone-cert-after").text("인증완료");
+            $(".join-btn button").addClass('main-blue-bg-btn').removeClass('lightgray-bg-btn').prop("disabled",false);
+            $('.join-phone-num-form-content').css("display", "flex").hide();
+        });
+
+        // 회원가입 검증
+        $(document).on('click', '.join-btn button', function () {
+            if(fjrm.pw.value.length < 8){
+                $('.join-content').addClass('invalid-form');
+            }else if(fjrm.pwconfirm.value.length < 8){
+                $('.join-content').addClass('invalid-form');
+            }else if(fjrm.pwconfirm.value !== fjrm.pw.value){
+                $('.join-content').addClass('invalid-form');
+            }else if(fjrm.name.value == ""){
+                $('.join-content').addClass('invalid-form');
+            }else if(fjrm.email.value == ""){
+                $('.join-content').addClass('invalid-form');
+            }else if(fjrm.tob.value < 0){
+                $('.join-content').addClass('invalid-form');
+            }else if(fjrm.residence.value == ""){
+                $('.join-content').addClass('invalid-form');
+            }else{
+                $('.result-modal-alert-dim').css("display", "flex")
+                .hide()
+                .fadeIn();
+                $('.result-modal-alert').css("display", "flex")
+                .hide()
+                .fadeIn();
+            }
+        });
+
+        $(document).on('focusout', '.join-pw-form input', function () {
+            if(fjrm.pw.value.length < 8){
+                $('.join-pw-form').addClass('invalid-form');
+            };
+        });
+
+        $(document).on('focusout', '.join-pwconfirm-form input', function () {
+            if(fjrm.pwconfirm.value.length < 8){
+                $('.join-pwconfirm-form').addClass('invalid-form');
+            }else if(fjrm.pwconfirm.value !== fjrm.pw.value){
+                $('.join-pwconfirm-form').addClass('invalid-form');
+            };
+        });
+
+        $(document).on('focusout', '.join-name-form input', function () {
+            if(fjrm.name.value.length < 8){
+                $('.join-name-form').addClass('invalid-form');
+            };
+        });
+
+        $(document).on('focusout', '.join-email-form input', function () {
+            if(fjrm.email.value.length < 8){
+                $('.join-email-form').addClass('invalid-form');
+            };
+        });
+
+        // 폰번호 입력
+        $('#phone').keydown(function(event) {
+            var key = event.charCode || event.keyCode || 0;
+            $text = $(this);
+            if (key !== 8 && key !== 9) {
+                if ($text.val().length === 3) {
+                    $text.val($text.val() + '-');
+                }
+                if ($text.val().length === 8) {
+                    $text.val($text.val() + '-');
+                }
+            }
+
+            return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+        });
         window.addEventListener('load', function() {
             var allElements = document.getElementsByTagName('*');
             Array.prototype.forEach.call(allElements, function(el) {

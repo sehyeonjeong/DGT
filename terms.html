@@ -219,11 +219,7 @@
     <div data-include-path="footer.html"></div>
     <!-- Footer-end -->
  
-    <script>
-        window.onresize = function(event) {
-            adjustHeight(); 
-        };
-        adjustHeight(); 
+    <script> 
         window.addEventListener('load', function() {
             var allElements = document.getElementsByTagName('*');
             Array.prototype.forEach.call(allElements, function(el) {
@@ -240,6 +236,13 @@
                 }
             });
         });
+        function adjustHeight() {
+            var textEle = $('textarea');
+            textEle[0].style.height = 'auto';
+            var textEleHeight = textEle.prop('scrollHeight');
+            textEle.css('height', textEleHeight);
+        };
+        adjustHeight();
     </script>
 
     <!-- js.common -->

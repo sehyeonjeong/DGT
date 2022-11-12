@@ -66,6 +66,7 @@ li, dd{margin: 0; padding: 0; list-style: none;}
 .menu .nav > ul > li{list-style-type: none; float: left; margin-left: 32px; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 100%; opacity: 0.6;}
 .menu .nav > ul > li.on{opacity: 1;}
 .menu .nav .my-data{max-width: 192px; display: inline-block; margin-top: 12px; margin-left: 32px; border: 1px solid rgba(255,255,255,0.4); border-radius: 32px; text-align: center; vertical-align: top; position: relative;}
+.menu .nav .my-data.nologin{margin-left: 8px;}
 .menu .nav .my-data p{font-size: 14px; line-height: 100%; font-weight: 600; color: #ffffff; padding: 8px 16px; display: inline-block; cursor: pointer; margin: 0;}
 .menu .nav .my-data > a{font-size: 14px; line-height: 100%; font-weight: 600; color: #ffffff; padding: 8px 16px; display: inline-block; cursor: pointer; margin: 0;}
 .menu .nav .my-data p span{opacity: 0.8;}
@@ -85,7 +86,7 @@ li, dd{margin: 0; padding: 0; list-style: none;}
 .m-nav ul li a{display: block; width: 100%; padding: 14.5px 20px;}
 .m-nav ul li:last-child{border-bottom: none;}
 
-.m-my-data{position: absolute; width: 208px; height: 136px; bottom: 0; margin: 16px; text-align: center; box-sizing: border-box; border: 1px solid #e6e5e9; background: #f8faff; border-radius: 16px; color: #828282;} 
+.m-my-data{position: absolute; width: 208px; min-height: 136px; bottom: 0; margin: 16px; text-align: center; box-sizing: border-box; border: 1px solid #e6e5e9; background: #f8faff; border-radius: 16px; color: #828282;} 
 .m-my-data dl{margin: 24px;}
 .m-my-data dl dt{font-weight: 700; font-size: 16px; line-height: 100%;}
 .m-my-data dl dd{margin: 8px 0 0; vertical-align: top; font-size: 16px; font-weight: 600;}
@@ -168,6 +169,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .result-modal-opt .modal-opt-cont .regnum-wrap .regnum{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 129px; height: 20px; flex: none; order: 0; flex-grow: 0; font-weight: 500px; color: #bdbdbd;}
 .result-modal-opt .modal-opt-cont .regnum-wrap .nums{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 4px; width: 307px; height: 22px; flex: none; order: 1; flex-grow: 1;}
 .result-modal-opt .modal-opt-cont .regnum-wrap .nums input{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 0 16px; gap: 10px; width: 40%; height: 22px; background: #fbfbfb; border: 1px solid #e0e0e0; border-radius: 4px; flex: none; order: 0; flex-grow: 1;}
+.result-modal-opt .modal-opt-cont .regnum-wrap .nums input.on{background: #ffffff;}
 .result-modal-docu-opt{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 16px; width: 452px; height: 244px; flex: none; order: 3; align-self: stretch; flex-grow: 0;}
 .result-modal-docu-opt .modal-docu-opt-title{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 4px; width: 452px; height: 22px; flex: none; order: 0; align-self:  stretch; flex-grow: 0;}
 .result-modal-docu-opt .modal-docu-opt-title p{margin: 0; font-weight: 600; font-size: 13px; line-height: 18px; text-align: center; color: #bdbdbd;}
@@ -239,25 +241,34 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .join .join-content .agree-btn,.join .join-content .join-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
 .join .join-content .agree-btn button,.join .join-content .join-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 600;}
 
-.join input[type=text], .join input[type=password], .join input[type=email]{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; height: 38px; gap: 10px; background: #ffffff; border: 1px solid #e2e2e2; border-radius: 8px; flex: none; order: 0; flex-grow: 1;}
+.join input[type=text], .join input[type=password], .join input[type=email], .join select{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; height: 38px; gap: 10px; background: #ffffff; border: 1px solid #e2e2e2; border-radius: 8px; flex: none; order: 0; flex-grow: 1;}
 
 .join .join-content.enter-info{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 24px; max-width: 400px; width: 100%; flex: none; order: 1; flex-grow: 0;}
 .join .join-content .join-form-wrap{display: flex; flex-direction: column; align-items: flex-start; gap: 16px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .join .join-content .join-phone-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
-.join .join-content .join-phone-form .join-phone-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
-.join .join-content .join-phone-form .join-phone-form-content input{max-width: 312px; width: calc(100% - 96px); font-weight: 500; line-height: 155%;}
-.join .join-content .join-phone-form .join-phone-form-content input::placeholder{color: #acacac;}
-.join .join-content .join-phone-form .join-phone-form-content .phone-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 80px; height: 38px; border: 1px solid #2c6ff0; border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #ffffff; cursor: pointer;}
+.join .join-content .join-phone-form .join-phone-form-content,.join .join-content .join-phone-form .join-phone-num-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
+.join .join-content .join-phone-form .join-phone-num-form-content{display: none;}
+.join .join-content .join-phone-form .join-phone-form-content input, .join .join-content .join-phone-form .join-phone-num-form-content input{max-width: 312px; width: calc(100% - 96px); font-weight: 500; line-height: 155%;}
+.join .join-content .join-phone-form .join-phone-form-content input.off:focus,.join .join-content .join-phone-form .join-phone-num-form-content input.off:focus{background: #f5f5f5 !important; border: 1px solid #e2e2e2 !important; color: #828282 !important;}
+.join .join-content .join-phone-form .join-phone-form-content input::placeholder,.join .join-content .join-phone-form .join-phone-num-form-content input::placeholder{color: #acacac;}
+.join .join-content .join-phone-form .join-phone-form-content .phone-cert-after,.join .join-content .join-phone-form .join-phone-num-form-content .phone-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 80px; height: 38px; border: 1px solid #2c6ff0; border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #ffffff; cursor: pointer;}
 .join .join-content .join-phone-form p{font-size: 12px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 1; flex-grow: 0;}
 .join .join-content .cert-none{display: none;}
 .join .cert-on .join-phone-form input{background: #f5f5f5; border: 1px solid #e2e2e2; color: #828282;}
-.join .cert-on input{width: 100%; max-width: 400px;}
+.join .cert-on input, .join .cert-on select{width: 100%; max-width: 400px;}
 .join .cert-on label{font-size: 12px; line-height: 100%; text-align: center; color: #828282; flex: none; order: 0; flex-grow: 0;}
 .join .cert-on .join-form-wrap > div{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 8px; max-width: 400px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
-.join .join-content.cert-on .join-phone-form .join-phone-form-content .phone-cert{background: #fbfbfb; border: 1px solid #acacac; color: #acacac;}
+.join .join-content.cert-on .join-phone-form .join-phone-form-content .phone-cert-after{background: #fbfbfb; border: 1px solid #acacac; color: #acacac;}
 .error {display: none; font-size: 11px; font-weight: 600; line-height: 100%; color: #eb5757;}
+.join .join-tob-form div > label{height: 38px; line-height: 38px; float: left; margin-right: 16px; background-position: 0px;}
+.join .join-tob-form div > input{width: 80px; float: left;}
+.join .join-tob-form > label{height: 12px; line-height: 12px; float: none;}
 .invalid-form input:invalid {border: 1px solid #EB5757;}
 .invalid-form input:invalid + .error {display: block;}
+.invalid-form .error.on{display: block;}
+.invalid-form select:invalid {border: 1px solid #EB5757;}
+.invalid-form select:invalid + .error {display: block;}
+.invalid-form input[type=radio]:invalid label {border: 1px solid #EB5757;}
 .join .result-modal-alert{width: 300px; left: calc(50% - 300px/2);}
 .join .result-modal-alert .alert-btn-set{justify-content: center;}
 .join .result-modal-alert .alert-login{width: 122px;}
@@ -346,8 +357,19 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .registered-modal .modal-content .modal-keyword-wrap .modal-agree-btn{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 14px 16px; gap: 10px; width: 100%; height: 44px; flex: none; order: 2; align-self: stretch; flex-grow: 0; font-weight: 700; font-size: 16px; line-height: 100%; text-align: center; color: #ffffff; flex: none; order: 0; flex-grow: 0; border-radius: 8px; border: 0; cursor: pointer;}
 .registered-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 8;}
 
+/* 등기열람삭제 */
+.delete-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 24px; gap: 24px; isolation: isolate; position: fixed; width: 312px; height: 171px; left: calc(50% - 312px/2); top: calc(50% - 171px/2 + 0.5px); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.delete-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
+.delete-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 264px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1; align-self: stretch;}
+.delete-modal-alert .alert-btn-set .alert-delete{display: flex; flex-direction: row; align-items: center; padding: 6px 0; justify-content: center; text-align: center; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #eb5757; color: #ffffff; cursor: pointer;}
+.delete-modal-alert .alert-btn-set .alert-no{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 41px; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 1; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #fbfbfb; color: #828282; cursor: pointer;}
+.delete-m-frame{display: none;}
+.delete-modal-alert .delete-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
+
+.delete-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 8; top: 0; left: 0;}
+
 /* 등기부등본 문자보내기 */
-.reg-sms-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 320px; height: 695px; left: calc(50% - 320px/2); top: calc(50% - 695px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5; transform: translate3d(0, 0, 200px);}
+.reg-sms-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 320px; height: 539px; left: calc(50% - 320px/2); top: calc(50% - 539px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5; transform: translate3d(0, 0, 200px);}
 .reg-sms-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
 .reg-sms-modal .reg-sms-modal-title{display: flex; flex-direction: row; align-items: flex-start; padding: 0; width: 100%; height: 24px; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .reg-sms-modal .reg-sms-modal-title h3{margin: 0; height: 24px; font-weight: 700; font-size: 18px; line-height: 24px; color: #333333; flex: none; order: 0; flex-grow: 1;}
@@ -363,8 +385,8 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .reg-sms-modal .recive-num-form .recive-num-cont{display: flex; flex-direction: row; align-items: center; padding: 0; gap: 4px; width: 100%; height: 38px; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
 .reg-sms-modal .recive-num-form .recive-num-cont input{box-sizing: border-box; display: flex; flex-direction: row; align-items: center; padding: 8px 16px; width: 90px; height: 38px; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 0; flex-grow: 0;}
 .reg-sms-modal .recive-num-form .recive-num-cont input#recive-num0{width: 60px;}
-.reg-sms-modal .sms-cont-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 16px; width: 100%; height: 349px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
-.reg-sms-modal .sms-cont-form div{box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; padding: 16px; gap: 16px; width: 100%; height: 328px; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0; color: #828282; font-weight: 500; font-size: 14px; line-height: 145%;}
+.reg-sms-modal .sms-cont-form{display: flex; flex-direction: column; align-items: flex-start; padding: 0; gap: 16px; width: 100%; height: 193px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
+.reg-sms-modal .sms-cont-form div{box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; padding: 16px; gap: 16px; width: 100%; height: 172x; border: 1px solid #e0e0e0; border-radius: 8px; flex: none; order: 1; align-self: stretch; flex-grow: 0; color: #828282; font-weight: 500; font-size: 14px; line-height: 145%;}
 .reg-sms-modal .sms-cont-form div textarea{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 8px; gap: 10px; width: 100%; height: 140px; border: 1px solid #e0e0e0; border-radius: 8px; resize: none; line-height: 155%;}
 .reg-sms-modal .sms-cont-form div textarea::placeholder{color: #bdbdbd;}
 .reg-sms-modal-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 44px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
@@ -449,13 +471,15 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .ticket-modal-content .calculation{display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-end; padding: 0px; gap: 8px; flex: none; order: 1; flex-grow: 0; flex-wrap: wrap;}
 .ticket-modal-content .calculation .service-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 8px; height: 40px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; color: #828282;}
 .ticket-modal-content .calculation .service-cost-wrap .commission-wrap{display: flex; flex-direction: column; align-items: flex-end; padding: 0px; gap: 4px; height: 40px; flex: none; order: 0; flex-grow: 0;}
-.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .minwon-label{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 4px 8px; gap: 10px; width: 97px; height: 18px; background: #ffedca; border-radius: 40px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 10px; line-height: 100%; text-align: center; color: #ec9d00; flex: none; order: 0; flex-grow: 0;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .minwon-label{visibility: hidden;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .minwon-label.on{box-sizing: border-box; visibility: visible; display: flex; flex-direction: row; align-items: flex-start; padding: 4px 8px; gap: 10px; width: 97px; height: 18px; background: #ffedca; border-radius: 40px; flex: none; order: 0; flex-grow: 0; font-weight: 500; font-size: 10px; line-height: 100%; text-align: center; color: #ec9d00; flex: none; order: 0; flex-grow: 0;}
 .ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost{display: flex; flex-direction: row; align-items: flex-end; padding: 0px; gap: 4px; flex: none; order: 1; flex-grow: 0;}
 .ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-txt{font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #c2c2c2; flex: none; order: 0; flex-grow: 0;}
-.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-num{display: flex; flex-direction: column; align-items: flex-start; padding: 0; width: 59px; height: 18px; flex: none; order: 1; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; text-decoration-line: line-through; color: #c2c2c2;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-num.on{display: flex; flex-direction: column; align-items: flex-start; padding: 0; height: 18px; flex: none; order: 1; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; text-decoration-line: line-through; color: #c2c2c2;}
+.ticket-modal-content .calculation .service-cost-wrap .commission-wrap .commission-cost .commission-num{text-decoration: none; color: #828282;}
 .ticket-modal-content .calculation .service-cost-wrap .service-cost{display: flex; flex-direction: row; align-items: flex-end; padding: 0px; gap: 4px; height: 18px; flex: none; flex-grow: 0;}
 .ticket-modal-content .calculation .service-cost-wrap .service-cost .service-txt{font-size: 13px; line-height: 100%; text-align: center; color: #bdbdbd; flex: none; order: 0; flex-grow: 0;}
-.ticket-modal-content .calculation .total-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 10px; width: 109px; height: 44px; flex: none; order: 1; flex-grow: 0; font-weight: 700; font-size: 19px; line-height: 100%; text-align: center;}
+.ticket-modal-content .calculation .total-cost-wrap{display: flex; flex-direction: row; align-items: flex-end; padding: 0; gap: 10px; height: 44px; flex: none; order: 1; flex-grow: 0; font-weight: 700; font-size: 19px; line-height: 100%; text-align: center;}
 .ticket-modal-content .calculation .total-cost-wrap .total-txt{font-weight: 500; font-size: 12px; line-height: 100%; text-align: right; color: #828282; flex: none; order: 0; flex-grow: 0;}
 .ticket-modal-content .calculation .total-cost-wrap .total-num{font-weight: 600; font-size: 24px; line-height: 100%; text-align: center; flex: none; order: 1; flex-grow: 0;}
 .ticket-modal-btn{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
@@ -496,15 +520,15 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .change-m-frame{display: none;}
 
 /* 회원탈퇴 */
-.secession-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 24px; gap: 24px; isolation: isolate; position: fixed; width: 312px; height: 200px; left: calc(50% - 312px/2); top: calc(50% - 200px/2); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
-.secession-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
-.secession-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 264px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1; align-self: stretch;}
-.secession-modal-alert .alert-btn-set .alert-secession{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #eb5757; color: #ffffff; cursor: pointer;}
-.secession-modal-alert .alert-btn-set .alert-no{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 41px; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 1; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #fbfbfb; color: #828282; cursor: pointer;}
+.secession-modal-alert, .secession-modal-alert-re{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 24px; gap: 24px; isolation: isolate; position: fixed; width: 312px; height: 200px; left: calc(50% - 312px/2); top: calc(50% - 171px/2 + 0.5px); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.secession-modal-alert p,.secession-modal-alert-re p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
+.secession-modal-alert .alert-btn-set,.secession-modal-alert-re .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 264px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1; align-self: stretch;}
+.secession-modal-alert .alert-btn-set .alert-secession,.secession-modal-alert-re .alert-btn-set .alert-secession-re{display: flex; flex-direction: row; align-items: center; padding: 6px 0; justify-content: center; text-align: center; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #eb5757; color: #ffffff; cursor: pointer;}
+.secession-modal-alert .alert-btn-set .alert-no,.secession-modal-alert-re .alert-btn-set .alert-no-re{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 41px; gap: 10px; width: 124px; height: 38px; border-radius: 8px; flex: none; order: 1; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #fbfbfb; color: #828282; cursor: pointer;}
 .secession-m-frame{display: none;}
-.secession-modal-alert .secession-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
+.secession-modal-alert .secession-modal-alert-close,.secession-modal-alert-re .secession-modal-alert-re-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
 
-.secession-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
+.secession-modal-alert-dim,.secession-modal-alert-re-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
 
 /* 전자민원캐시 사용 */
 .minwoncash-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 571px; left: calc(50% - 500px/2); top: calc(50% - 571px/2 + 0.5px); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
@@ -521,7 +545,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .minwoncash-number-form div{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 8px; width: 100%; height: 38px; flex: none; order: 1; align-self: stretch; flex-grow: 0; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; color: #828282;}
 .minwoncash-number-form div input{width: calc(50% - 12px) !important;}
 .minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content input{width: calc(100% - 96px); font-weight: 500; line-height: 155%;}
-.minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content .pw-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 90px; height: 38px; border: 1px solid rgba(83,99,241,0.3); border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #5363F1; background: #ffffff;}
+.minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content .pw-cert{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px 14px; gap: 10px; width: 90px; height: 38px; border: 1px solid rgba(83,99,241,0.3); border-radius: 8px; flex: none; order: 1; flex-grow: 0; font-weight: 700; line-height: 155%; color: #5363F1; background: #ffffff; cursor: pointer;}
 .minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content{display: flex; flex-direction: row; align-items: flex-start; padding: 0; gap: 8px; width: 100%; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
 .minwoncash-modal .notice{display: flex; flex-direction: column; align-items: flex-start; padding: 0px; gap: 8px; width: 100%; flex: none; order: 1; align-self: stretch; flex-grow: 0;}
 .minwoncash-modal .notice li{list-style: disc; margin-left: 20px; font-weight: 500; font-size: 13px; line-height: 145%; color: #828282; flex: none; order: 0; align-self: stretch; flex-grow: 0;}
