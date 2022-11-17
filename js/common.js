@@ -1,3 +1,5 @@
+<meta charset="UTF-8"></meta>
+
 // 내정보 toggle 팝업설정
 $('html').on('click', '.my-data.login', function(){
     $('.my-data-menu').stop().fadeToggle();
