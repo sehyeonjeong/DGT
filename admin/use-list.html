@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>등기 리스트 | 등기통 - 어드민</title>
+        <title>이용내역 | 등기통 - 어드민</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -540,7 +540,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">등기 리스트 <button type="button" class="btn btn-outline-light ms-2"> <i class="mdi mdi-refresh"></i> 새로고침</button></h4> 
+                                    <h4 class="page-title">이용내역 <button type="button" class="btn btn-outline-light ms-2"> <i class="mdi mdi-refresh"></i> 새로고침</button></h4> 
                                 </div>
                             </div>
                         </div>
@@ -561,12 +561,6 @@
                                     </select>
                                 </div>
                                 <div class="col-xl-2 mb-3">
-                                    <label for="status-select" class="form-label">처리상태</label>
-                                    <select class="form-select" id="status-select">
-                                        <option>All</option>
-                                    </select>
-                                </div>
-                                <div class="col-xl-2 mb-3">
                                     <label for="start-date" class="form-label">시작 날짜</label>
                                     <input class="form-control" id="start-date" type="date" name="date">
                                 </div>
@@ -575,33 +569,17 @@
                                     <input class="form-control" id="end-date" type="date" name="date">
                                 </div>
                                 <div class="col-xl-2 mb-3">
-                                    <label for="delete-select" class="form-label">삭제여부</label>
-                                    <select class="form-select" id="delete-select">
-                                        <option>All</option>
-                                    </select>
-                                </div>
-                                <div class="col-xl-2 mb-3">
-                                    <label for="rid-search" class="form-label">rid</label>
-                                    <input type="search" id="rid-search" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-2 mb-3">
-                                    <label for="id-search" class="form-label">아이디 또는 uid</label>
-                                    <input type="search" id="id-search" class="form-control">
+                                    <label for="uid-search" class="form-label">아이디(핸드폰번호)</label>
+                                    <input type="search" id="uid-search" class="form-control">
                                 </div>
                                 <div class="col-xl-2 mb-3">
                                     <label for="email-search" class="form-label">이메일</label>
                                     <input type="email" id="email-search" class="form-control">
                                 </div>
                                 <div class="col-xl-2 mb-3">
-                                    <label for="ip-search" class="form-label">ip검색(*등기요청시 ip)</label>
-                                    <input type="text" id="ip-search" class="form-control">
-                                </div>
-                                <div class="col-xl-6 mb-3">
-                                    <label class="form-label">주소 검색</label>
+                                    <label for="name-search" class="form-label">이름</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="주소를 입력해주세요" aria-label="Recipient's username">
+                                        <input type="text" id="name-search" class="form-control">
                                         <button class="btn btn-dark" type="button">검색</button>
                                     </div>
                                 </div>
@@ -614,35 +592,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -650,35 +625,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -686,35 +658,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -722,35 +691,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -758,35 +724,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -794,35 +757,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -830,35 +790,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -866,35 +823,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -902,35 +856,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -938,35 +889,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -974,35 +922,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1010,35 +955,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1046,35 +988,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1082,35 +1021,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1118,35 +1054,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1154,35 +1087,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1190,35 +1120,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1226,35 +1153,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1262,35 +1186,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -1298,107 +1219,32 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
+                                                        <th>사용일시</th>
+                                                        <th>내용</th>
+                                                        <th>유저(이름)</th>
+                                                        <th>유저(아이디_번호)</th>
+                                                        <th>유저(이메일주소)</th>
+                                                        <th>잔여 열람권</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
+                                                            <span class="badge bg-success">645</span>
                                                         </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
+                                                        <td>2022.11.04 21:45</td>
+                                                        <td>등기열람권 -30회 환불/패널티</td>
+                                                        <td>김민재</td>
+                                                        <td>010-0000-0000</td>
                                                         <td>000000@gmail.com</td>
+                                                        <td>29회</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <table class="table mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
-                                                        </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
-                                                        <td>000000@gmail.com</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <table class="table mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No</th>
-                                                        <th>최초열람날짜</th>
-                                                        <th>건물타입</th>
-                                                        <th>주소</th>
-                                                        <th>등기번호</th>
-                                                        <th>소유자명</th>
-                                                        <th>처리상태</th>
-                                                        <th>열람유저(아이디_번호)</th>
-                                                        <th>열람유저(이메일주소)</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="table-number">
-                                                            <span class="badge bg-success">347</span>
-                                                        </td>
-                                                        <td>2022.11.04</td>
-                                                        <td><span class="badge badge-outline-info">집합건물</span></td>
-                                                        <td>서울특별시 마포구 모래내로3길 11 상암미르웰한올림 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</td>
-                                                        <td>2701-2018-001308</td>
-                                                        <td>김준범</td>
-                                                        <td><span class="badge badge-outline-success rounded-pill">등기부등본</span><span class="badge badge-outline-success rounded-pill">토지대장</span><span class="badge badge-outline-success rounded-pill">지적도</span></td>
-                                                        <td>010-6346-4245</td>
-                                                        <td>000000@gmail.com</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <nav>
                                     <ul class="pagination pagination-rounded mb-3 float-end">
                                         <li class="page-item">
