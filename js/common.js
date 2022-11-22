@@ -1,5 +1,3 @@
-<meta charset="UTF-8"></meta>
-
 // 내정보 toggle 팝업설정
 $('html').on('click', '.my-data.login', function(){
     $('.my-data-menu').stop().fadeToggle();
@@ -156,7 +154,7 @@ window.onload = function() {
     setTimeout(() => {
         var btn1 = document.querySelectorAll('.registered-btn .btn1');
         for ( var i = 0; i < btn1.length; i++ ) {
-            btn1[i].innerHTML = "등기 열람 요청";
+            btn1[i].innerHTML = "등기부등본";
         };
         var btn2 = document.querySelectorAll('.registered-btn .btn2');
         for ( var i = 0; i < btn2.length; i++ ) {
