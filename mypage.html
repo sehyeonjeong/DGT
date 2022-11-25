@@ -196,6 +196,45 @@
                             <input type="email" name="email" id="email" required placeholder="jeongnnnn@gmail.com"> 
                              <span class="error">잘못된 정보입니다.</span>
                         </div>
+                        <div class="change-tob-form cert-none">
+                            <label for="tob">종사업종 *</label>
+                            <div>
+                                <input type="radio" name="tob" id="tob1" class="tob" required checked>
+                                <label for="tob1">공인중개사</label>
+                                <input type="radio" name="tob" id="tob2" class="tob" >
+                                <label for="tob2">법무사</label>
+                                <input type="radio" name="tob" id="tob3" class="tob">
+                                <label for="tob3">경매</label>
+                                <input type="radio" name="tob" id="tob4" class="tob">
+                                <label for="tob4">기타</label>
+                                <input type="text" name="tob4txt" id="tob4txt">
+                                <span class="error">업종을 선택해주세요</span>
+                            </div>
+                        </div>
+                        <div class="change-residence-form cert-none">
+                            <label for="residence">거주지역 *</label>
+                            <select name="residence" id="residence" required>
+                                <option value="">선택해주세요</option>
+                                <option selected value="서울">서울</option>
+                                <option value="부산">부산</option>
+                                <option value="대구">대구</option>
+                                <option value="인천">인천</option>
+                                <option value="광주">광주</option>
+                                <option value="대전">대전</option>
+                                <option value="울산">울산</option>
+                                <option value="세종">세종</option>
+                                <option value="경기">경기</option>
+                                <option value="강원">강원</option>
+                                <option value="충북">충북</option>
+                                <option value="충남">충남</option>
+                                <option value="전북">전북</option>
+                                <option value="전남">전남</option>
+                                <option value="경북">경북</option>
+                                <option value="경남">경남</option>
+                                <option value="제주">제주</option>
+                            </select>
+                            <span class="error">거주지역을 선택해주세요</span>
+                        </div>
                     </div>
                     <div class="change-m-frame"></div>
                     <div class="change-btn">
