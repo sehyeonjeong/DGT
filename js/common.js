@@ -60,18 +60,21 @@ $(document).on('click', '.request-btn', function () {
     $('.result-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 등기열람 요청 모달 닫기
 $(document).on('click', '.result-modal-close', function () {
     $('.result-modal-dim').fadeOut();
     $('.result-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기열람 요청 모달 쉐도우 영역 클릭
 $(document).on('click', '.result-modal-dim', function () {
     $('.result-modal-dim').fadeOut();
     $('.result-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기열람 주민등록번호 폼
@@ -113,18 +116,21 @@ $(document).on('click', '.sms', function () {
     $('.reg-sms-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 등기문자보내기 닫기
 $(document).on('click', '.reg-sms-modal-close', function () {
     $('.reg-sms-modal-dim').fadeOut();
     $('.reg-sms-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기문자보내기 쉐도우 영역 클릭
 $(document).on('click', '.reg-sms-modal-dim', function () {
     $('.reg-sms-modal-dim').fadeOut();
     $('.reg-sms-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기열람 경고창 오픈
@@ -158,11 +164,11 @@ window.onload = function() {
         };
         var btn2 = document.querySelectorAll('.registered-btn .btn2');
         for ( var i = 0; i < btn2.length; i++ ) {
-            btn2[i].innerHTML = "건축물대장";
+            btn2[i].innerHTML = "건축물대장 <div class='tooltip-content'>클릭하시면 '건축물대장' 발급이 무료로 진행됩니다.</div>";
         };
         var btn3 = document.querySelectorAll('.registered-btn .btn3');
         for ( var i = 0; i < btn3.length; i++ ) {
-            btn3[i].innerHTML = "토지대장";
+            btn3[i].innerHTML = "토지대장 <div class='tooltip-content'>클릭하시면 '토지대장' 발급이 무료로 진행됩니다.</div>";
         };
     }, 4000);
 }
@@ -187,18 +193,21 @@ $(document).on('click', '.keyword-btn .edit-keyword', function () {
     $('.registered-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 키워드 추가 및 수정 모달 닫기
 $(document).on('click', '.modal-agree-btn', function () {
     $('.registered-modal-dim').fadeOut();
     $('.registered-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 키워드 추가 및 수정 모달 쉐도우 영역 클릭
 $(document).on('click', '.registered-modal-dim', function () {
     $('.registered-modal-dim').fadeOut();
     $('.registered-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 키워드 수정 버튼 클릭
@@ -217,18 +226,21 @@ $(document).on('click', '.card-delete', function () {
     $('.delete-modal-alert').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 등기열람삭제 모달 닫기
 $(document).on('click', '.delete-modal-alert-close', function () {
     $('.delete-modal-alert-dim').fadeOut();
     $('.delete-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기열람삭제 모달 쉐도우 영역 클릭
 $(document).on('click', '.delete-modal-alert-dim', function () {
     $('.delete-modal-alert-dim').fadeOut();
     $('.delete-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기열람카드 삭제
@@ -236,12 +248,24 @@ $(document).on('click', '.alert-delete', function () {
     $('.registered-card:first-child').remove();
     $('.delete-modal-alert-dim').fadeOut();
     $('.delete-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
-// 키워드토글
-$(document).on('click', '.keyword-add-btn button', function () {
-    $(this).toggleClass('on main-blue');
-    $(this).toggleClass('off');
+// 키워드토글 with 전체클릭
+$(document).on('click', '.registered-wrap-keyword button', function () {
+    var all = $('.keyword.all');
+    if(all.hasClass('on') == true){
+        all.removeClass('on');
+        all.addClass('off')
+        $(this).toggleClass('on');
+        $(this).toggleClass('off');
+    } else if($(this).is(all)){
+        $('.registered-wrap-keyword button').removeClass('on').addClass('off');
+        all.addClass('on').removeClass('off');
+    } else{
+        $(this).toggleClass('on');
+        $(this).toggleClass('off');
+    }
 });
 
 // 마이페이지 테이블 탭
@@ -251,7 +275,6 @@ $(document).on('click', '.wrap-tab .tab button', function () {
     $('.table').removeClass('on');
     $(this).addClass('on');
     $('#' + activeTab).addClass('on');
-
 });
 
 // 등기열람 충전 모달 오픈
@@ -262,18 +285,21 @@ $(document).on('click', '.ticket-btn .buy', function () {
     $('.ticket-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 등기열람 충전 모달 닫기
 $(document).on('click', '.ticket-modal-close', function () {
     $('.ticket-modal-dim').fadeOut();
     $('.ticket-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 등기열람 충전 모달 쉐도우 영역 클릭
 $(document).on('click', '.ticket-modal-dim', function () {
     $('.ticket-modal-dim').fadeOut();
     $('.ticket-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 전자민원캐시 on/off
@@ -374,18 +400,21 @@ $(document).on('click', '.profile-btn .change', function () {
     $('.change-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 정보수정 모달 닫기
 $(document).on('click', '.change-modal-close, .change-btn button', function () {
     $('.change-modal-dim').fadeOut();
     $('.change-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 정보수정 모달 쉐도우 영역 클릭
 $(document).on('click', '.change-modal-dim', function () {
     $('.change-modal-dim').fadeOut();
     $('.change-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 회원탈퇴 모달 오픈
@@ -396,18 +425,21 @@ $(document).on('click', '.profile-btn .resignation', function () {
     $('.secession-modal-alert').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 회원탈퇴 모달 닫기
 $(document).on('click', '.secession-modal-alert-close', function () {
     $('.secession-modal-alert-dim').fadeOut();
     $('.secession-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 회원탈퇴 모달 쉐도우 영역 클릭
 $(document).on('click', '.secession-modal-alert-dim', function () {
     $('.secession-modal-alert-dim').fadeOut();
     $('.secession-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 회원탈퇴 재확인 모달 오픈
@@ -440,13 +472,16 @@ $(document).on('click', '.cash-btn button ', function () {
     $('.minwoncash-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 전자민원캐시 모달 닫기
 $(document).on('click', '.minwoncash-modal-close', function () {
     $('.minwoncash-modal-dim').fadeOut();
     $('.minwoncash-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
+
 $(document).on('click', '.minwoncash-btn button', function () {
     $('.minwoncash-modal-dim').fadeOut();
     $('.minwoncash-modal').fadeOut();
@@ -461,6 +496,7 @@ $(document).on('click', '.minwoncash-btn button', function () {
 $(document).on('click', '.minwoncash-modal-dim', function () {
     $('.minwoncash-modal-dim').fadeOut();
     $('.minwoncash-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 전자민원캐시 인증
@@ -481,12 +517,14 @@ $(document).on('click', '.pw-lose', function () {
     $('.findpw-modal').css("display", "flex")
     .hide()
     .fadeIn();
+    $('body').addClass('wrapper');
 });
 
 // 비밀번호 찾기 모달 닫기
 $(document).on('click', '.findpw-modal-close', function () {
     $('.findpw-modal-dim').fadeOut();
     $('.findpw-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 비밀번호 찾기 모달 확인
@@ -502,6 +540,7 @@ $(document).on('click', '.findpw-btn button', function () {
 $(document).on('click', '.findpw-modal-dim', function () {
     $('.findpw-modal-dim').fadeOut();
     $('.findpw-modal').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 비밀번호 찾기 안내창 오픈
@@ -513,6 +552,7 @@ $(document).on('click', '.findpw-btn button', function () {
     .hide()
     .fadeIn();
 
+    $('body').addClass('wrapper');
     return false;
 });
 
@@ -520,12 +560,14 @@ $(document).on('click', '.findpw-btn button', function () {
 $(document).on('click', '.findpw-modal-alert-close, .alert-failed', function () {
     $('.findpw-modal-alert-dim').fadeOut();
     $('.findpw-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 // 비밀번호 찾기 안내창 쉐도우 영역 클릭
 $(document).on('click', '.findpw-modal-alert-dim', function () {
     $('.findpw-modal-alert-dim').fadeOut();
     $('.findpw-modal-alert').fadeOut();
+    $('body').removeClass('wrapper');
 });
 
 //gototop
@@ -543,6 +585,7 @@ function hashHandler() {
     if(typeof window.location.hash != "undefined" && window.location.hash == "#ticket"){
         document.getElementsByClassName('ticket-modal')[0].style.display = "flex";
         document.getElementsByClassName('ticket-modal-dim')[0].style.display = "flex";
+        document.querySelector('body').classList.add('wrapper');
     }    
 }
 

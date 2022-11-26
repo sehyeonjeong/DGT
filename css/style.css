@@ -42,9 +42,9 @@ form.was-validated input:invalid {
 	z-index: 1;
 	border-radius: 4px;
 }
-.tooltip:hover .tooltip-content { visibility: visible; }
+.tooltip.off:hover .tooltip-content { visibility: visible; }
 
-.tooltip:hover .tooltip-content:after {
+.tooltip.off:hover .tooltip-content:after {
     border-bottom: 10px solid #5363F1;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -330,7 +330,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .section-content .registered-content .content-top .registered-caution li .caution-img{display: flex; flex-direction: row; align-items: center; padding: 0px; gap: 4px; width: 12px; height: 18px; flex: none; order: 0; flex-grow: 0;}
 .section-content .registered-content .registered-wrap-keyword{display: flex; flex-direction: row; align-items: flex-start; padding: 32px 0px 16px; gap: 8px; width: 100%; flex: none; order: 2; flex-grow: 0; z-index: 2; flex-wrap: wrap;}
 .section-content .registered-content .registered-wrap-keyword .keyword{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 10px; gap: 2px; height: 24px; flex: none; order: 0; flex-grow: 0; border-radius: 8px; background: #ffffff; font-weight: 500; font-size: 12px; line-height: 100%; cursor: pointer;}
-.section-content .registered-content .registered-wrap-keyword .keyword.on{background: #5363F1; border: 0; color: #ffffff;}
+.section-content .registered-content .registered-wrap-keyword .keyword.on{background: #5363F1; border: 1px solid #5363F1; color: #ffffff;}
 .section-content .registered-content .registered-wrap-keyword .keyword.off{background: #f4f7ff; border: 1px solid #cbd0fb; color: #5363F1;}
 .section-content .registered-content .registered-wrap-keyword .edit-keyword{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 10px; gap: 2px; height: 24px; border: 1px dashed #cbd0fb; border-radius: 8px; background-color: #ffffff; flex: none; order: 7; flex-grow: 0; font-weight: 500; font-size: 12px; line-height: 100%; text-align: center; color: #5363f1; flex: none; order: 0; flex-grow: 0; cursor: pointer;}
 .section-content .registered-content .registered-wrap{display: flex; flex-direction: column; align-items: flex-start; padding: 0px 0px 32px; gap: 16px; isolation: isolate; width: 100%; flex: none; order: 3; flex-grow: 0; z-index: 3;}
@@ -713,3 +713,6 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 /* gototop */
 .gototop{position: fixed; bottom: 245px; right: 16px; cursor: pointer; display: none; z-index: 5;}
 .gototop img{width: 56px; height: 56px; border-radius: 28px; box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);}
+
+/* 모달찰팝업시 스크롤방지 */
+.wrapper{position: fixed; width: 100%; height: 100%; overflow: hidden;}

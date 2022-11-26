@@ -455,13 +455,6 @@
                                             <div class="col-sm-5">
                                                 <a href="./notice-write.html" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> 공지사항 추가</a>
                                             </div>
-                                            <div class="col-sm-7">
-                                                <div class="text-sm-end">
-                                                    <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
-                                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
-                                                    <button type="button" class="btn btn-light mb-2">Export</button>
-                                                </div>
-                                            </div><!-- end col-->
                                         </div>
                 
                                         <div class="table-responsive">
@@ -481,7 +474,7 @@
                                                         <th style="width: 100px;">수정/삭제</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="simple-daragula" data-plugin="dragula">
                                                     <tr>
                                                         <td>
                                                             <div class="form-check">
@@ -643,6 +636,30 @@
         <!-- END wrapper -->       
         
         <!-- Vendor js -->
-        <script src="assets/js/vendor.min.js"></script>å
+        <script src="assets/js/vendor.min.js"></script>
+
+        <script>
+            let badge = document.querySelectorAll('tbody .badge');
+            badge.forEach( bd => {
+                bd.addEventListener('click',() => bd.classList.toggle('badge-danger-lighten'));
+                bd.addEventListener('click',() => bd.classList.toggle('badge-success-lighten'));
+            });
+
+            let x = document.querySelectorAll('tbody .badge');
+            
+            x.forEach( xt => {
+                xt.addEventListener('click', function(){
+                    if (xt.innerHTML === "노출") {
+                    xt.innerHTML = "비노출";
+                    } else {
+                        xt.innerHTML = "노출";
+                    }
+                })             
+            });
+        </script>
+
+        <!-- Dragula js -->
+        <script src="assets/vendor/dragula/dragula.min.js"></script>
+        <script src="assets/js/ui/component.dragula.js"></script>
     </body>
 </html> 
