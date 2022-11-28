@@ -317,6 +317,9 @@ $(".minwon-cash input").click(function () {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
         document.querySelector('.total-num').innerText = numberWithCommas( num1 );
+        $(".reg-count").addClass('on')
+        $(".red").hide()
+        $(".red-hide").show()
     }else{
         $(".minwon-label").removeClass('on');
         $(".commission-num").removeClass('on');
@@ -325,6 +328,9 @@ $(".minwon-cash input").click(function () {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
         document.querySelector('.total-num').innerText = numberWithCommas( num1 + num2 );
+        $(".reg-count").removeClass('on')
+        $(".red").show();
+        $(".red-hide").hide()
     };
 });
 
