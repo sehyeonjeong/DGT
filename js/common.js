@@ -63,6 +63,8 @@ $(document).on('click', '.request-btn', function () {
     $('body').addClass('wrapper');
 });
 
+
+
 // 등기열람 요청 모달 닫기
 $(document).on('click', '.result-modal-close', function () {
     $('.result-modal-dim').fadeOut();
@@ -96,8 +98,33 @@ $(document).on('click', '.modal-request-btn', function () {
     .fadeIn();
 });
 
+// 등기열람 요청 모달 오픈 로그인상황
+$(document).on('click', '.modal-request-btn-login', function () {
+    var chk = $(".regnum input").is(':checked');
+    var nn1 = $('.nums #num1').val().length;
+    var nn2 = $('.nums #num2').val().length;
+
+    if(chk && nn1 < 6){
+        $('.result-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.result-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+    } else if(chk && nn2 < 7){
+        $('.result-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.result-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+    } else{
+        location.href = 'registered-list.html';
+    }
+});
+
 // 등기열람 경고창 닫기
-$(document).on('click', '.result-modal-alert-close', function () {
+$(document).on('click', '.result-modal-alert-close, .alert-confirm', function () {
     $('.result-modal-alert-dim').fadeOut();
     $('.result-modal-alert').fadeOut();
 });
@@ -507,7 +534,49 @@ $(document).on('click', '.minwoncash-modal-dim', function () {
 
 // 전자민원캐시 인증
 $(document).on('click', '.pw-cert', function () {
-    $(this).addClass('on').text('인증완료');
+    if($('#mw-pw').val().length==0){
+        $('.minwoncash-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.minwoncash-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+
+        return false;
+    }else if($('#mw-number1').val().length<7){
+        $('.minwoncash-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.minwoncash-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+
+        return false;
+    }else if($('#mw-number2').val().length<3){
+        $('.minwoncash-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.minwoncash-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+
+        return false;
+    }else{
+        $(this).addClass('on').text('인증완료');
+        $('.minwoncash-btn button').attr('disabled',false);
+    };    
+});
+
+// 결제실패 경고창 닫기
+$(document).on('click', '.minwoncash-modal-alert-close, .alert-failed', function () {
+    $('.minwoncash-modal-alert-dim').fadeOut();
+    $('.minwoncash-modal-alert').fadeOut();
+});
+
+// 결제실패 경고창 쉐도우 영역 클릭
+$(document).on('click', '.minwoncash-modal-alert-dim', function () {
+    $('.minwoncash-modal-alert-dim').fadeOut();
+    $('.minwoncash-modal-alert').fadeOut();
 });
 
 // 민원캐시 on/off

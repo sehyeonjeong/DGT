@@ -210,10 +210,12 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .result-modal-docu-opt .modal-docu-opt-cont li:first-child{display: flex; flex-direction: row; align-items: center; padding: 8px 16px; gap: 8px; width: 452px; height: 30px; background: #f4f7ff; border: 1px solid #cbd0fb; border-radius: 8px;}
 .result-modal-docu-opt .modal-docu-opt-cont li:first-child label{font-weight: 500; color: #5363f1; flex: none; order: 0; flex-grow: 1; padding: 0; width: 100%;}
 .result-modal .modal-request-btn{display: flex; flex-direction: row; justify-content: center; padding: 8px 16px; gap: 10px; width: 452px; height: 41px; border-radius: 8px; flex: none; order: 4; align-self: stretch; flex-grow: 0; font-weight: 700; font-size: 16px; line-height: 155%; color: #ffffff; border: 0; cursor: pointer;}
+.result-modal .modal-request-btn-login{display: flex; flex-direction: row; justify-content: center; padding: 8px 16px; gap: 10px; width: 452px; height: 41px; border-radius: 8px; flex: none; order: 4; align-self: stretch; flex-grow: 0; font-weight: 700; font-size: 16px; line-height: 155%; color: #ffffff; border: 0; cursor: pointer;}
 .result-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 32px; gap: 24px; isolation: isolate; position: fixed; width: 366px; height: 171px; left: calc(50% - 366px/2); top: calc(50% - 171px/2 + 0.5px); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
 .result-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0;}
-.result-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 302px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1;}
+.result-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; padding: 0px; gap: 16px; width: 302px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1; justify-content: center;}
 .result-modal-alert .alert-btn-set .alert-login{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 136px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
+.result-modal-alert .alert-btn-set .alert-confirm{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 54px; gap: 10px; width: 136px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
 .result-modal-alert .alert-btn-set .alert-join{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 150px; height: 38px; border-radius: 8px; flex: none; order: 1; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; background: #fbfbfb; color: #828282; cursor: pointer;}
 .result-m-frame{display: none;}
 .result-modal-alert .result-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
@@ -587,8 +589,17 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .minwoncash-modal .notice li .link{color: #2f80ed;}
 .minwoncash-btn{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 8px; width: 100%; height: 42px; flex: none; order: 2; align-self: stretch; flex-grow: 0;}
 .minwoncash-btn button{box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; height: 44px; padding: 14px 16px; gap: 10px; border-radius: 8px; border: 0; width: 100%; cursor: pointer; font-weight: 600; font-weight: 700; font-size: 16px;}
+.minwoncash-btn button:disabled{background: #f2f2f2; color: #bdbdbd;}
 .minwoncash-modal .minwoncash-pw-form .minwoncash-pw-form-content .pw-cert.on{border: 0; background: #f2f2f2; color: #bdbdbd;}
 .minwoncash-m-frame{display: none;}
+
+/* 민원캐시 검증오류 안내 */
+.minwoncash-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 32px; gap: 24px; isolation: isolate; position: fixed; width: 366px; height: 228px; left: calc(50% - 366px/2); top: calc(50% - 228px/2); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.minwoncash-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
+.minwoncash-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
+.minwoncash-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; justify-content: center; padding: 0px; gap: 16px; width: 302px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1;}
+.minwoncash-modal-alert .alert-btn-set .alert-failed{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 122px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
+.minwoncash-modal-alert .minwoncash-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
 
 @media screen and (max-width:960px) {
 	.section-content .main-search p{font-size: 21px;}
@@ -633,6 +644,7 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 	.result-modal-docu-opt .modal-docu-opt-cont li:first-child{max-width: 551px; width: calc(100vw - 48px);}
 	.result-m-frame{box-sizing: border-box; display: flex; flex-direction: row; align-items: flex-start; padding: 16px; width: 100vw; height: 116px; border-bottom: 1px solid #f2f2f2; flex: none; order: 2; align-self: stretch; flex-grow: 1;}
 	.result-modal .modal-request-btn{align-items: center; padding: 16px; gap: 10px; width: 100vw; height: 48px; flex: none; order: 3; border-radius: 0;}
+	.result-modal .modal-request-btn-login{align-items: center; padding: 16px; gap: 10px; width: 100vw; height: 48px; flex: none; order: 3; border-radius: 0;}
 
 	/* 회원가입 */
 	.join .join-content .main-terms-content .main-terms textarea{max-height: 242px;} 
