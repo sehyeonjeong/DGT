@@ -23,11 +23,11 @@
         <div class="section-content">
             <div class="main-search bg-blue">
                 <p>등기부등본, 등기통에서 쉽고 빠르게!</p>
-                <form action="search-page.html">
+                <form action="search-page.html" name="search">
                     <div class="search">
                         <input type="search" class="search-input" placeholder="도로명 주소 또는 지번 주소를 입력해주세요.(공동주택의 경우  동 · 호수까지 입력)" name="query" value="">
                         <div class="btnClear" type="reset"></div>
-                        <button class="searchsubmit" type="submit"><img src="./images/search.svg" alt=""></button>
+                        <button class="searchsubmit" onclick="OKSearch()"><img src="./images/search.svg" alt="검색"></button>
                     </div>
                 </form>
             </div>
@@ -136,147 +136,26 @@
                         </div>
                         <button class="request-btn main-blue">등기 열람 요청</button>
                     </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
-                    <div class="result-card">
-                        <div class="type-address-wrap">
-                            <dl class="type-address">
-                                <dt class="type main-blue">집합건물</dt>
-                                <dd class="address">서울특별시 마포구 모래내로 3길 11 상암미르웰한올림 제10층 제1015호 [성산동 593-5]</dd>
-                            </dl>
-                            <p class="add-code">2701-2018-001308</p>
-                        </div>
-                        <button class="request-btn main-blue">등기 열람 요청</button>
-                    </div>
                 </div>
+                <nav class="pagi-nav">
+                    <ul class="pagination pagination-rounded">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="result-modal">
                     <div class="result-modal-title">
                         <h3>등기열람</h3>

@@ -332,11 +332,12 @@ $(document).on('click', '.ticket-modal-dim', function () {
 // 전자민원캐시 on/off
 $(".minwon-cash input").click(function () {
     var chk = $(".minwon-cash input").is(':checked');
+    var cert = $(".modify").hasClass('cert');
     var sn = $(".service-num").text();
     num1 = parseInt(sn.replace(/,/g , ''));
     var cn = $(".commission-num").text();
     num2 = parseInt(cn.replace(/,/g , ''));
-    if(chk){
+    if(cert && chk){
         $(".minwon-label").addClass('on');
         $(".commission-num").addClass('on');
         $(".total-num").addClass('on')
@@ -347,7 +348,16 @@ $(".minwon-cash input").click(function () {
         $(".reg-count").addClass('on')
         $(".red").hide()
         $(".red-hide").show()
-    }else{
+    } else if(chk){
+        $(".minwon-cash input").prop('checked',false);
+        $(".minwon-cash").removeClass('on');
+        $('.mwc-modal-alert-dim').css("display", "flex")
+        .hide()
+        .fadeIn();
+        $('.mwc-modal-alert').css("display", "flex")
+        .hide()
+        .fadeIn();
+    } else{
         $(".minwon-label").removeClass('on');
         $(".commission-num").removeClass('on');
         $(".total-num").removeClass('on')
@@ -359,6 +369,18 @@ $(".minwon-cash input").click(function () {
         $(".red").show();
         $(".red-hide").hide()
     };
+});
+
+// 전자민원캐시 등록 알림 닫기
+$(document).on('click', '.mwc-modal-alert-close, .alert-failed', function () {
+    $('.mwc-modal-alert-dim').fadeOut();
+    $('.mwc-modal-alert').fadeOut();
+});
+
+// 전자민원캐시 등록 알림 쉐도우 영역 클릭
+$(document).on('click', '.mwc-modal-alert-dim', function () {
+    $('.mwc-modal-alert-dim').fadeOut();
+    $('.mwc-modal-alert').fadeOut();
 });
 
 // 등기열람 충전 가격변경
@@ -521,7 +543,7 @@ $(document).on('click', '.minwoncash-btn button', function () {
     var value1 = $('#mw-number1').val();
     var value2 = $('#mw-number2').val();
     $('.cash-card dl dd').text(value1+'-'+value2);
-    $('.modify').text('변경');
+    $('.modify').text('변경').addClass('cert');
     $('.pw-cert').removeClass('on').text('인증하기');
 });
 
@@ -635,14 +657,12 @@ $(document).on('click', '.findpw-btn button', function () {
 $(document).on('click', '.findpw-modal-alert-close, .alert-failed', function () {
     $('.findpw-modal-alert-dim').fadeOut();
     $('.findpw-modal-alert').fadeOut();
-    $('body').removeClass('wrapper');
 });
 
 // 비밀번호 찾기 안내창 쉐도우 영역 클릭
 $(document).on('click', '.findpw-modal-alert-dim', function () {
     $('.findpw-modal-alert-dim').fadeOut();
     $('.findpw-modal-alert').fadeOut();
-    $('body').removeClass('wrapper');
 });
 
 //gototop
@@ -689,3 +709,24 @@ document.querySelectorAll("select").forEach(select => {
         e.preventDefault()
     });
 })
+
+//검색 후 페이지이동 test
+
+function OKSearch(){
+    let content1 = document.querySelector(".main-content-P");
+    let content2 = document.querySelector(".main-content");
+    let content3 = document.querySelector(".main-info");
+    let test = "<div class='loading'><div class='loader'></div><p>인터넷등기소(iros.go.kr)에서 주소 검색 중 입니다.</p></div>"
+    event.preventDefault();
+    if(document.getElementsByClassName("main-content-P").length){
+        content1.style.display = "none";
+        content3.style.display = "none";
+    }else if(document.getElementsByClassName("main-content").length){
+        content2.style.display = "none";
+        content3.style.display = "none";
+    };
+
+    document.querySelector('.section-content').insertAdjacentHTML('beforeend', test);
+
+    setTimeout(function(){document.search.submit();},3000);
+}

@@ -529,6 +529,14 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .ticket-modal-alert .alert-btn-set .alert-failed{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 122px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
 .ticket-modal-alert .ticket-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
 
+/* 전자민원캐시 등록 안내 */
+.mwc-modal-alert{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 32px; gap: 24px; isolation: isolate; position: fixed; width: 366px; height: 171px; left: calc(50% - 366px/2); top: calc(50% - 171px/2 + 0.5px); background: #ffffff; border-radius: 14px; flex: none; order: 0; flex-grow: 0; z-index: 9;}
+.mwc-modal-alert-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 6; top: 0; left: 0;}
+.mwc-modal-alert p{margin: 0; font-weight: 600; font-size: 18px; line-height: 160%; color: #828282; flex: none; order: 0; flex-grow: 0; z-index: 0; text-align: center;}
+.mwc-modal-alert .alert-btn-set{display: flex; flex-direction: row; align-items: flex-start; justify-content: center; padding: 0px; gap: 16px; width: 302px; height: 38px; flex: none; order: 1; flex-grow: 0; z-index: 1;}
+.mwc-modal-alert .alert-btn-set .alert-failed{display: flex; flex-direction: row; align-items: flex-start; padding: 6px 47px; gap: 10px; width: 122px; height: 38px; border-radius: 8px; flex: none; order: 0; flex-grow: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 160%; color: #ffffff; cursor: pointer;}
+.mwc-modal-alert .mwc-modal-alert-close{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0; gap: 10px; position: absolute; width: 24px; height: 24px; right: 16px; top: 16px; flex: none; order: 2; flex-grow: 0; z-index: 2; background: #ffffff; border: 0; cursor: pointer;}
+
 /* 정보수정 */
 .change-modal{box-sizing: border-box; display: none; flex-direction: column; justify-content: center; align-items: flex-start; padding: 24px; gap: 32px; position: fixed; width: 500px; height: 688px; left: calc(50% - 500px/2); top: calc(50% - 688px/2); background: #ffffff; border-radius: 16px; flex: none; order: 5; flex-grow: 0; z-index: 5;}
 .change-modal-dim{display: none; position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.4); z-index: 4; top: 0; left: 0;}
@@ -729,5 +737,130 @@ section{overflow-y: auto; overflow-x: hidden; width: 100vw; z-index: 1; backgrou
 .gototop{position: fixed; bottom: 245px; right: 16px; cursor: pointer; display: none; z-index: 5;}
 .gototop img{width: 56px; height: 56px; border-radius: 28px; box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);}
 
-/* 모달찰팝업시 스크롤방지 */
+/* 모달창팝업시 스크롤방지 */
 .wrapper{position: fixed; width: 100%; height: 100%; overflow: hidden;}
+
+/* 검색로딩실행 */
+.loading{display: flex; flex-direction: column; align-items: center; padding: 0; gap: 16px; flex: none; order: 2; flex-grow: 0; margin: 120px auto 150px;}
+
+.loader{width: 75px; height: 75px;}
+.loading p{font-weight: 500; color: #34365e;}
+
+.loader:after {content: ""; display: inline-block; font-size: 6.2px; border: 1.2em solid #004080; border-right-color: rgba(0,64,128, 0) !important; transform: translateZ(0); animation: spiner 1s infinite cubic-bezier(0.53, 0.21, 0.57, 0.85), colors 3s infinite cubic-bezier(0.45, -0.03, 1, 0.77); border-radius: 50%; width: 10em; height: 10em; position: absolute; right: calc(50% - 5em);}
+
+@keyframes colors {
+  0% {
+    border-color: #CBD0FB;
+    border-bottom-color: transparent;
+  }
+  33% {
+    border-color: #5363f1;
+    border-bottom-color: transparent;
+  }
+  66% {
+    border-color: #CBD0FB;
+    border-bottom-color: transparent;
+  }
+  100% {
+    border-color: #CBD0FB;
+    border-bottom-color: transparent;
+  }
+}
+@keyframes spiner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+/* 페이지네이션 */
+
+.pagi-nav {display: flex; flex-direction: column; align-items: center; padding: 0px 0px 32px; max-width: 720px; flex: none; order: 3; flex-grow: 0; z-index: 3;}
+
+.pagination {
+    --ct-pagination-padding-x: 0.75rem;
+    --ct-pagination-padding-y: 0.375rem;
+    --ct-pagination-font-size: 0.9rem;
+    --ct-pagination-color: var(--ct-pagination-color);
+    --ct-pagination-bg: var(--ct-pagination-bg);
+    --ct-pagination-border-width: 1px;
+    --ct-pagination-border-color: var(--ct-pagination-border-color);
+    --ct-pagination-border-radius: 0.25rem;
+    --ct-pagination-hover-color: var(--ct-pagination-hover-color);
+    --ct-pagination-hover-bg: var(--ct-pagination-hover-bg);
+    --ct-pagination-hover-border-color: var(--ct-pagination-hover-border-color);
+    --ct-pagination-focus-color: var(--ct-pagination-focus-color);
+    --ct-pagination-focus-bg: var(--ct-pagination-focus-bg);
+    --ct-pagination-focus-box-shadow: var(--ct-pagination-focus-box-shadow);
+    --ct-pagination-active-color: #ffffff;
+    --ct-pagination-active-bg: #727cf5;
+    --ct-pagination-active-border-color: #727cf5;
+    --ct-pagination-disabled-color: var(--ct-pagination-disabled-color);
+    --ct-pagination-disabled-bg: var(--ct-pagination-disabled-bg);
+    --ct-pagination-disabled-border-color: var(--ct-pagination-disabled-border-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pagination {
+    --ct-pagination-color: #313a46;
+    --ct-pagination-bg: #fff;
+    --ct-pagination-border-color: #dee2e6;
+    --ct-pagination-focus-color: #6169d0;
+    --ct-pagination-focus-bg: #eef2f7;
+    --ct-pagination-focus-box-shadow: 0 0 0 0.15rem rgba(114, 124, 245, 0.25);
+    --ct-pagination-hover-color: #313a46;
+    --ct-pagination-hover-bg: #eef2f7;
+    --ct-pagination-hover-border-color: #dee2e6;
+    --ct-pagination-disabled-color: #8a969c;
+    --ct-pagination-disabled-bg: #fff;
+    --ct-pagination-disabled-border-color: #dee2e6;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: var(--ct-pagination-border-radius);
+    border-bottom-left-radius: var(--ct-pagination-border-radius);
+}
+.pagination-rounded .page-link {
+    border-radius: 30px!important;
+    margin: 0 3px!important;
+    border: none;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: var(--ct-pagination-padding-y) var(--ct-pagination-padding-x);
+    font-size: var(--ct-pagination-font-size);
+    color: var(--ct-pagination-color);
+    background-color: var(--ct-pagination-bg);
+    border: var(--ct-pagination-border-width) solid var(--ct-pagination-border-color);
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.active > .page-link, .page-link.active {
+    z-index: 3;
+    color: var(--ct-pagination-active-color);
+    background-color: var(--ct-pagination-active-bg);
+    border-color: var(--ct-pagination-active-border-color);
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: var(--ct-pagination-border-radius);
+    border-bottom-right-radius: var(--ct-pagination-border-radius);
+}
+.page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+}
+.pagination-rounded .page-link {
+    border-radius: 30px!important;
+    margin: 0 3px!important;
+    border: none;
+}
