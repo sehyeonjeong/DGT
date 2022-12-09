@@ -34,21 +34,21 @@
             <div class="main-content">
                 <div class="desc-wrap">
                     <div class="brand-desc1">
-                        <img src="./images/brand_image1.svg" alt="쉽고">
+                        <img src="./images/brand_image1.png" alt="쉽고">
                         <dl>
                             <dt class="main-blue">쉽고</dt>
                             <dd>Active X 설치, 복잡한 결제과정 등<br>복잡한 과정을 주소 입력 한 번이면<br>쉽게 처리할 수 있습니다.</dd>
                         </dl>
                     </div>
                     <div class="brand-desc2">
-                        <img src="./images/brand_image2.svg" alt="빠르고">
+                        <img src="./images/brand_image2.png" alt="빠르고">
                         <dl>
                             <dt class="main-blue">빠르고</dt>
                             <dd>각종 서류를 열람/출력하기까지<br>3분 만에 빠르게 처리하여<br>빠른 부동산 중계가 가능합니다.</dd>
                         </dl>
                     </div>
                     <div class="brand-desc3">
-                        <img src="./images/brand_image3.svg" alt="정확하게">
+                        <img src="./images/brand_image3.png" alt="정확하게">
                         <dl>
                             <dt class="main-blue">정확하게</dt>
                             <dd>인터넷 등기소, 정부24에서 제공하는<br>원본문서로 고유번호와 열람일자까지<br>100% 믿고 열람하실 수 있습니다.</dd>
@@ -94,13 +94,7 @@
             btnClear.parentNode.querySelector('input').value = "";
             document.getElementsByClassName('btnClear')[0].style.display = "none";
         })
-
-        function adjustHeight() {
-            var textEle = $('textarea');
-            textEle[0].style.height = 'auto';
-            var textEleHeight = textEle.prop('scrollHeight');
-            textEle.css('height', textEleHeight);
-        };    
+         
         window.addEventListener('load', function() {
             var allElements = document.getElementsByTagName('*');
             Array.prototype.forEach.call(allElements, function(el) {
@@ -114,6 +108,8 @@
                     };
                     xhttp.open('GET', includePath, true);
                     xhttp.send();
+                    const test = document.getElementById('footer');
+                    test.classList.add('testclass');   
                 }
             });
         });
